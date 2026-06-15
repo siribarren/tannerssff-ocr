@@ -1,0 +1,5785 @@
+{
+  "uri": "",
+  "mimeType": "image/jpeg",
+  "text": "12345 2014\nProd.Nro Operacion\n0300 00.967.790.214\nN° 6594398\nFECHA DE EMISION\n25/11/2016\nVALE57188*********1.857.180\n031000.967.790.214\nQUEDA DEPOSITADO EN ESTA OFICINA A NOMBRE DE FUNDACION TELETON\nA LA ORDEN DE\nLA CANTIDAD DE UN MILLON OCHOCIENTOS CINCUENTA Y SIETE MIL CIENTO OCHENTA Y OCHO\nPAGADERA A LA VISTA\nESTE DOCUMENTO NO DEVENGARA INTERESES\nTONADO POR: VARELA ESPINOZA ADOLFO ARHANDO\nBancoEstado\nR.U.T.: 007278201-1\n012-904-\n719\nPesa\nMANUEL ANTONIO MATTA NI 162\np.p. BANCO DEL ESTADO DE CHILE\n",
+  "pages": [{
+    "pageNumber": 1,
+    "dimension": {
+      "width": 450.0,
+      "height": 227.0,
+      "unit": "pixels"
+    },
+    "layout": {
+      "textAnchor": {
+        "textSegments": [{
+          "endIndex": "504"
+        }]
+      },
+      "confidence": 0.86214083,
+      "boundingPoly": {
+        "vertices": [{
+        }, {
+          "x": 450
+        }, {
+          "x": 450,
+          "y": 227
+        }, {
+          "y": 227
+        }],
+        "normalizedVertices": [{
+        }, {
+          "x": 1.0
+        }, {
+          "x": 1.0,
+          "y": 1.0
+        }, {
+          "y": 1.0
+        }]
+      },
+      "orientation": 1
+    },
+    "detectedLanguages": [{
+      "languageCode": "es",
+      "confidence": 0.5625458
+    }, {
+      "languageCode": "qu",
+      "confidence": 0.08997901
+    }, {
+      "languageCode": "en",
+      "confidence": 0.06442938
+    }, {
+      "languageCode": "ilo",
+      "confidence": 0.045688093
+    }, {
+      "languageCode": "sq",
+      "confidence": 0.0409295
+    }],
+    "blocks": [{
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "endIndex": "11"
+          }]
+        },
+        "confidence": 0.54155725,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 1,
+            "y": 129
+          }, {
+            "x": 1,
+            "y": 83
+          }, {
+            "x": 6,
+            "y": 83
+          }, {
+            "x": 6,
+            "y": 129
+          }],
+          "normalizedVertices": [{
+            "x": 0.0022222223,
+            "y": 0.56828195
+          }, {
+            "x": 0.0022222223,
+            "y": 0.36563876
+          }, {
+            "x": 0.013333334,
+            "y": 0.36563876
+          }, {
+            "x": 0.013333334,
+            "y": 0.56828195
+          }]
+        },
+        "orientation": 4
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "11",
+            "endIndex": "61"
+          }]
+        },
+        "confidence": 0.9397837,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 5
+          }, {
+            "x": 85,
+            "y": 1
+          }, {
+            "x": 84,
+            "y": 35
+          }, {
+            "x": 5,
+            "y": 34
+          }],
+          "normalizedVertices": [{
+            "x": 0.011111111
+          }, {
+            "x": 0.18888889,
+            "y": 0.004405286
+          }, {
+            "x": 0.18666667,
+            "y": 0.15418503
+          }, {
+            "x": 0.011111111,
+            "y": 0.14977974
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "61",
+            "endIndex": "78"
+          }]
+        },
+        "confidence": 0.94504315,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 8,
+            "y": 50
+          }, {
+            "x": 71,
+            "y": 50
+          }, {
+            "x": 71,
+            "y": 58
+          }, {
+            "x": 8,
+            "y": 58
+          }],
+          "normalizedVertices": [{
+            "x": 0.017777778,
+            "y": 0.22026432
+          }, {
+            "x": 0.15777777,
+            "y": 0.22026432
+          }, {
+            "x": 0.15777777,
+            "y": 0.2555066
+          }, {
+            "x": 0.017777778,
+            "y": 0.2555066
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "78",
+            "endIndex": "89"
+          }]
+        },
+        "confidence": 0.9623088,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 7,
+            "y": 59
+          }, {
+            "x": 50,
+            "y": 59
+          }, {
+            "x": 50,
+            "y": 68
+          }, {
+            "x": 7,
+            "y": 68
+          }],
+          "normalizedVertices": [{
+            "x": 0.015555556,
+            "y": 0.2599119
+          }, {
+            "x": 0.11111111,
+            "y": 0.2599119
+          }, {
+            "x": 0.11111111,
+            "y": 0.29955947
+          }, {
+            "x": 0.015555556,
+            "y": 0.29955947
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "89",
+            "endIndex": "117"
+          }]
+        },
+        "confidence": 0.62477195,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 157,
+            "y": 10
+          }, {
+            "x": 435,
+            "y": 13
+          }, {
+            "x": 435,
+            "y": 33
+          }, {
+            "x": 157,
+            "y": 30
+          }],
+          "normalizedVertices": [{
+            "x": 0.34888887,
+            "y": 0.04405286
+          }, {
+            "x": 0.96666664,
+            "y": 0.057268724
+          }, {
+            "x": 0.96666664,
+            "y": 0.14537445
+          }, {
+            "x": 0.34888887,
+            "y": 0.13215859
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "117",
+            "endIndex": "136"
+          }]
+        },
+        "confidence": 0.834917,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 173,
+            "y": 21
+          }, {
+            "x": 257,
+            "y": 22
+          }, {
+            "x": 257,
+            "y": 33
+          }, {
+            "x": 173,
+            "y": 32
+          }],
+          "normalizedVertices": [{
+            "x": 0.38444445,
+            "y": 0.09251101
+          }, {
+            "x": 0.5711111,
+            "y": 0.0969163
+          }, {
+            "x": 0.5711111,
+            "y": 0.14537445
+          }, {
+            "x": 0.38444445,
+            "y": 0.14096916
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "136",
+            "endIndex": "199"
+          }]
+        },
+        "confidence": 0.96686566,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 9,
+            "y": 76
+          }, {
+            "x": 278,
+            "y": 78
+          }, {
+            "x": 278,
+            "y": 89
+          }, {
+            "x": 9,
+            "y": 87
+          }],
+          "normalizedVertices": [{
+            "x": 0.02,
+            "y": 0.33480176
+          }, {
+            "x": 0.61777776,
+            "y": 0.34361234
+          }, {
+            "x": 0.61777776,
+            "y": 0.39207047
+          }, {
+            "x": 0.02,
+            "y": 0.38325992
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "199",
+            "endIndex": "213"
+          }]
+        },
+        "confidence": 0.95113605,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 130,
+            "y": 97
+          }, {
+            "x": 130,
+            "y": 88
+          }, {
+            "x": 183,
+            "y": 89
+          }, {
+            "x": 183,
+            "y": 98
+          }],
+          "normalizedVertices": [{
+            "x": 0.2888889,
+            "y": 0.42731276
+          }, {
+            "x": 0.2888889,
+            "y": 0.3876652
+          }, {
+            "x": 0.40666667,
+            "y": 0.39207047
+          }, {
+            "x": 0.40666667,
+            "y": 0.43171805
+          }]
+        },
+        "orientation": 4
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "213",
+            "endIndex": "294"
+          }]
+        },
+        "confidence": 0.9505767,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 10,
+            "y": 101
+          }, {
+            "x": 317,
+            "y": 103
+          }, {
+            "x": 317,
+            "y": 114
+          }, {
+            "x": 10,
+            "y": 112
+          }],
+          "normalizedVertices": [{
+            "x": 0.022222223,
+            "y": 0.44493392
+          }, {
+            "x": 0.70444447,
+            "y": 0.4537445
+          }, {
+            "x": 0.70444447,
+            "y": 0.50220263
+          }, {
+            "x": 0.022222223,
+            "y": 0.49339208
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "294",
+            "endIndex": "407"
+          }]
+        },
+        "confidence": 0.9699707,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 9,
+            "y": 133
+          }, {
+            "x": 215,
+            "y": 133
+          }, {
+            "x": 215,
+            "y": 184
+          }, {
+            "x": 9,
+            "y": 184
+          }],
+          "normalizedVertices": [{
+            "x": 0.02,
+            "y": 0.5859031
+          }, {
+            "x": 0.47777778,
+            "y": 0.5859031
+          }, {
+            "x": 0.47777778,
+            "y": 0.8105727
+          }, {
+            "x": 0.02,
+            "y": 0.8105727
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "407",
+            "endIndex": "427"
+          }]
+        },
+        "confidence": 0.92160684,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 328,
+            "y": 157
+          }, {
+            "x": 403,
+            "y": 157
+          }, {
+            "x": 403,
+            "y": 165
+          }, {
+            "x": 328,
+            "y": 165
+          }],
+          "normalizedVertices": [{
+            "x": 0.72888887,
+            "y": 0.69162995
+          }, {
+            "x": 0.89555556,
+            "y": 0.69162995
+          }, {
+            "x": 0.89555556,
+            "y": 0.72687227
+          }, {
+            "x": 0.72888887,
+            "y": 0.72687227
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "427",
+            "endIndex": "440"
+          }]
+        },
+        "confidence": 0.9317314,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 387,
+            "y": 39
+          }, {
+            "x": 425,
+            "y": 39
+          }, {
+            "x": 425,
+            "y": 54
+          }, {
+            "x": 387,
+            "y": 54
+          }],
+          "normalizedVertices": [{
+            "x": 0.86,
+            "y": 0.17180617
+          }, {
+            "x": 0.9444444,
+            "y": 0.17180617
+          }, {
+            "x": 0.9444444,
+            "y": 0.23788546
+          }, {
+            "x": 0.86,
+            "y": 0.23788546
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "440",
+            "endIndex": "445"
+          }]
+        },
+        "confidence": 0.72728324,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 404,
+            "y": 119
+          }, {
+            "x": 421,
+            "y": 119
+          }, {
+            "x": 421,
+            "y": 127
+          }, {
+            "x": 404,
+            "y": 127
+          }],
+          "normalizedVertices": [{
+            "x": 0.8977778,
+            "y": 0.52422905
+          }, {
+            "x": 0.9355556,
+            "y": 0.52422905
+          }, {
+            "x": 0.9355556,
+            "y": 0.55947137
+          }, {
+            "x": 0.8977778,
+            "y": 0.55947137
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "445",
+            "endIndex": "473"
+          }]
+        },
+        "confidence": 0.7733622,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 131,
+            "y": 194
+          }, {
+            "x": 235,
+            "y": 194
+          }, {
+            "x": 235,
+            "y": 203
+          }, {
+            "x": 131,
+            "y": 203
+          }],
+          "normalizedVertices": [{
+            "x": 0.2911111,
+            "y": 0.8546255
+          }, {
+            "x": 0.5222222,
+            "y": 0.8546255
+          }, {
+            "x": 0.5222222,
+            "y": 0.8942731
+          }, {
+            "x": 0.2911111,
+            "y": 0.8942731
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "473",
+            "endIndex": "504"
+          }]
+        },
+        "confidence": 0.8911968,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 314,
+            "y": 206
+          }, {
+            "x": 431,
+            "y": 206
+          }, {
+            "x": 431,
+            "y": 216
+          }, {
+            "x": 314,
+            "y": 216
+          }],
+          "normalizedVertices": [{
+            "x": 0.69777775,
+            "y": 0.907489
+          }, {
+            "x": 0.9577778,
+            "y": 0.907489
+          }, {
+            "x": 0.9577778,
+            "y": 0.95154184
+          }, {
+            "x": 0.69777775,
+            "y": 0.95154184
+          }]
+        },
+        "orientation": 1
+      }
+    }],
+    "paragraphs": [{
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "endIndex": "11"
+          }]
+        },
+        "confidence": 0.54155725,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 1,
+            "y": 129
+          }, {
+            "x": 1,
+            "y": 83
+          }, {
+            "x": 6,
+            "y": 83
+          }, {
+            "x": 6,
+            "y": 129
+          }],
+          "normalizedVertices": [{
+            "x": 0.0022222223,
+            "y": 0.56828195
+          }, {
+            "x": 0.0022222223,
+            "y": 0.36563876
+          }, {
+            "x": 0.013333334,
+            "y": 0.36563876
+          }, {
+            "x": 0.013333334,
+            "y": 0.56828195
+          }]
+        },
+        "orientation": 4
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "11",
+            "endIndex": "61"
+          }]
+        },
+        "confidence": 0.9397837,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 5
+          }, {
+            "x": 85,
+            "y": 1
+          }, {
+            "x": 84,
+            "y": 35
+          }, {
+            "x": 5,
+            "y": 34
+          }],
+          "normalizedVertices": [{
+            "x": 0.011111111
+          }, {
+            "x": 0.18888889,
+            "y": 0.004405286
+          }, {
+            "x": 0.18666667,
+            "y": 0.15418503
+          }, {
+            "x": 0.011111111,
+            "y": 0.14977974
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "61",
+            "endIndex": "78"
+          }]
+        },
+        "confidence": 0.94504315,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 8,
+            "y": 50
+          }, {
+            "x": 71,
+            "y": 50
+          }, {
+            "x": 71,
+            "y": 58
+          }, {
+            "x": 8,
+            "y": 58
+          }],
+          "normalizedVertices": [{
+            "x": 0.017777778,
+            "y": 0.22026432
+          }, {
+            "x": 0.15777777,
+            "y": 0.22026432
+          }, {
+            "x": 0.15777777,
+            "y": 0.2555066
+          }, {
+            "x": 0.017777778,
+            "y": 0.2555066
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "78",
+            "endIndex": "89"
+          }]
+        },
+        "confidence": 0.9623088,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 7,
+            "y": 59
+          }, {
+            "x": 50,
+            "y": 59
+          }, {
+            "x": 50,
+            "y": 68
+          }, {
+            "x": 7,
+            "y": 68
+          }],
+          "normalizedVertices": [{
+            "x": 0.015555556,
+            "y": 0.2599119
+          }, {
+            "x": 0.11111111,
+            "y": 0.2599119
+          }, {
+            "x": 0.11111111,
+            "y": 0.29955947
+          }, {
+            "x": 0.015555556,
+            "y": 0.29955947
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "89",
+            "endIndex": "117"
+          }]
+        },
+        "confidence": 0.62477195,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 157,
+            "y": 10
+          }, {
+            "x": 435,
+            "y": 13
+          }, {
+            "x": 435,
+            "y": 33
+          }, {
+            "x": 157,
+            "y": 30
+          }],
+          "normalizedVertices": [{
+            "x": 0.34888887,
+            "y": 0.04405286
+          }, {
+            "x": 0.96666664,
+            "y": 0.057268724
+          }, {
+            "x": 0.96666664,
+            "y": 0.14537445
+          }, {
+            "x": 0.34888887,
+            "y": 0.13215859
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "117",
+            "endIndex": "136"
+          }]
+        },
+        "confidence": 0.834917,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 173,
+            "y": 21
+          }, {
+            "x": 257,
+            "y": 22
+          }, {
+            "x": 257,
+            "y": 33
+          }, {
+            "x": 173,
+            "y": 32
+          }],
+          "normalizedVertices": [{
+            "x": 0.38444445,
+            "y": 0.09251101
+          }, {
+            "x": 0.5711111,
+            "y": 0.0969163
+          }, {
+            "x": 0.5711111,
+            "y": 0.14537445
+          }, {
+            "x": 0.38444445,
+            "y": 0.14096916
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "136",
+            "endIndex": "199"
+          }]
+        },
+        "confidence": 0.96686566,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 9,
+            "y": 76
+          }, {
+            "x": 278,
+            "y": 78
+          }, {
+            "x": 278,
+            "y": 89
+          }, {
+            "x": 9,
+            "y": 87
+          }],
+          "normalizedVertices": [{
+            "x": 0.02,
+            "y": 0.33480176
+          }, {
+            "x": 0.61777776,
+            "y": 0.34361234
+          }, {
+            "x": 0.61777776,
+            "y": 0.39207047
+          }, {
+            "x": 0.02,
+            "y": 0.38325992
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "199",
+            "endIndex": "213"
+          }]
+        },
+        "confidence": 0.95113605,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 130,
+            "y": 97
+          }, {
+            "x": 130,
+            "y": 88
+          }, {
+            "x": 183,
+            "y": 89
+          }, {
+            "x": 183,
+            "y": 98
+          }],
+          "normalizedVertices": [{
+            "x": 0.2888889,
+            "y": 0.42731276
+          }, {
+            "x": 0.2888889,
+            "y": 0.3876652
+          }, {
+            "x": 0.40666667,
+            "y": 0.39207047
+          }, {
+            "x": 0.40666667,
+            "y": 0.43171805
+          }]
+        },
+        "orientation": 4
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "213",
+            "endIndex": "294"
+          }]
+        },
+        "confidence": 0.9505767,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 10,
+            "y": 101
+          }, {
+            "x": 317,
+            "y": 103
+          }, {
+            "x": 317,
+            "y": 114
+          }, {
+            "x": 10,
+            "y": 112
+          }],
+          "normalizedVertices": [{
+            "x": 0.022222223,
+            "y": 0.44493392
+          }, {
+            "x": 0.70444447,
+            "y": 0.4537445
+          }, {
+            "x": 0.70444447,
+            "y": 0.50220263
+          }, {
+            "x": 0.022222223,
+            "y": 0.49339208
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "294",
+            "endIndex": "314"
+          }]
+        },
+        "confidence": 0.97324944,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 9,
+            "y": 133
+          }, {
+            "x": 84,
+            "y": 133
+          }, {
+            "x": 84,
+            "y": 142
+          }, {
+            "x": 9,
+            "y": 142
+          }],
+          "normalizedVertices": [{
+            "x": 0.02,
+            "y": 0.5859031
+          }, {
+            "x": 0.18666667,
+            "y": 0.5859031
+          }, {
+            "x": 0.18666667,
+            "y": 0.6255507
+          }, {
+            "x": 0.02,
+            "y": 0.6255507
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "314",
+            "endIndex": "352"
+          }]
+        },
+        "confidence": 0.9894743,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 10,
+            "y": 143
+          }, {
+            "x": 153,
+            "y": 143
+          }, {
+            "x": 153,
+            "y": 153
+          }, {
+            "x": 10,
+            "y": 153
+          }],
+          "normalizedVertices": [{
+            "x": 0.022222223,
+            "y": 0.62995595
+          }, {
+            "x": 0.34,
+            "y": 0.62995595
+          }, {
+            "x": 0.34,
+            "y": 0.6740088
+          }, {
+            "x": 0.022222223,
+            "y": 0.6740088
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "352",
+            "endIndex": "395"
+          }]
+        },
+        "confidence": 0.94677603,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 9,
+            "y": 155
+          }, {
+            "x": 215,
+            "y": 156
+          }, {
+            "x": 215,
+            "y": 167
+          }, {
+            "x": 9,
+            "y": 166
+          }],
+          "normalizedVertices": [{
+            "x": 0.02,
+            "y": 0.68281937
+          }, {
+            "x": 0.47777778,
+            "y": 0.6872247
+          }, {
+            "x": 0.47777778,
+            "y": 0.73568285
+          }, {
+            "x": 0.02,
+            "y": 0.7312775
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "395",
+            "endIndex": "407"
+          }]
+        },
+        "confidence": 0.9847095,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 33,
+            "y": 168
+          }, {
+            "x": 142,
+            "y": 168
+          }, {
+            "x": 142,
+            "y": 184
+          }, {
+            "x": 33,
+            "y": 184
+          }],
+          "normalizedVertices": [{
+            "x": 0.07333333,
+            "y": 0.7400881
+          }, {
+            "x": 0.31555554,
+            "y": 0.7400881
+          }, {
+            "x": 0.31555554,
+            "y": 0.8105727
+          }, {
+            "x": 0.07333333,
+            "y": 0.8105727
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "407",
+            "endIndex": "427"
+          }]
+        },
+        "confidence": 0.92160684,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 328,
+            "y": 157
+          }, {
+            "x": 403,
+            "y": 157
+          }, {
+            "x": 403,
+            "y": 165
+          }, {
+            "x": 328,
+            "y": 165
+          }],
+          "normalizedVertices": [{
+            "x": 0.72888887,
+            "y": 0.69162995
+          }, {
+            "x": 0.89555556,
+            "y": 0.69162995
+          }, {
+            "x": 0.89555556,
+            "y": 0.72687227
+          }, {
+            "x": 0.72888887,
+            "y": 0.72687227
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "427",
+            "endIndex": "440"
+          }]
+        },
+        "confidence": 0.9317314,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 387,
+            "y": 39
+          }, {
+            "x": 425,
+            "y": 39
+          }, {
+            "x": 425,
+            "y": 54
+          }, {
+            "x": 387,
+            "y": 54
+          }],
+          "normalizedVertices": [{
+            "x": 0.86,
+            "y": 0.17180617
+          }, {
+            "x": 0.9444444,
+            "y": 0.17180617
+          }, {
+            "x": 0.9444444,
+            "y": 0.23788546
+          }, {
+            "x": 0.86,
+            "y": 0.23788546
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "440",
+            "endIndex": "445"
+          }]
+        },
+        "confidence": 0.72728324,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 404,
+            "y": 119
+          }, {
+            "x": 421,
+            "y": 119
+          }, {
+            "x": 421,
+            "y": 127
+          }, {
+            "x": 404,
+            "y": 127
+          }],
+          "normalizedVertices": [{
+            "x": 0.8977778,
+            "y": 0.52422905
+          }, {
+            "x": 0.9355556,
+            "y": 0.52422905
+          }, {
+            "x": 0.9355556,
+            "y": 0.55947137
+          }, {
+            "x": 0.8977778,
+            "y": 0.55947137
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "445",
+            "endIndex": "473"
+          }]
+        },
+        "confidence": 0.7733622,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 131,
+            "y": 194
+          }, {
+            "x": 235,
+            "y": 194
+          }, {
+            "x": 235,
+            "y": 203
+          }, {
+            "x": 131,
+            "y": 203
+          }],
+          "normalizedVertices": [{
+            "x": 0.2911111,
+            "y": 0.8546255
+          }, {
+            "x": 0.5222222,
+            "y": 0.8546255
+          }, {
+            "x": 0.5222222,
+            "y": 0.8942731
+          }, {
+            "x": 0.2911111,
+            "y": 0.8942731
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "473",
+            "endIndex": "504"
+          }]
+        },
+        "confidence": 0.8911968,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 314,
+            "y": 206
+          }, {
+            "x": 431,
+            "y": 206
+          }, {
+            "x": 431,
+            "y": 216
+          }, {
+            "x": 314,
+            "y": 216
+          }],
+          "normalizedVertices": [{
+            "x": 0.69777775,
+            "y": 0.907489
+          }, {
+            "x": 0.9577778,
+            "y": 0.907489
+          }, {
+            "x": 0.9577778,
+            "y": 0.95154184
+          }, {
+            "x": 0.69777775,
+            "y": 0.95154184
+          }]
+        },
+        "orientation": 1
+      }
+    }],
+    "lines": [{
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "endIndex": "11"
+          }]
+        },
+        "confidence": 0.54155725,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 1,
+            "y": 129
+          }, {
+            "x": 1,
+            "y": 83
+          }, {
+            "x": 6,
+            "y": 83
+          }, {
+            "x": 6,
+            "y": 129
+          }],
+          "normalizedVertices": [{
+            "x": 0.0022222223,
+            "y": 0.56828195
+          }, {
+            "x": 0.0022222223,
+            "y": 0.36563876
+          }, {
+            "x": 0.013333334,
+            "y": 0.36563876
+          }, {
+            "x": 0.013333334,
+            "y": 0.56828195
+          }]
+        },
+        "orientation": 4
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "11",
+            "endIndex": "30"
+          }]
+        },
+        "confidence": 0.937336,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 7
+          }, {
+            "x": 80,
+            "y": 1
+          }, {
+            "x": 80,
+            "y": 13
+          }, {
+            "x": 7,
+            "y": 12
+          }],
+          "normalizedVertices": [{
+            "x": 0.015555556
+          }, {
+            "x": 0.17777778,
+            "y": 0.004405286
+          }, {
+            "x": 0.17777778,
+            "y": 0.057268724
+          }, {
+            "x": 0.015555556,
+            "y": 0.052863438
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "sq",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "30",
+            "endIndex": "50"
+          }]
+        },
+        "confidence": 0.94005483,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 6,
+            "y": 12
+          }, {
+            "x": 85,
+            "y": 13
+          }, {
+            "x": 85,
+            "y": 22
+          }, {
+            "x": 6,
+            "y": 21
+          }],
+          "normalizedVertices": [{
+            "x": 0.013333334,
+            "y": 0.052863438
+          }, {
+            "x": 0.18888889,
+            "y": 0.057268724
+          }, {
+            "x": 0.18888889,
+            "y": 0.0969163
+          }, {
+            "x": 0.013333334,
+            "y": 0.09251101
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "50",
+            "endIndex": "61"
+          }]
+        },
+        "confidence": 0.9438647,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 5,
+            "y": 22
+          }, {
+            "x": 80,
+            "y": 23
+          }, {
+            "x": 80,
+            "y": 35
+          }, {
+            "x": 5,
+            "y": 34
+          }],
+          "normalizedVertices": [{
+            "x": 0.011111111,
+            "y": 0.0969163
+          }, {
+            "x": 0.17777778,
+            "y": 0.101321585
+          }, {
+            "x": 0.17777778,
+            "y": 0.15418503
+          }, {
+            "x": 0.011111111,
+            "y": 0.14977974
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "en",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "61",
+            "endIndex": "78"
+          }]
+        },
+        "confidence": 0.94504315,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 8,
+            "y": 50
+          }, {
+            "x": 71,
+            "y": 50
+          }, {
+            "x": 71,
+            "y": 58
+          }, {
+            "x": 8,
+            "y": 58
+          }],
+          "normalizedVertices": [{
+            "x": 0.017777778,
+            "y": 0.22026432
+          }, {
+            "x": 0.15777777,
+            "y": 0.22026432
+          }, {
+            "x": 0.15777777,
+            "y": 0.2555066
+          }, {
+            "x": 0.017777778,
+            "y": 0.2555066
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "78",
+            "endIndex": "89"
+          }]
+        },
+        "confidence": 0.9623088,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 7,
+            "y": 59
+          }, {
+            "x": 50,
+            "y": 59
+          }, {
+            "x": 50,
+            "y": 68
+          }, {
+            "x": 7,
+            "y": 68
+          }],
+          "normalizedVertices": [{
+            "x": 0.015555556,
+            "y": 0.2599119
+          }, {
+            "x": 0.11111111,
+            "y": 0.2599119
+          }, {
+            "x": 0.11111111,
+            "y": 0.29955947
+          }, {
+            "x": 0.015555556,
+            "y": 0.29955947
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "89",
+            "endIndex": "117"
+          }]
+        },
+        "confidence": 0.62477195,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 157,
+            "y": 10
+          }, {
+            "x": 435,
+            "y": 13
+          }, {
+            "x": 435,
+            "y": 33
+          }, {
+            "x": 157,
+            "y": 30
+          }],
+          "normalizedVertices": [{
+            "x": 0.34888887,
+            "y": 0.04405286
+          }, {
+            "x": 0.96666664,
+            "y": 0.057268724
+          }, {
+            "x": 0.96666664,
+            "y": 0.14537445
+          }, {
+            "x": 0.34888887,
+            "y": 0.13215859
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "117",
+            "endIndex": "136"
+          }]
+        },
+        "confidence": 0.834917,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 173,
+            "y": 21
+          }, {
+            "x": 257,
+            "y": 22
+          }, {
+            "x": 257,
+            "y": 33
+          }, {
+            "x": 173,
+            "y": 32
+          }],
+          "normalizedVertices": [{
+            "x": 0.38444445,
+            "y": 0.09251101
+          }, {
+            "x": 0.5711111,
+            "y": 0.0969163
+          }, {
+            "x": 0.5711111,
+            "y": 0.14537445
+          }, {
+            "x": 0.38444445,
+            "y": 0.14096916
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "136",
+            "endIndex": "199"
+          }]
+        },
+        "confidence": 0.96686566,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 9,
+            "y": 76
+          }, {
+            "x": 278,
+            "y": 78
+          }, {
+            "x": 278,
+            "y": 89
+          }, {
+            "x": 9,
+            "y": 87
+          }],
+          "normalizedVertices": [{
+            "x": 0.02,
+            "y": 0.33480176
+          }, {
+            "x": 0.61777776,
+            "y": 0.34361234
+          }, {
+            "x": 0.61777776,
+            "y": 0.39207047
+          }, {
+            "x": 0.02,
+            "y": 0.38325992
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "199",
+            "endIndex": "213"
+          }]
+        },
+        "confidence": 0.95113605,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 130,
+            "y": 97
+          }, {
+            "x": 130,
+            "y": 88
+          }, {
+            "x": 183,
+            "y": 89
+          }, {
+            "x": 183,
+            "y": 98
+          }],
+          "normalizedVertices": [{
+            "x": 0.2888889,
+            "y": 0.42731276
+          }, {
+            "x": 0.2888889,
+            "y": 0.3876652
+          }, {
+            "x": 0.40666667,
+            "y": 0.39207047
+          }, {
+            "x": 0.40666667,
+            "y": 0.43171805
+          }]
+        },
+        "orientation": 4
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "213",
+            "endIndex": "294"
+          }]
+        },
+        "confidence": 0.9505767,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 10,
+            "y": 101
+          }, {
+            "x": 317,
+            "y": 103
+          }, {
+            "x": 317,
+            "y": 114
+          }, {
+            "x": 10,
+            "y": 112
+          }],
+          "normalizedVertices": [{
+            "x": 0.022222223,
+            "y": 0.44493392
+          }, {
+            "x": 0.70444447,
+            "y": 0.4537445
+          }, {
+            "x": 0.70444447,
+            "y": 0.50220263
+          }, {
+            "x": 0.022222223,
+            "y": 0.49339208
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "294",
+            "endIndex": "314"
+          }]
+        },
+        "confidence": 0.97324944,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 9,
+            "y": 133
+          }, {
+            "x": 84,
+            "y": 133
+          }, {
+            "x": 84,
+            "y": 142
+          }, {
+            "x": 9,
+            "y": 142
+          }],
+          "normalizedVertices": [{
+            "x": 0.02,
+            "y": 0.5859031
+          }, {
+            "x": 0.18666667,
+            "y": 0.5859031
+          }, {
+            "x": 0.18666667,
+            "y": 0.6255507
+          }, {
+            "x": 0.02,
+            "y": 0.6255507
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "314",
+            "endIndex": "352"
+          }]
+        },
+        "confidence": 0.9894743,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 10,
+            "y": 143
+          }, {
+            "x": 153,
+            "y": 143
+          }, {
+            "x": 153,
+            "y": 153
+          }, {
+            "x": 10,
+            "y": 153
+          }],
+          "normalizedVertices": [{
+            "x": 0.022222223,
+            "y": 0.62995595
+          }, {
+            "x": 0.34,
+            "y": 0.62995595
+          }, {
+            "x": 0.34,
+            "y": 0.6740088
+          }, {
+            "x": 0.022222223,
+            "y": 0.6740088
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "352",
+            "endIndex": "395"
+          }]
+        },
+        "confidence": 0.94677603,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 9,
+            "y": 155
+          }, {
+            "x": 215,
+            "y": 156
+          }, {
+            "x": 215,
+            "y": 167
+          }, {
+            "x": 9,
+            "y": 166
+          }],
+          "normalizedVertices": [{
+            "x": 0.02,
+            "y": 0.68281937
+          }, {
+            "x": 0.47777778,
+            "y": 0.6872247
+          }, {
+            "x": 0.47777778,
+            "y": 0.73568285
+          }, {
+            "x": 0.02,
+            "y": 0.7312775
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "qu",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "395",
+            "endIndex": "407"
+          }]
+        },
+        "confidence": 0.9847095,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 33,
+            "y": 168
+          }, {
+            "x": 142,
+            "y": 168
+          }, {
+            "x": 142,
+            "y": 184
+          }, {
+            "x": 33,
+            "y": 184
+          }],
+          "normalizedVertices": [{
+            "x": 0.07333333,
+            "y": 0.7400881
+          }, {
+            "x": 0.31555554,
+            "y": 0.7400881
+          }, {
+            "x": 0.31555554,
+            "y": 0.8105727
+          }, {
+            "x": 0.07333333,
+            "y": 0.8105727
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "407",
+            "endIndex": "427"
+          }]
+        },
+        "confidence": 0.92160684,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 328,
+            "y": 157
+          }, {
+            "x": 403,
+            "y": 157
+          }, {
+            "x": 403,
+            "y": 165
+          }, {
+            "x": 328,
+            "y": 165
+          }],
+          "normalizedVertices": [{
+            "x": 0.72888887,
+            "y": 0.69162995
+          }, {
+            "x": 0.89555556,
+            "y": 0.69162995
+          }, {
+            "x": 0.89555556,
+            "y": 0.72687227
+          }, {
+            "x": 0.72888887,
+            "y": 0.72687227
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "en",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "427",
+            "endIndex": "436"
+          }]
+        },
+        "confidence": 0.9202163,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 387,
+            "y": 39
+          }, {
+            "x": 425,
+            "y": 39
+          }, {
+            "x": 425,
+            "y": 47
+          }, {
+            "x": 387,
+            "y": 47
+          }],
+          "normalizedVertices": [{
+            "x": 0.86,
+            "y": 0.17180617
+          }, {
+            "x": 0.9444444,
+            "y": 0.17180617
+          }, {
+            "x": 0.9444444,
+            "y": 0.20704846
+          }, {
+            "x": 0.86,
+            "y": 0.20704846
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "436",
+            "endIndex": "440"
+          }]
+        },
+        "confidence": 0.9624383,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 399,
+            "y": 47
+          }, {
+            "x": 413,
+            "y": 47
+          }, {
+            "x": 413,
+            "y": 54
+          }, {
+            "x": 399,
+            "y": 54
+          }],
+          "normalizedVertices": [{
+            "x": 0.88666666,
+            "y": 0.20704846
+          }, {
+            "x": 0.9177778,
+            "y": 0.20704846
+          }, {
+            "x": 0.9177778,
+            "y": 0.23788546
+          }, {
+            "x": 0.88666666,
+            "y": 0.23788546
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "440",
+            "endIndex": "445"
+          }]
+        },
+        "confidence": 0.72728324,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 404,
+            "y": 119
+          }, {
+            "x": 421,
+            "y": 119
+          }, {
+            "x": 421,
+            "y": 127
+          }, {
+            "x": 404,
+            "y": 127
+          }],
+          "normalizedVertices": [{
+            "x": 0.8977778,
+            "y": 0.52422905
+          }, {
+            "x": 0.9355556,
+            "y": 0.52422905
+          }, {
+            "x": 0.9355556,
+            "y": 0.55947137
+          }, {
+            "x": 0.8977778,
+            "y": 0.55947137
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "445",
+            "endIndex": "473"
+          }]
+        },
+        "confidence": 0.7733622,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 131,
+            "y": 194
+          }, {
+            "x": 235,
+            "y": 194
+          }, {
+            "x": 235,
+            "y": 203
+          }, {
+            "x": 131,
+            "y": 203
+          }],
+          "normalizedVertices": [{
+            "x": 0.2911111,
+            "y": 0.8546255
+          }, {
+            "x": 0.5222222,
+            "y": 0.8546255
+          }, {
+            "x": 0.5222222,
+            "y": 0.8942731
+          }, {
+            "x": 0.2911111,
+            "y": 0.8942731
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "ilo",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "473",
+            "endIndex": "504"
+          }]
+        },
+        "confidence": 0.8911968,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 314,
+            "y": 206
+          }, {
+            "x": 431,
+            "y": 206
+          }, {
+            "x": 431,
+            "y": 216
+          }, {
+            "x": 314,
+            "y": 216
+          }],
+          "normalizedVertices": [{
+            "x": 0.69777775,
+            "y": 0.907489
+          }, {
+            "x": 0.9577778,
+            "y": 0.907489
+          }, {
+            "x": 0.9577778,
+            "y": 0.95154184
+          }, {
+            "x": 0.69777775,
+            "y": 0.95154184
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }],
+    "tokens": [{
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "endIndex": "6"
+          }]
+        },
+        "confidence": 0.336321,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 1,
+            "y": 129
+          }, {
+            "x": 1,
+            "y": 110
+          }, {
+            "x": 6,
+            "y": 110
+          }, {
+            "x": 6,
+            "y": 129
+          }],
+          "normalizedVertices": [{
+            "x": 0.0022222223,
+            "y": 0.56828195
+          }, {
+            "x": 0.0022222223,
+            "y": 0.4845815
+          }, {
+            "x": 0.013333334,
+            "y": 0.4845815
+          }, {
+            "x": 0.013333334,
+            "y": 0.56828195
+          }]
+        },
+        "orientation": 4
+      },
+      "detectedBreak": {
+        "type": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "6",
+            "endIndex": "11"
+          }]
+        },
+        "confidence": 0.7981026,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 1,
+            "y": 95
+          }, {
+            "x": 1,
+            "y": 83
+          }, {
+            "x": 6,
+            "y": 83
+          }, {
+            "x": 6,
+            "y": 95
+          }],
+          "normalizedVertices": [{
+            "x": 0.0022222223,
+            "y": 0.4185022
+          }, {
+            "x": 0.0022222223,
+            "y": 0.36563876
+          }, {
+            "x": 0.013333334,
+            "y": 0.36563876
+          }, {
+            "x": 0.013333334,
+            "y": 0.4185022
+          }]
+        },
+        "orientation": 4
+      },
+      "detectedBreak": {
+        "type": 2
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "11",
+            "endIndex": "20"
+          }]
+        },
+        "confidence": 0.878163,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 7
+          }, {
+            "x": 39,
+            "y": 1
+          }, {
+            "x": 39,
+            "y": 13
+          }, {
+            "x": 7,
+            "y": 12
+          }],
+          "normalizedVertices": [{
+            "x": 0.015555556
+          }, {
+            "x": 0.086666666,
+            "y": 0.004405286
+          }, {
+            "x": 0.086666666,
+            "y": 0.057268724
+          }, {
+            "x": 0.015555556,
+            "y": 0.052863438
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "sq",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "20",
+            "endIndex": "30"
+          }]
+        },
+        "confidence": 0.9899342,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 43,
+            "y": 1
+          }, {
+            "x": 80,
+            "y": 2
+          }, {
+            "x": 80,
+            "y": 14
+          }, {
+            "x": 43,
+            "y": 13
+          }],
+          "normalizedVertices": [{
+            "x": 0.09555556,
+            "y": 0.004405286
+          }, {
+            "x": 0.17777778,
+            "y": 0.008810572
+          }, {
+            "x": 0.17777778,
+            "y": 0.06167401
+          }, {
+            "x": 0.09555556,
+            "y": 0.057268724
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 2
+      },
+      "detectedLanguages": [{
+        "languageCode": "sq",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "30",
+            "endIndex": "35"
+          }]
+        },
+        "confidence": 0.89906275,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 6,
+            "y": 13
+          }, {
+            "x": 25,
+            "y": 13
+          }, {
+            "x": 25,
+            "y": 21
+          }, {
+            "x": 6,
+            "y": 21
+          }],
+          "normalizedVertices": [{
+            "x": 0.013333334,
+            "y": 0.057268724
+          }, {
+            "x": 0.055555556,
+            "y": 0.057268724
+          }, {
+            "x": 0.055555556,
+            "y": 0.09251101
+          }, {
+            "x": 0.013333334,
+            "y": 0.09251101
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "35",
+            "endIndex": "50"
+          }]
+        },
+        "confidence": 0.95176685,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 24,
+            "y": 12
+          }, {
+            "x": 85,
+            "y": 13
+          }, {
+            "x": 85,
+            "y": 22
+          }, {
+            "x": 24,
+            "y": 21
+          }],
+          "normalizedVertices": [{
+            "x": 0.053333335,
+            "y": 0.052863438
+          }, {
+            "x": 0.18888889,
+            "y": 0.057268724
+          }, {
+            "x": 0.18888889,
+            "y": 0.0969163
+          }, {
+            "x": 0.053333335,
+            "y": 0.09251101
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 2
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "50",
+            "endIndex": "51"
+          }]
+        },
+        "confidence": 0.8824419,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 5,
+            "y": 22
+          }, {
+            "x": 19,
+            "y": 22
+          }, {
+            "x": 19,
+            "y": 34
+          }, {
+            "x": 5,
+            "y": 34
+          }],
+          "normalizedVertices": [{
+            "x": 0.011111111,
+            "y": 0.0969163
+          }, {
+            "x": 0.04222222,
+            "y": 0.0969163
+          }, {
+            "x": 0.04222222,
+            "y": 0.14977974
+          }, {
+            "x": 0.011111111,
+            "y": 0.14977974
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "en",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "51",
+            "endIndex": "53"
+          }]
+        },
+        "confidence": 0.6568883,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 17,
+            "y": 22
+          }, {
+            "x": 25,
+            "y": 22
+          }, {
+            "x": 25,
+            "y": 34
+          }, {
+            "x": 17,
+            "y": 34
+          }],
+          "normalizedVertices": [{
+            "x": 0.037777778,
+            "y": 0.0969163
+          }, {
+            "x": 0.055555556,
+            "y": 0.0969163
+          }, {
+            "x": 0.055555556,
+            "y": 0.14977974
+          }, {
+            "x": 0.037777778,
+            "y": 0.14977974
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "en",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "53",
+            "endIndex": "61"
+          }]
+        },
+        "confidence": 0.993636,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 28,
+            "y": 22
+          }, {
+            "x": 80,
+            "y": 22
+          }, {
+            "x": 80,
+            "y": 34
+          }, {
+            "x": 28,
+            "y": 34
+          }],
+          "normalizedVertices": [{
+            "x": 0.062222224,
+            "y": 0.0969163
+          }, {
+            "x": 0.17777778,
+            "y": 0.0969163
+          }, {
+            "x": 0.17777778,
+            "y": 0.14977974
+          }, {
+            "x": 0.062222224,
+            "y": 0.14977974
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 2
+      },
+      "detectedLanguages": [{
+        "languageCode": "en",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "61",
+            "endIndex": "67"
+          }]
+        },
+        "confidence": 0.973307,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 8,
+            "y": 50
+          }, {
+            "x": 29,
+            "y": 50
+          }, {
+            "x": 29,
+            "y": 58
+          }, {
+            "x": 8,
+            "y": 58
+          }],
+          "normalizedVertices": [{
+            "x": 0.017777778,
+            "y": 0.22026432
+          }, {
+            "x": 0.064444445,
+            "y": 0.22026432
+          }, {
+            "x": 0.064444445,
+            "y": 0.2555066
+          }, {
+            "x": 0.017777778,
+            "y": 0.2555066
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "67",
+            "endIndex": "70"
+          }]
+        },
+        "confidence": 0.9721172,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 29,
+            "y": 50
+          }, {
+            "x": 40,
+            "y": 50
+          }, {
+            "x": 40,
+            "y": 58
+          }, {
+            "x": 29,
+            "y": 58
+          }],
+          "normalizedVertices": [{
+            "x": 0.064444445,
+            "y": 0.22026432
+          }, {
+            "x": 0.08888889,
+            "y": 0.22026432
+          }, {
+            "x": 0.08888889,
+            "y": 0.2555066
+          }, {
+            "x": 0.064444445,
+            "y": 0.2555066
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "70",
+            "endIndex": "78"
+          }]
+        },
+        "confidence": 0.91711926,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 44,
+            "y": 50
+          }, {
+            "x": 71,
+            "y": 50
+          }, {
+            "x": 71,
+            "y": 58
+          }, {
+            "x": 44,
+            "y": 58
+          }],
+          "normalizedVertices": [{
+            "x": 0.09777778,
+            "y": 0.22026432
+          }, {
+            "x": 0.15777777,
+            "y": 0.22026432
+          }, {
+            "x": 0.15777777,
+            "y": 0.2555066
+          }, {
+            "x": 0.09777778,
+            "y": 0.2555066
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 2
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "78",
+            "endIndex": "89"
+          }]
+        },
+        "confidence": 0.9623088,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 7,
+            "y": 59
+          }, {
+            "x": 50,
+            "y": 59
+          }, {
+            "x": 50,
+            "y": 68
+          }, {
+            "x": 7,
+            "y": 68
+          }],
+          "normalizedVertices": [{
+            "x": 0.015555556,
+            "y": 0.2599119
+          }, {
+            "x": 0.11111111,
+            "y": 0.2599119
+          }, {
+            "x": 0.11111111,
+            "y": 0.29955947
+          }, {
+            "x": 0.015555556,
+            "y": 0.29955947
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 2
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "89",
+            "endIndex": "98"
+          }]
+        },
+        "confidence": 0.6167739,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 157,
+            "y": 10
+          }, {
+            "x": 325,
+            "y": 12
+          }, {
+            "x": 325,
+            "y": 32
+          }, {
+            "x": 157,
+            "y": 30
+          }],
+          "normalizedVertices": [{
+            "x": 0.34888887,
+            "y": 0.04405286
+          }, {
+            "x": 0.7222222,
+            "y": 0.052863438
+          }, {
+            "x": 0.7222222,
+            "y": 0.14096916
+          }, {
+            "x": 0.34888887,
+            "y": 0.13215859
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "98",
+            "endIndex": "107"
+          }]
+        },
+        "confidence": 0.4166172,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 322,
+            "y": 12
+          }, {
+            "x": 379,
+            "y": 13
+          }, {
+            "x": 379,
+            "y": 33
+          }, {
+            "x": 322,
+            "y": 32
+          }],
+          "normalizedVertices": [{
+            "x": 0.71555555,
+            "y": 0.052863438
+          }, {
+            "x": 0.8422222,
+            "y": 0.057268724
+          }, {
+            "x": 0.8422222,
+            "y": 0.14537445
+          }, {
+            "x": 0.71555555,
+            "y": 0.14096916
+          }]
+        },
+        "orientation": 1
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "107",
+            "endIndex": "117"
+          }]
+        },
+        "confidence": 0.8409248,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 379,
+            "y": 13
+          }, {
+            "x": 435,
+            "y": 14
+          }, {
+            "x": 435,
+            "y": 33
+          }, {
+            "x": 379,
+            "y": 32
+          }],
+          "normalizedVertices": [{
+            "x": 0.8422222,
+            "y": 0.057268724
+          }, {
+            "x": 0.96666664,
+            "y": 0.06167401
+          }, {
+            "x": 0.96666664,
+            "y": 0.14537445
+          }, {
+            "x": 0.8422222,
+            "y": 0.14096916
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 2
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "117",
+            "endIndex": "136"
+          }]
+        },
+        "confidence": 0.834917,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 173,
+            "y": 21
+          }, {
+            "x": 257,
+            "y": 22
+          }, {
+            "x": 257,
+            "y": 33
+          }, {
+            "x": 173,
+            "y": 32
+          }],
+          "normalizedVertices": [{
+            "x": 0.38444445,
+            "y": 0.09251101
+          }, {
+            "x": 0.5711111,
+            "y": 0.0969163
+          }, {
+            "x": 0.5711111,
+            "y": 0.14537445
+          }, {
+            "x": 0.38444445,
+            "y": 0.14096916
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 2
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "136",
+            "endIndex": "142"
+          }]
+        },
+        "confidence": 0.97734404,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 9,
+            "y": 77
+          }, {
+            "x": 30,
+            "y": 77
+          }, {
+            "x": 30,
+            "y": 87
+          }, {
+            "x": 9,
+            "y": 87
+          }],
+          "normalizedVertices": [{
+            "x": 0.02,
+            "y": 0.33920705
+          }, {
+            "x": 0.06666667,
+            "y": 0.33920705
+          }, {
+            "x": 0.06666667,
+            "y": 0.38325992
+          }, {
+            "x": 0.02,
+            "y": 0.38325992
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "142",
+            "endIndex": "153"
+          }]
+        },
+        "confidence": 0.9927579,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 32,
+            "y": 77
+          }, {
+            "x": 72,
+            "y": 77
+          }, {
+            "x": 72,
+            "y": 87
+          }, {
+            "x": 32,
+            "y": 87
+          }],
+          "normalizedVertices": [{
+            "x": 0.07111111,
+            "y": 0.33920705
+          }, {
+            "x": 0.16,
+            "y": 0.33920705
+          }, {
+            "x": 0.16,
+            "y": 0.38325992
+          }, {
+            "x": 0.07111111,
+            "y": 0.38325992
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "153",
+            "endIndex": "156"
+          }]
+        },
+        "confidence": 0.9563601,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 75,
+            "y": 77
+          }, {
+            "x": 83,
+            "y": 77
+          }, {
+            "x": 83,
+            "y": 87
+          }, {
+            "x": 75,
+            "y": 87
+          }],
+          "normalizedVertices": [{
+            "x": 0.16666667,
+            "y": 0.33920705
+          }, {
+            "x": 0.18444444,
+            "y": 0.33920705
+          }, {
+            "x": 0.18444444,
+            "y": 0.38325992
+          }, {
+            "x": 0.16666667,
+            "y": 0.38325992
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "156",
+            "endIndex": "161"
+          }]
+        },
+        "confidence": 0.99047565,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 86,
+            "y": 77
+          }, {
+            "x": 103,
+            "y": 77
+          }, {
+            "x": 103,
+            "y": 87
+          }, {
+            "x": 86,
+            "y": 87
+          }],
+          "normalizedVertices": [{
+            "x": 0.19111112,
+            "y": 0.33920705
+          }, {
+            "x": 0.22888888,
+            "y": 0.33920705
+          }, {
+            "x": 0.22888888,
+            "y": 0.38325992
+          }, {
+            "x": 0.19111112,
+            "y": 0.38325992
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "161",
+            "endIndex": "169"
+          }]
+        },
+        "confidence": 0.9865234,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 105,
+            "y": 77
+          }, {
+            "x": 133,
+            "y": 77
+          }, {
+            "x": 133,
+            "y": 88
+          }, {
+            "x": 105,
+            "y": 88
+          }],
+          "normalizedVertices": [{
+            "x": 0.23333333,
+            "y": 0.33920705
+          }, {
+            "x": 0.29555556,
+            "y": 0.33920705
+          }, {
+            "x": 0.29555556,
+            "y": 0.3876652
+          }, {
+            "x": 0.23333333,
+            "y": 0.3876652
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "169",
+            "endIndex": "171"
+          }]
+        },
+        "confidence": 0.8752618,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 136,
+            "y": 78
+          }, {
+            "x": 141,
+            "y": 78
+          }, {
+            "x": 141,
+            "y": 88
+          }, {
+            "x": 136,
+            "y": 88
+          }],
+          "normalizedVertices": [{
+            "x": 0.30222222,
+            "y": 0.34361234
+          }, {
+            "x": 0.31333333,
+            "y": 0.34361234
+          }, {
+            "x": 0.31333333,
+            "y": 0.3876652
+          }, {
+            "x": 0.30222222,
+            "y": 0.3876652
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "171",
+            "endIndex": "178"
+          }]
+        },
+        "confidence": 0.89710486,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 145,
+            "y": 78
+          }, {
+            "x": 168,
+            "y": 78
+          }, {
+            "x": 168,
+            "y": 88
+          }, {
+            "x": 145,
+            "y": 88
+          }],
+          "normalizedVertices": [{
+            "x": 0.32222223,
+            "y": 0.34361234
+          }, {
+            "x": 0.37333333,
+            "y": 0.34361234
+          }, {
+            "x": 0.37333333,
+            "y": 0.3876652
+          }, {
+            "x": 0.32222223,
+            "y": 0.3876652
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "178",
+            "endIndex": "181"
+          }]
+        },
+        "confidence": 0.97313964,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 172,
+            "y": 78
+          }, {
+            "x": 180,
+            "y": 78
+          }, {
+            "x": 180,
+            "y": 88
+          }, {
+            "x": 172,
+            "y": 88
+          }],
+          "normalizedVertices": [{
+            "x": 0.38222224,
+            "y": 0.34361234
+          }, {
+            "x": 0.4,
+            "y": 0.34361234
+          }, {
+            "x": 0.4,
+            "y": 0.3876652
+          }, {
+            "x": 0.38222224,
+            "y": 0.3876652
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "181",
+            "endIndex": "191"
+          }]
+        },
+        "confidence": 0.96299005,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 189,
+            "y": 78
+          }, {
+            "x": 236,
+            "y": 78
+          }, {
+            "x": 236,
+            "y": 88
+          }, {
+            "x": 189,
+            "y": 88
+          }],
+          "normalizedVertices": [{
+            "x": 0.42,
+            "y": 0.34361234
+          }, {
+            "x": 0.52444446,
+            "y": 0.34361234
+          }, {
+            "x": 0.52444446,
+            "y": 0.3876652
+          }, {
+            "x": 0.42,
+            "y": 0.3876652
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "191",
+            "endIndex": "199"
+          }]
+        },
+        "confidence": 0.9683164,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 241,
+            "y": 78
+          }, {
+            "x": 278,
+            "y": 78
+          }, {
+            "x": 278,
+            "y": 89
+          }, {
+            "x": 241,
+            "y": 89
+          }],
+          "normalizedVertices": [{
+            "x": 0.53555554,
+            "y": 0.34361234
+          }, {
+            "x": 0.61777776,
+            "y": 0.34361234
+          }, {
+            "x": 0.61777776,
+            "y": 0.39207047
+          }, {
+            "x": 0.53555554,
+            "y": 0.39207047
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 2
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "199",
+            "endIndex": "201"
+          }]
+        },
+        "confidence": 0.82859474,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 130,
+            "y": 97
+          }, {
+            "x": 130,
+            "y": 88
+          }, {
+            "x": 140,
+            "y": 88
+          }, {
+            "x": 140,
+            "y": 97
+          }],
+          "normalizedVertices": [{
+            "x": 0.2888889,
+            "y": 0.42731276
+          }, {
+            "x": 0.2888889,
+            "y": 0.3876652
+          }, {
+            "x": 0.31111112,
+            "y": 0.3876652
+          }, {
+            "x": 0.31111112,
+            "y": 0.42731276
+          }]
+        },
+        "orientation": 4
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "201",
+            "endIndex": "204"
+          }]
+        },
+        "confidence": 0.9567039,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 140,
+            "y": 97
+          }, {
+            "x": 140,
+            "y": 88
+          }, {
+            "x": 149,
+            "y": 88
+          }, {
+            "x": 149,
+            "y": 97
+          }],
+          "normalizedVertices": [{
+            "x": 0.31111112,
+            "y": 0.42731276
+          }, {
+            "x": 0.31111112,
+            "y": 0.3876652
+          }, {
+            "x": 0.3311111,
+            "y": 0.3876652
+          }, {
+            "x": 0.3311111,
+            "y": 0.42731276
+          }]
+        },
+        "orientation": 4
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "204",
+            "endIndex": "210"
+          }]
+        },
+        "confidence": 0.9746633,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 151,
+            "y": 97
+          }, {
+            "x": 151,
+            "y": 88
+          }, {
+            "x": 172,
+            "y": 88
+          }, {
+            "x": 172,
+            "y": 97
+          }],
+          "normalizedVertices": [{
+            "x": 0.33555555,
+            "y": 0.42731276
+          }, {
+            "x": 0.33555555,
+            "y": 0.3876652
+          }, {
+            "x": 0.38222224,
+            "y": 0.3876652
+          }, {
+            "x": 0.38222224,
+            "y": 0.42731276
+          }]
+        },
+        "orientation": 4
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "210",
+            "endIndex": "213"
+          }]
+        },
+        "confidence": 0.94802064,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 174,
+            "y": 97
+          }, {
+            "x": 174,
+            "y": 88
+          }, {
+            "x": 183,
+            "y": 88
+          }, {
+            "x": 183,
+            "y": 97
+          }],
+          "normalizedVertices": [{
+            "x": 0.38666666,
+            "y": 0.42731276
+          }, {
+            "x": 0.38666666,
+            "y": 0.3876652
+          }, {
+            "x": 0.40666667,
+            "y": 0.3876652
+          }, {
+            "x": 0.40666667,
+            "y": 0.42731276
+          }]
+        },
+        "orientation": 4
+      },
+      "detectedBreak": {
+        "type": 2
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "213",
+            "endIndex": "216"
+          }]
+        },
+        "confidence": 0.96800625,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 10,
+            "y": 102
+          }, {
+            "x": 18,
+            "y": 102
+          }, {
+            "x": 18,
+            "y": 112
+          }, {
+            "x": 10,
+            "y": 112
+          }],
+          "normalizedVertices": [{
+            "x": 0.022222223,
+            "y": 0.4493392
+          }, {
+            "x": 0.04,
+            "y": 0.4493392
+          }, {
+            "x": 0.04,
+            "y": 0.49339208
+          }, {
+            "x": 0.022222223,
+            "y": 0.49339208
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "216",
+            "endIndex": "225"
+          }]
+        },
+        "confidence": 0.9841078,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 19,
+            "y": 102
+          }, {
+            "x": 52,
+            "y": 102
+          }, {
+            "x": 52,
+            "y": 112
+          }, {
+            "x": 19,
+            "y": 112
+          }],
+          "normalizedVertices": [{
+            "x": 0.04222222,
+            "y": 0.4493392
+          }, {
+            "x": 0.115555555,
+            "y": 0.4493392
+          }, {
+            "x": 0.115555555,
+            "y": 0.49339208
+          }, {
+            "x": 0.04222222,
+            "y": 0.49339208
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "225",
+            "endIndex": "228"
+          }]
+        },
+        "confidence": 0.9876022,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 52,
+            "y": 102
+          }, {
+            "x": 63,
+            "y": 102
+          }, {
+            "x": 63,
+            "y": 112
+          }, {
+            "x": 52,
+            "y": 112
+          }],
+          "normalizedVertices": [{
+            "x": 0.115555555,
+            "y": 0.4493392
+          }, {
+            "x": 0.14,
+            "y": 0.4493392
+          }, {
+            "x": 0.14,
+            "y": 0.49339208
+          }, {
+            "x": 0.115555555,
+            "y": 0.49339208
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "228",
+            "endIndex": "231"
+          }]
+        },
+        "confidence": 0.94080126,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 65,
+            "y": 102
+          }, {
+            "x": 74,
+            "y": 102
+          }, {
+            "x": 74,
+            "y": 112
+          }, {
+            "x": 65,
+            "y": 112
+          }],
+          "normalizedVertices": [{
+            "x": 0.14444445,
+            "y": 0.4493392
+          }, {
+            "x": 0.16444445,
+            "y": 0.4493392
+          }, {
+            "x": 0.16444445,
+            "y": 0.49339208
+          }, {
+            "x": 0.14444445,
+            "y": 0.49339208
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "231",
+            "endIndex": "238"
+          }]
+        },
+        "confidence": 0.95213854,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 77,
+            "y": 102
+          }, {
+            "x": 101,
+            "y": 102
+          }, {
+            "x": 101,
+            "y": 112
+          }, {
+            "x": 77,
+            "y": 112
+          }],
+          "normalizedVertices": [{
+            "x": 0.1711111,
+            "y": 0.4493392
+          }, {
+            "x": 0.22444445,
+            "y": 0.4493392
+          }, {
+            "x": 0.22444445,
+            "y": 0.49339208
+          }, {
+            "x": 0.1711111,
+            "y": 0.49339208
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "238",
+            "endIndex": "250"
+          }]
+        },
+        "confidence": 0.98521096,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 105,
+            "y": 102
+          }, {
+            "x": 149,
+            "y": 102
+          }, {
+            "x": 149,
+            "y": 112
+          }, {
+            "x": 105,
+            "y": 112
+          }],
+          "normalizedVertices": [{
+            "x": 0.23333333,
+            "y": 0.4493392
+          }, {
+            "x": 0.3311111,
+            "y": 0.4493392
+          }, {
+            "x": 0.3311111,
+            "y": 0.49339208
+          }, {
+            "x": 0.23333333,
+            "y": 0.49339208
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "250",
+            "endIndex": "260"
+          }]
+        },
+        "confidence": 0.9518137,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 152,
+            "y": 102
+          }, {
+            "x": 188,
+            "y": 102
+          }, {
+            "x": 188,
+            "y": 113
+          }, {
+            "x": 152,
+            "y": 113
+          }],
+          "normalizedVertices": [{
+            "x": 0.33777776,
+            "y": 0.4493392
+          }, {
+            "x": 0.41777778,
+            "y": 0.4493392
+          }, {
+            "x": 0.41777778,
+            "y": 0.49779737
+          }, {
+            "x": 0.33777776,
+            "y": 0.49779737
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "260",
+            "endIndex": "262"
+          }]
+        },
+        "confidence": 0.68270004,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 191,
+            "y": 103
+          }, {
+            "x": 195,
+            "y": 103
+          }, {
+            "x": 195,
+            "y": 113
+          }, {
+            "x": 191,
+            "y": 113
+          }],
+          "normalizedVertices": [{
+            "x": 0.42444444,
+            "y": 0.4537445
+          }, {
+            "x": 0.43333334,
+            "y": 0.4537445
+          }, {
+            "x": 0.43333334,
+            "y": 0.49779737
+          }, {
+            "x": 0.42444444,
+            "y": 0.49779737
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "262",
+            "endIndex": "268"
+          }]
+        },
+        "confidence": 0.9786089,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 198,
+            "y": 103
+          }, {
+            "x": 218,
+            "y": 103
+          }, {
+            "x": 218,
+            "y": 113
+          }, {
+            "x": 198,
+            "y": 113
+          }],
+          "normalizedVertices": [{
+            "x": 0.44,
+            "y": 0.4537445
+          }, {
+            "x": 0.48444444,
+            "y": 0.4537445
+          }, {
+            "x": 0.48444444,
+            "y": 0.49779737
+          }, {
+            "x": 0.44,
+            "y": 0.49779737
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "268",
+            "endIndex": "272"
+          }]
+        },
+        "confidence": 0.92250085,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 220,
+            "y": 103
+          }, {
+            "x": 232,
+            "y": 103
+          }, {
+            "x": 232,
+            "y": 113
+          }, {
+            "x": 220,
+            "y": 113
+          }],
+          "normalizedVertices": [{
+            "x": 0.4888889,
+            "y": 0.4537445
+          }, {
+            "x": 0.51555556,
+            "y": 0.4537445
+          }, {
+            "x": 0.51555556,
+            "y": 0.49779737
+          }, {
+            "x": 0.4888889,
+            "y": 0.49779737
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "272",
+            "endIndex": "279"
+          }]
+        },
+        "confidence": 0.96973497,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 236,
+            "y": 103
+          }, {
+            "x": 260,
+            "y": 103
+          }, {
+            "x": 260,
+            "y": 113
+          }, {
+            "x": 236,
+            "y": 113
+          }],
+          "normalizedVertices": [{
+            "x": 0.52444446,
+            "y": 0.4537445
+          }, {
+            "x": 0.5777778,
+            "y": 0.4537445
+          }, {
+            "x": 0.5777778,
+            "y": 0.49779737
+          }, {
+            "x": 0.52444446,
+            "y": 0.49779737
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "279",
+            "endIndex": "287"
+          }]
+        },
+        "confidence": 0.9410305,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 262,
+            "y": 103
+          }, {
+            "x": 290,
+            "y": 103
+          }, {
+            "x": 290,
+            "y": 113
+          }, {
+            "x": 262,
+            "y": 113
+          }],
+          "normalizedVertices": [{
+            "x": 0.5822222,
+            "y": 0.4537445
+          }, {
+            "x": 0.64444447,
+            "y": 0.4537445
+          }, {
+            "x": 0.64444447,
+            "y": 0.49779737
+          }, {
+            "x": 0.5822222,
+            "y": 0.49779737
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "287",
+            "endIndex": "289"
+          }]
+        },
+        "confidence": 0.63045883,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 293,
+            "y": 103
+          }, {
+            "x": 299,
+            "y": 103
+          }, {
+            "x": 299,
+            "y": 113
+          }, {
+            "x": 293,
+            "y": 113
+          }],
+          "normalizedVertices": [{
+            "x": 0.6511111,
+            "y": 0.4537445
+          }, {
+            "x": 0.66444445,
+            "y": 0.4537445
+          }, {
+            "x": 0.66444445,
+            "y": 0.49779737
+          }, {
+            "x": 0.6511111,
+            "y": 0.49779737
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "289",
+            "endIndex": "294"
+          }]
+        },
+        "confidence": 0.8817885,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 301,
+            "y": 103
+          }, {
+            "x": 317,
+            "y": 103
+          }, {
+            "x": 317,
+            "y": 113
+          }, {
+            "x": 301,
+            "y": 113
+          }],
+          "normalizedVertices": [{
+            "x": 0.66888887,
+            "y": 0.4537445
+          }, {
+            "x": 0.70444447,
+            "y": 0.4537445
+          }, {
+            "x": 0.70444447,
+            "y": 0.49779737
+          }, {
+            "x": 0.66888887,
+            "y": 0.49779737
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 2
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "294",
+            "endIndex": "303"
+          }]
+        },
+        "confidence": 0.9677579,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 9,
+            "y": 133
+          }, {
+            "x": 41,
+            "y": 133
+          }, {
+            "x": 41,
+            "y": 142
+          }, {
+            "x": 9,
+            "y": 142
+          }],
+          "normalizedVertices": [{
+            "x": 0.02,
+            "y": 0.5859031
+          }, {
+            "x": 0.09111111,
+            "y": 0.5859031
+          }, {
+            "x": 0.09111111,
+            "y": 0.6255507
+          }, {
+            "x": 0.02,
+            "y": 0.6255507
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "303",
+            "endIndex": "305"
+          }]
+        },
+        "confidence": 0.94782495,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 43,
+            "y": 133
+          }, {
+            "x": 49,
+            "y": 133
+          }, {
+            "x": 49,
+            "y": 142
+          }, {
+            "x": 43,
+            "y": 142
+          }],
+          "normalizedVertices": [{
+            "x": 0.09555556,
+            "y": 0.5859031
+          }, {
+            "x": 0.10888889,
+            "y": 0.5859031
+          }, {
+            "x": 0.10888889,
+            "y": 0.6255507
+          }, {
+            "x": 0.09555556,
+            "y": 0.6255507
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "305",
+            "endIndex": "308"
+          }]
+        },
+        "confidence": 0.9750967,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 52,
+            "y": 133
+          }, {
+            "x": 60,
+            "y": 133
+          }, {
+            "x": 60,
+            "y": 142
+          }, {
+            "x": 52,
+            "y": 142
+          }],
+          "normalizedVertices": [{
+            "x": 0.115555555,
+            "y": 0.5859031
+          }, {
+            "x": 0.13333334,
+            "y": 0.5859031
+          }, {
+            "x": 0.13333334,
+            "y": 0.6255507
+          }, {
+            "x": 0.115555555,
+            "y": 0.6255507
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "308",
+            "endIndex": "314"
+          }]
+        },
+        "confidence": 0.9863819,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 62,
+            "y": 133
+          }, {
+            "x": 84,
+            "y": 133
+          }, {
+            "x": 84,
+            "y": 142
+          }, {
+            "x": 62,
+            "y": 142
+          }],
+          "normalizedVertices": [{
+            "x": 0.13777778,
+            "y": 0.5859031
+          }, {
+            "x": 0.18666667,
+            "y": 0.5859031
+          }, {
+            "x": 0.18666667,
+            "y": 0.6255507
+          }, {
+            "x": 0.13777778,
+            "y": 0.6255507
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 2
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "314",
+            "endIndex": "319"
+          }]
+        },
+        "confidence": 0.9842304,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 10,
+            "y": 143
+          }, {
+            "x": 24,
+            "y": 143
+          }, {
+            "x": 24,
+            "y": 153
+          }, {
+            "x": 10,
+            "y": 153
+          }],
+          "normalizedVertices": [{
+            "x": 0.022222223,
+            "y": 0.62995595
+          }, {
+            "x": 0.053333335,
+            "y": 0.62995595
+          }, {
+            "x": 0.053333335,
+            "y": 0.6740088
+          }, {
+            "x": 0.022222223,
+            "y": 0.6740088
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "319",
+            "endIndex": "329"
+          }]
+        },
+        "confidence": 0.9904218,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 28,
+            "y": 143
+          }, {
+            "x": 63,
+            "y": 143
+          }, {
+            "x": 63,
+            "y": 153
+          }, {
+            "x": 28,
+            "y": 153
+          }],
+          "normalizedVertices": [{
+            "x": 0.062222224,
+            "y": 0.62995595
+          }, {
+            "x": 0.14,
+            "y": 0.62995595
+          }, {
+            "x": 0.14,
+            "y": 0.6740088
+          }, {
+            "x": 0.062222224,
+            "y": 0.6740088
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "329",
+            "endIndex": "332"
+          }]
+        },
+        "confidence": 0.9865722,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 66,
+            "y": 143
+          }, {
+            "x": 74,
+            "y": 143
+          }, {
+            "x": 74,
+            "y": 153
+          }, {
+            "x": 66,
+            "y": 153
+          }],
+          "normalizedVertices": [{
+            "x": 0.14666666,
+            "y": 0.62995595
+          }, {
+            "x": 0.16444445,
+            "y": 0.62995595
+          }, {
+            "x": 0.16444445,
+            "y": 0.6740088
+          }, {
+            "x": 0.14666666,
+            "y": 0.6740088
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "332",
+            "endIndex": "342"
+          }]
+        },
+        "confidence": 0.9896344,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 78,
+            "y": 143
+          }, {
+            "x": 114,
+            "y": 143
+          }, {
+            "x": 114,
+            "y": 153
+          }, {
+            "x": 78,
+            "y": 153
+          }],
+          "normalizedVertices": [{
+            "x": 0.17333333,
+            "y": 0.62995595
+          }, {
+            "x": 0.25333333,
+            "y": 0.62995595
+          }, {
+            "x": 0.25333333,
+            "y": 0.6740088
+          }, {
+            "x": 0.17333333,
+            "y": 0.6740088
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "342",
+            "endIndex": "352"
+          }]
+        },
+        "confidence": 0.99134225,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 118,
+            "y": 143
+          }, {
+            "x": 153,
+            "y": 143
+          }, {
+            "x": 153,
+            "y": 153
+          }, {
+            "x": 118,
+            "y": 153
+          }],
+          "normalizedVertices": [{
+            "x": 0.26222223,
+            "y": 0.62995595
+          }, {
+            "x": 0.34,
+            "y": 0.62995595
+          }, {
+            "x": 0.34,
+            "y": 0.6740088
+          }, {
+            "x": 0.26222223,
+            "y": 0.6740088
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 2
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "352",
+            "endIndex": "359"
+          }]
+        },
+        "confidence": 0.7907092,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 9,
+            "y": 156
+          }, {
+            "x": 32,
+            "y": 156
+          }, {
+            "x": 32,
+            "y": 166
+          }, {
+            "x": 9,
+            "y": 166
+          }],
+          "normalizedVertices": [{
+            "x": 0.02,
+            "y": 0.6872247
+          }, {
+            "x": 0.07111111,
+            "y": 0.6872247
+          }, {
+            "x": 0.07111111,
+            "y": 0.7312775
+          }, {
+            "x": 0.02,
+            "y": 0.7312775
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "qu",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "359",
+            "endIndex": "362"
+          }]
+        },
+        "confidence": 0.9847093,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 35,
+            "y": 156
+          }, {
+            "x": 47,
+            "y": 156
+          }, {
+            "x": 47,
+            "y": 166
+          }, {
+            "x": 35,
+            "y": 166
+          }],
+          "normalizedVertices": [{
+            "x": 0.07777778,
+            "y": 0.6872247
+          }, {
+            "x": 0.104444444,
+            "y": 0.6872247
+          }, {
+            "x": 0.104444444,
+            "y": 0.7312775
+          }, {
+            "x": 0.07777778,
+            "y": 0.7312775
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "qu",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "362",
+            "endIndex": "364"
+          }]
+        },
+        "confidence": 0.8933769,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 48,
+            "y": 156
+          }, {
+            "x": 51,
+            "y": 156
+          }, {
+            "x": 51,
+            "y": 166
+          }, {
+            "x": 48,
+            "y": 166
+          }],
+          "normalizedVertices": [{
+            "x": 0.10666667,
+            "y": 0.6872247
+          }, {
+            "x": 0.11333334,
+            "y": 0.6872247
+          }, {
+            "x": 0.11333334,
+            "y": 0.7312775
+          }, {
+            "x": 0.10666667,
+            "y": 0.7312775
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "qu",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "364",
+            "endIndex": "371"
+          }]
+        },
+        "confidence": 0.9798884,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 55,
+            "y": 156
+          }, {
+            "x": 86,
+            "y": 156
+          }, {
+            "x": 86,
+            "y": 166
+          }, {
+            "x": 55,
+            "y": 166
+          }],
+          "normalizedVertices": [{
+            "x": 0.12222222,
+            "y": 0.6872247
+          }, {
+            "x": 0.19111112,
+            "y": 0.6872247
+          }, {
+            "x": 0.19111112,
+            "y": 0.7312775
+          }, {
+            "x": 0.12222222,
+            "y": 0.7312775
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "qu",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "371",
+            "endIndex": "380"
+          }]
+        },
+        "confidence": 0.99213797,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 91,
+            "y": 156
+          }, {
+            "x": 134,
+            "y": 156
+          }, {
+            "x": 134,
+            "y": 166
+          }, {
+            "x": 91,
+            "y": 166
+          }],
+          "normalizedVertices": [{
+            "x": 0.20222223,
+            "y": 0.6872247
+          }, {
+            "x": 0.29777777,
+            "y": 0.6872247
+          }, {
+            "x": 0.29777777,
+            "y": 0.7312775
+          }, {
+            "x": 0.20222223,
+            "y": 0.7312775
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "qu",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "380",
+            "endIndex": "387"
+          }]
+        },
+        "confidence": 0.9924783,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 140,
+            "y": 156
+          }, {
+            "x": 173,
+            "y": 156
+          }, {
+            "x": 173,
+            "y": 166
+          }, {
+            "x": 140,
+            "y": 166
+          }],
+          "normalizedVertices": [{
+            "x": 0.31111112,
+            "y": 0.6872247
+          }, {
+            "x": 0.38444445,
+            "y": 0.6872247
+          }, {
+            "x": 0.38444445,
+            "y": 0.7312775
+          }, {
+            "x": 0.31111112,
+            "y": 0.7312775
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "qu",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "387",
+            "endIndex": "395"
+          }]
+        },
+        "confidence": 0.95252126,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 177,
+            "y": 156
+          }, {
+            "x": 215,
+            "y": 156
+          }, {
+            "x": 215,
+            "y": 166
+          }, {
+            "x": 177,
+            "y": 166
+          }],
+          "normalizedVertices": [{
+            "x": 0.39333335,
+            "y": 0.6872247
+          }, {
+            "x": 0.47777778,
+            "y": 0.6872247
+          }, {
+            "x": 0.47777778,
+            "y": 0.7312775
+          }, {
+            "x": 0.39333335,
+            "y": 0.7312775
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 2
+      },
+      "detectedLanguages": [{
+        "languageCode": "qu",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "395",
+            "endIndex": "407"
+          }]
+        },
+        "confidence": 0.9847095,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 33,
+            "y": 168
+          }, {
+            "x": 142,
+            "y": 168
+          }, {
+            "x": 142,
+            "y": 184
+          }, {
+            "x": 33,
+            "y": 184
+          }],
+          "normalizedVertices": [{
+            "x": 0.07333333,
+            "y": 0.7400881
+          }, {
+            "x": 0.31555554,
+            "y": 0.7400881
+          }, {
+            "x": 0.31555554,
+            "y": 0.8105727
+          }, {
+            "x": 0.07333333,
+            "y": 0.8105727
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 2
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "407",
+            "endIndex": "412"
+          }]
+        },
+        "confidence": 0.8996806,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 328,
+            "y": 157
+          }, {
+            "x": 350,
+            "y": 157
+          }, {
+            "x": 350,
+            "y": 165
+          }, {
+            "x": 328,
+            "y": 165
+          }],
+          "normalizedVertices": [{
+            "x": 0.72888887,
+            "y": 0.69162995
+          }, {
+            "x": 0.7777778,
+            "y": 0.69162995
+          }, {
+            "x": 0.7777778,
+            "y": 0.72687227
+          }, {
+            "x": 0.72888887,
+            "y": 0.72687227
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "en",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "412",
+            "endIndex": "415"
+          }]
+        },
+        "confidence": 0.7936001,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 348,
+            "y": 157
+          }, {
+            "x": 355,
+            "y": 157
+          }, {
+            "x": 355,
+            "y": 165
+          }, {
+            "x": 348,
+            "y": 165
+          }],
+          "normalizedVertices": [{
+            "x": 0.7733333,
+            "y": 0.69162995
+          }, {
+            "x": 0.7888889,
+            "y": 0.69162995
+          }, {
+            "x": 0.7888889,
+            "y": 0.72687227
+          }, {
+            "x": 0.7733333,
+            "y": 0.72687227
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "en",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "415",
+            "endIndex": "427"
+          }]
+        },
+        "confidence": 0.9548473,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 358,
+            "y": 157
+          }, {
+            "x": 403,
+            "y": 157
+          }, {
+            "x": 403,
+            "y": 165
+          }, {
+            "x": 358,
+            "y": 165
+          }],
+          "normalizedVertices": [{
+            "x": 0.79555553,
+            "y": 0.69162995
+          }, {
+            "x": 0.89555556,
+            "y": 0.69162995
+          }, {
+            "x": 0.89555556,
+            "y": 0.72687227
+          }, {
+            "x": 0.79555553,
+            "y": 0.72687227
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 2
+      },
+      "detectedLanguages": [{
+        "languageCode": "en",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "427",
+            "endIndex": "436"
+          }]
+        },
+        "confidence": 0.9202163,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 387,
+            "y": 39
+          }, {
+            "x": 425,
+            "y": 39
+          }, {
+            "x": 425,
+            "y": 47
+          }, {
+            "x": 387,
+            "y": 47
+          }],
+          "normalizedVertices": [{
+            "x": 0.86,
+            "y": 0.17180617
+          }, {
+            "x": 0.9444444,
+            "y": 0.17180617
+          }, {
+            "x": 0.9444444,
+            "y": 0.20704846
+          }, {
+            "x": 0.86,
+            "y": 0.20704846
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 2
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "436",
+            "endIndex": "440"
+          }]
+        },
+        "confidence": 0.9624383,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 399,
+            "y": 47
+          }, {
+            "x": 413,
+            "y": 47
+          }, {
+            "x": 413,
+            "y": 54
+          }, {
+            "x": 399,
+            "y": 54
+          }],
+          "normalizedVertices": [{
+            "x": 0.88666666,
+            "y": 0.20704846
+          }, {
+            "x": 0.9177778,
+            "y": 0.20704846
+          }, {
+            "x": 0.9177778,
+            "y": 0.23788546
+          }, {
+            "x": 0.88666666,
+            "y": 0.23788546
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 2
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "440",
+            "endIndex": "445"
+          }]
+        },
+        "confidence": 0.72728324,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 404,
+            "y": 119
+          }, {
+            "x": 421,
+            "y": 119
+          }, {
+            "x": 421,
+            "y": 127
+          }, {
+            "x": 404,
+            "y": 127
+          }],
+          "normalizedVertices": [{
+            "x": 0.8977778,
+            "y": 0.52422905
+          }, {
+            "x": 0.9355556,
+            "y": 0.52422905
+          }, {
+            "x": 0.9355556,
+            "y": 0.55947137
+          }, {
+            "x": 0.8977778,
+            "y": 0.55947137
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 2
+      }
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "445",
+            "endIndex": "452"
+          }]
+        },
+        "confidence": 0.7954297,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 131,
+            "y": 194
+          }, {
+            "x": 155,
+            "y": 194
+          }, {
+            "x": 155,
+            "y": 203
+          }, {
+            "x": 131,
+            "y": 203
+          }],
+          "normalizedVertices": [{
+            "x": 0.2911111,
+            "y": 0.8546255
+          }, {
+            "x": 0.34444445,
+            "y": 0.8546255
+          }, {
+            "x": 0.34444445,
+            "y": 0.8942731
+          }, {
+            "x": 0.2911111,
+            "y": 0.8942731
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "ilo",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "452",
+            "endIndex": "460"
+          }]
+        },
+        "confidence": 0.9922597,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 158,
+            "y": 194
+          }, {
+            "x": 186,
+            "y": 194
+          }, {
+            "x": 186,
+            "y": 203
+          }, {
+            "x": 158,
+            "y": 203
+          }],
+          "normalizedVertices": [{
+            "x": 0.3511111,
+            "y": 0.8546255
+          }, {
+            "x": 0.41333333,
+            "y": 0.8546255
+          }, {
+            "x": 0.41333333,
+            "y": 0.8942731
+          }, {
+            "x": 0.3511111,
+            "y": 0.8942731
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "ilo",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "460",
+            "endIndex": "466"
+          }]
+        },
+        "confidence": 0.5081567,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 189,
+            "y": 194
+          }, {
+            "x": 208,
+            "y": 194
+          }, {
+            "x": 208,
+            "y": 203
+          }, {
+            "x": 189,
+            "y": 203
+          }],
+          "normalizedVertices": [{
+            "x": 0.42,
+            "y": 0.8546255
+          }, {
+            "x": 0.46222222,
+            "y": 0.8546255
+          }, {
+            "x": 0.46222222,
+            "y": 0.8942731
+          }, {
+            "x": 0.42,
+            "y": 0.8942731
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "ilo",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "466",
+            "endIndex": "469"
+          }]
+        },
+        "confidence": 0.4090015,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 212,
+            "y": 194
+          }, {
+            "x": 220,
+            "y": 194
+          }, {
+            "x": 220,
+            "y": 203
+          }, {
+            "x": 212,
+            "y": 203
+          }],
+          "normalizedVertices": [{
+            "x": 0.47111112,
+            "y": 0.8546255
+          }, {
+            "x": 0.4888889,
+            "y": 0.8546255
+          }, {
+            "x": 0.4888889,
+            "y": 0.8942731
+          }, {
+            "x": 0.47111112,
+            "y": 0.8942731
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "ilo",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "469",
+            "endIndex": "473"
+          }]
+        },
+        "confidence": 0.90338284,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 222,
+            "y": 194
+          }, {
+            "x": 235,
+            "y": 194
+          }, {
+            "x": 235,
+            "y": 203
+          }, {
+            "x": 222,
+            "y": 203
+          }],
+          "normalizedVertices": [{
+            "x": 0.49333334,
+            "y": 0.8546255
+          }, {
+            "x": 0.5222222,
+            "y": 0.8546255
+          }, {
+            "x": 0.5222222,
+            "y": 0.8942731
+          }, {
+            "x": 0.49333334,
+            "y": 0.8942731
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 2
+      },
+      "detectedLanguages": [{
+        "languageCode": "ilo",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "473",
+            "endIndex": "478"
+          }]
+        },
+        "confidence": 0.81713283,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 314,
+            "y": 206
+          }, {
+            "x": 328,
+            "y": 206
+          }, {
+            "x": 328,
+            "y": 216
+          }, {
+            "x": 314,
+            "y": 216
+          }],
+          "normalizedVertices": [{
+            "x": 0.69777775,
+            "y": 0.907489
+          }, {
+            "x": 0.72888887,
+            "y": 0.907489
+          }, {
+            "x": 0.72888887,
+            "y": 0.95154184
+          }, {
+            "x": 0.69777775,
+            "y": 0.95154184
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "478",
+            "endIndex": "484"
+          }]
+        },
+        "confidence": 0.7502841,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 333,
+            "y": 206
+          }, {
+            "x": 353,
+            "y": 206
+          }, {
+            "x": 353,
+            "y": 215
+          }, {
+            "x": 333,
+            "y": 215
+          }],
+          "normalizedVertices": [{
+            "x": 0.74,
+            "y": 0.907489
+          }, {
+            "x": 0.78444445,
+            "y": 0.907489
+          }, {
+            "x": 0.78444445,
+            "y": 0.9471366
+          }, {
+            "x": 0.74,
+            "y": 0.9471366
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "484",
+            "endIndex": "488"
+          }]
+        },
+        "confidence": 0.9643345,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 357,
+            "y": 206
+          }, {
+            "x": 369,
+            "y": 206
+          }, {
+            "x": 369,
+            "y": 215
+          }, {
+            "x": 357,
+            "y": 215
+          }],
+          "normalizedVertices": [{
+            "x": 0.79333335,
+            "y": 0.907489
+          }, {
+            "x": 0.82,
+            "y": 0.907489
+          }, {
+            "x": 0.82,
+            "y": 0.9471366
+          }, {
+            "x": 0.79333335,
+            "y": 0.9471366
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "488",
+            "endIndex": "495"
+          }]
+        },
+        "confidence": 0.93191355,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 372,
+            "y": 206
+          }, {
+            "x": 397,
+            "y": 206
+          }, {
+            "x": 397,
+            "y": 215
+          }, {
+            "x": 372,
+            "y": 215
+          }],
+          "normalizedVertices": [{
+            "x": 0.82666665,
+            "y": 0.907489
+          }, {
+            "x": 0.88222224,
+            "y": 0.907489
+          }, {
+            "x": 0.88222224,
+            "y": 0.9471366
+          }, {
+            "x": 0.82666665,
+            "y": 0.9471366
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "495",
+            "endIndex": "498"
+          }]
+        },
+        "confidence": 0.98647165,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 398,
+            "y": 206
+          }, {
+            "x": 409,
+            "y": 206
+          }, {
+            "x": 409,
+            "y": 215
+          }, {
+            "x": 398,
+            "y": 215
+          }],
+          "normalizedVertices": [{
+            "x": 0.8844444,
+            "y": 0.907489
+          }, {
+            "x": 0.9088889,
+            "y": 0.907489
+          }, {
+            "x": 0.9088889,
+            "y": 0.9471366
+          }, {
+            "x": 0.8844444,
+            "y": 0.9471366
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 1
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }, {
+      "layout": {
+        "textAnchor": {
+          "textSegments": [{
+            "startIndex": "498",
+            "endIndex": "504"
+          }]
+        },
+        "confidence": 0.96050787,
+        "boundingPoly": {
+          "vertices": [{
+            "x": 411,
+            "y": 206
+          }, {
+            "x": 431,
+            "y": 206
+          }, {
+            "x": 431,
+            "y": 215
+          }, {
+            "x": 411,
+            "y": 215
+          }],
+          "normalizedVertices": [{
+            "x": 0.91333336,
+            "y": 0.907489
+          }, {
+            "x": 0.9577778,
+            "y": 0.907489
+          }, {
+            "x": 0.9577778,
+            "y": 0.9471366
+          }, {
+            "x": 0.91333336,
+            "y": 0.9471366
+          }]
+        },
+        "orientation": 1
+      },
+      "detectedBreak": {
+        "type": 2
+      },
+      "detectedLanguages": [{
+        "languageCode": "es",
+        "confidence": 1.0
+      }]
+    }],
+    "image": {
+      "content": "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",
+      "mimeType": "image/jpeg",
+      "width": 450,
+      "height": 227
+    }
+  }]
+}

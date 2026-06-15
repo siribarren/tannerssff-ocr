@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tanner SF - Conciliación Bancaria</title>
+    <meta name="theme-color" content="#001E3D" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              tanner: {
+                midnight: '#001E3D',
+                navy: '#002080',
+                royal: '#005CB9',
+                medium: '#023AE0',
+                slate: '#024993',
+                aqua: '#4DD2FF',
+                mint: '#4DFFF0',
+                gray: '#6B7280',
+                line: '#E5E7EB',
+                snow: '#FAFAFA'
+              }
+            },
+            boxShadow: {
+              tanner: '0 24px 60px rgba(0, 30, 61, 0.12)'
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="min-h-screen bg-slate-50 text-[#222222]">
+    <div class="min-h-screen lg:grid lg:grid-cols-[300px_minmax(0,1fr)]">
+      <aside class="flex flex-col justify-between gap-2 bg-gradient-to-b from-tanner-midnight to-tanner-navy px-6 py-7 text-white shadow-tanner">
+        <div class="grid gap-3">
+          <img class="w-[220px] max-w-full drop-shadow-xl" src="./logo.svg" alt="Tanner Servicios Financieros" />
+          <!-- <p class="text-xs uppercase tracking-widest text-white/75">Plataforma de conciliación</p> -->
+        <!-- <div class="w-fit rounded-full border border-white/15 bg-white/10 px-3 py-2 text-sm text-white/90">Operación financiera</div> -->
+        </div>
+
+        <div>
+          <nav class="grid gap-2">
+            <div class="rounded-lg border border-white/15 bg-white/10 px-4 py-3 font-semibold text-white">Dashboard</div>
+            <div class="rounded-lg px-4 py-3 text-white/80">Conciliación</div>
+            <div class="rounded-lg px-4 py-3 text-white/80">Pagos</div>
+            <div class="rounded-lg px-4 py-3 text-white/80">Excepciones</div>
+            <div class="rounded-lg px-4 py-3 text-white/80">Auditoría</div>
+            <div class="rounded-lg px-4 py-3 text-white/80">Reportes</div>
+            <div class="rounded-lg px-4 py-3 text-white/80">Configuración</div>
+          </nav>
+        </div>
+        <div class="text-xs text-white/55">v1.0 Prototipo</div>
+      </aside>
+
+      <main class="overflow-auto p-5 lg:p-8">
+        <section class="mb-5 flex flex-col justify-between gap-6 rounded-lg bg-gradient-to-br from-tanner-midnight to-tanner-medium p-6 text-white shadow-tanner lg:flex-row lg:items-start">
+          <div>
+            <!-- <div class="mb-3 text-xs uppercase tracking-widest text-white/70">Tanner Servicios Financieros</div> -->
+            <h1 class="text-4xl font-bold leading-none lg:text-5xl">Conciliación Bancaria</h1>
+            <!-- <p class="mt-4 max-w-2xl text-base text-white/80">Control de pagos, diferencias y trazabilidad.</p> -->
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <button class="rounded-lg border border-white/15 bg-white/10 px-4 py-3 text-white transition hover:-translate-y-0.5">Exportar</button>
+            <button class="rounded-lg bg-tanner-royal px-4 py-3 font-semibold text-white shadow-lg shadow-blue-900/25 transition hover:-translate-y-0.5" id="openConciliationModal">+ Nueva Conciliación</button>
+          </div>
+        </section>
+
+        <section class="mb-5 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div class="rounded-lg border border-slate-200 bg-white/85 p-5 shadow-sm">
+            <span class="block text-sm text-tanner-gray">Procesados hoy</span>
+            <strong class="mt-2 block text-3xl text-tanner-midnight">120</strong>
+          </div>
+          <div class="rounded-lg border border-slate-200 bg-white/85 p-5 shadow-sm">
+            <span class="block text-sm text-tanner-gray">Conciliación total</span>
+            <strong class="mt-2 block text-3xl text-tanner-midnight">85%</strong>
+          </div>
+          <div class="rounded-lg border border-slate-200 bg-white/85 p-5 shadow-sm">
+            <span class="block text-sm text-tanner-gray">Pendientes</span>
+            <strong class="mt-2 block text-3xl text-tanner-midnight">32</strong>
+          </div>
+          <div class="rounded-lg border border-slate-200 bg-white/85 p-5 shadow-sm">
+            <span class="block text-sm text-tanner-gray">Alertas</span>
+            <strong class="mt-2 block text-3xl text-tanner-midnight">8</strong>
+          </div>
+        </section>
+
+        <header class="mb-5 flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
+          <div>
+            <h2 class="text-xl font-bold text-tanner-midnight">Monitoreo operativo</h2>
+            <p class="mt-1 text-sm text-tanner-gray">Visión rápida del estado de conciliación y pendientes críticos.</p>
+          </div>
+          <div class="w-fit rounded-full border border-tanner-midnight/10 bg-tanner-midnight/5 px-4 py-2 text-sm text-tanner-slate">Actualizado hace 2 min</div>
+        </header>
+
+        <section class="mb-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <article class="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
+            <span class="text-sm text-tanner-gray">Flujo conciliado</span>
+            <strong class="mt-2 block text-3xl text-tanner-midnight">85%</strong>
+            <div class="mt-4 h-2 overflow-hidden rounded-full bg-slate-200">
+              <i class="block h-full rounded-full bg-gradient-to-r from-tanner-aqua to-tanner-mint" style="width: 85%"></i>
+            </div>
+          </article>
+          <article class="rounded-lg border border-tanner-midnight bg-gradient-to-br from-tanner-midnight to-tanner-royal p-5 text-white shadow-sm">
+            <span class="text-sm text-white/75">Monto conciliado</span>
+            <strong class="mt-2 block text-3xl">$14.2M</strong>
+            <p class="mt-2 text-sm text-white/70">+12% respecto al período anterior</p>
+          </article>
+          <article class="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
+            <span class="text-sm text-tanner-gray">Pendientes críticos</span>
+            <strong class="mt-2 block text-3xl text-tanner-midnight">32</strong>
+            <p class="mt-2 text-sm text-tanner-gray">Requieren revisión manual</p>
+          </article>
+          <article class="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
+            <span class="text-sm text-tanner-gray">Alertas activas</span>
+            <strong class="mt-2 block text-3xl text-tanner-midnight">8</strong>
+            <p class="mt-2 text-sm text-tanner-gray">Diferencias detectadas hoy</p>
+          </article>
+        </section>
+
+        <section class="grid gap-4">
+          <div class="flex w-fit gap-2 rounded-lg border border-slate-200 bg-white p-1 shadow-sm">
+            <button class="rounded-md bg-tanner-midnight px-4 py-2 text-sm font-semibold text-white">Conciliación</button>
+            <button class="rounded-md px-4 py-2 text-sm text-tanner-gray">Excepciones</button>
+            <button class="rounded-md px-4 py-2 text-sm text-tanner-gray">Historial</button>
+          </div>
+
+          <div class="rounded-lg border border-slate-200 bg-white p-5 shadow-tanner">
+            <div class="mb-5 flex flex-col justify-between gap-4 lg:flex-row">
+              <div>
+                <h3 class="text-lg font-bold text-tanner-midnight">Detalle de conciliación</h3>
+                <p class="mt-1 text-sm text-tanner-gray">Transacciones bancarias con estado, monto y acción sugerida.</p>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="rounded-full border border-tanner-midnight/10 bg-tanner-midnight/5 px-3 py-2 text-sm text-tanner-slate">24 en revisión</span>
+                <span class="rounded-full border border-tanner-midnight/10 bg-tanner-midnight/5 px-3 py-2 text-sm text-tanner-slate">5 automatizadas</span>
+              </div>
+            </div>
+
+            <div class="mb-5 flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3">
+              <span class="text-tanner-royal">⌕</span>
+              <input class="w-full border-0 bg-transparent outline-none" type="text" value="" placeholder="Buscar por monto, cliente o referencia..." />
+            </div>
+
+            <table class="w-full border-collapse text-left">
+              <thead class="text-xs uppercase text-tanner-gray">
+                <tr>
+                  <th class="border-b border-slate-200 px-3 py-3">Fecha</th>
+                  <th class="border-b border-slate-200 px-3 py-3">Monto</th>
+                  <th class="border-b border-slate-200 px-3 py-3">Cliente</th>
+                  <th class="border-b border-slate-200 px-3 py-3">Estado</th>
+                  <th class="border-b border-slate-200 px-3 py-3">Acción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border-b border-slate-200 px-3 py-4">10-05-2026</td>
+                  <td class="border-b border-slate-200 px-3 py-4">$120.000</td>
+                  <td class="border-b border-slate-200 px-3 py-4">Automotora XYZ</td>
+                  <td class="border-b border-slate-200 px-3 py-4 text-green-600">Conciliado</td>
+                  <td class="border-b border-slate-200 px-3 py-4"><button class="rounded-lg bg-tanner-midnight/5 px-3 py-2 text-sm font-semibold text-tanner-midnight">Ver</button></td>
+                </tr>
+                <tr>
+                  <td class="border-b border-slate-200 px-3 py-4">10-05-2026</td>
+                  <td class="border-b border-slate-200 px-3 py-4">$85.000</td>
+                  <td class="border-b border-slate-200 px-3 py-4">Cliente ABC</td>
+                  <td class="border-b border-slate-200 px-3 py-4 text-amber-600">Pendiente</td>
+                  <td class="border-b border-slate-200 px-3 py-4"><button class="rounded-lg bg-tanner-midnight/5 px-3 py-2 text-sm font-semibold text-tanner-midnight">Conciliar</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal-overlay fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/60 p-5 backdrop-blur-md" id="conciliationModal" aria-hidden="true">
+      <div class="modal-card max-h-[calc(100vh-40px)] w-full max-w-5xl overflow-auto rounded-lg border border-white/60 bg-white p-6 shadow-2xl" role="dialog" aria-modal="true" aria-labelledby="conciliationModalTitle">
+        <div class="modal-header mb-6 flex items-start justify-between gap-4">
+          <div>
+            <p class="modal-eyebrow mb-2 text-xs uppercase tracking-widest text-tanner-royal">Solicitud</p>
+            <h2 class="text-2xl font-bold text-tanner-midnight" id="conciliationModalTitle">Nueva conciliación</h2>
+          </div>
+          <button class="modal-close grid h-10 w-10 place-items-center rounded-full bg-tanner-midnight/10 text-2xl text-tanner-midnight" id="closeConciliationModal" aria-label="Cerrar modal">×</button>
+        </div>
+
+        <form class="modal-form grid gap-6" id="requestStep">
+          <div class="form-grid grid gap-5 lg:grid-cols-2">
+            <div class="form-field form-field--full grid gap-3 lg:col-span-2">
+              <label class="font-semibold text-tanner-midnight" for="proofImage">Adjuntar imagen</label>
+              <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <input class="w-full min-w-0 rounded-lg border border-slate-200 bg-white p-3 text-sm file:mr-4 file:rounded-md file:border-0 file:bg-tanner-midnight file:px-4 file:py-2 file:text-white" type="file" id="proofImage" accept="image/*" />
+                <button type="button" id="processImageBtn" class="rounded-lg bg-tanner-royal px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/25 transition hover:-translate-y-0.5">Procesar imagen</button>
+              </div>
+              <div class="image-preview grid min-h-56 place-items-center overflow-hidden rounded-lg border border-slate-200 bg-slate-50" id="imagePreview">
+                <span class="text-sm text-tanner-gray">La imagen seleccionada se mostrará aquí</span>
+              </div>
+              <pre id="resultBlock" class="max-h-52 overflow-auto rounded-lg border border-slate-200 bg-slate-50 p-4 text-sm text-tanner-midnight">El resultado aparecerá aquí...</pre>
+            </div>
+
+            <div class="form-field grid gap-2">
+              <label class="font-semibold text-tanner-midnight" for="amount">Monto</label>
+              <input class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 outline-none focus:border-tanner-royal focus:ring-4 focus:ring-blue-100" type="text" id="amount" inputmode="numeric" placeholder="$0" />
+            </div>
+
+            <div class="form-field grid gap-2">
+              <label class="font-semibold text-tanner-midnight" for="dateRange">Rango de fechas</label>
+              <select class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 outline-none focus:border-tanner-royal focus:ring-4 focus:ring-blue-100" id="dateRange">
+                <option>Hoy</option>
+                <option>Fecha</option>
+                <option>Semana</option>
+                <option>Mes</option>
+                <option>Fecha personalizada</option>
+              </select>
+            </div>
+
+            <div class="form-field form-field--full date-panel grid gap-2 lg:col-span-2" id="singleDateFields">
+              <label class="font-semibold text-tanner-midnight" for="singleDate">Fecha</label>
+              <input class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 outline-none focus:border-tanner-royal focus:ring-4 focus:ring-blue-100" type="date" id="singleDate" />
+            </div>
+
+            <div class="form-field form-field--full date-panel grid gap-2 lg:col-span-2" id="weekDateFields">
+              <label class="font-semibold text-tanner-midnight">Semana</label>
+              <div class="date-pair grid gap-3 md:grid-cols-2">
+                <input class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 outline-none focus:border-tanner-royal focus:ring-4 focus:ring-blue-100" type="date" id="weekFrom" aria-label="Inicio de semana" />
+                <input class="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-tanner-gray outline-none" type="date" id="weekTo" aria-label="Fin de semana" readonly />
+              </div>
+            </div>
+
+            <div class="form-field form-field--full date-panel grid gap-2 lg:col-span-2" id="monthFields">
+              <label class="font-semibold text-tanner-midnight" for="monthPicker">Mes</label>
+              <input class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 outline-none focus:border-tanner-royal focus:ring-4 focus:ring-blue-100" type="month" id="monthPicker" />
+            </div>
+
+            <div class="form-field form-field--full date-panel grid gap-2 lg:col-span-2" id="customDateFields">
+              <label class="font-semibold text-tanner-midnight">Fecha personalizada</label>
+              <div class="date-pair grid gap-3 md:grid-cols-2">
+                <input class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 outline-none focus:border-tanner-royal focus:ring-4 focus:ring-blue-100" type="date" id="dateFrom" aria-label="Desde" />
+                <input class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 outline-none focus:border-tanner-royal focus:ring-4 focus:ring-blue-100" type="date" id="dateTo" aria-label="Hasta" />
+              </div>
+            </div>
+
+            <div class="form-field form-field--full grid gap-2 lg:col-span-2">
+              <label class="font-semibold text-tanner-midnight">Rango horario</label>
+              <div class="radio-group grid gap-3 md:grid-cols-3">
+                <label class="radio-option flex min-h-12 cursor-pointer items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 font-semibold text-tanner-midnight">
+                  <input class="accent-tanner-royal" type="radio" name="timeRange" value="Rango AM" checked />
+                  <span>Rango AM</span>
+                </label>
+                <label class="radio-option flex min-h-12 cursor-pointer items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 font-semibold text-tanner-midnight">
+                  <input class="accent-tanner-royal" type="radio" name="timeRange" value="Rango PM" />
+                  <span>Rango PM</span>
+                </label>
+                <label class="radio-option flex min-h-12 cursor-pointer items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 font-semibold text-tanner-midnight">
+                  <input class="accent-tanner-royal" type="radio" name="timeRange" value="Cualquiera" />
+                  <span>Cualquiera</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-field form-field--full grid gap-2 lg:col-span-2">
+              <label class="font-semibold text-tanner-midnight" for="mandante">Mandante</label>
+              <select class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 outline-none focus:border-tanner-royal focus:ring-4 focus:ring-blue-100" id="mandante">
+                <option value="">Seleccione un mandante</option>
+                <optgroup label="[Canales de Pago]">
+                  <option>Servipag</option>
+                  <option>BancoEstado</option>
+                  <option>WebPay</option>
+                </optgroup>
+                <optgroup label="[Automotoras]">
+                  <option>Automotora – BPM</option>
+                  <option>Automotora – Correo</option>
+                </optgroup>
+                <optgroup label="[Clientes]">
+                  <option>Cliente Directo – Transferencia</option>
+                </optgroup>
+                <optgroup label="[Excepciones]">
+                  <option>Pago No Identificado</option>
+                  <option>Otro</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+
+          <div class="modal-actions flex flex-wrap justify-end gap-3">
+            <button type="button" class="secondary-btn rounded-lg bg-tanner-midnight/5 px-4 py-3 font-semibold text-tanner-midnight" id="cancelConciliation">Cancelar</button>
+            <button type="submit" class="primary-btn rounded-lg bg-tanner-royal px-4 py-3 font-semibold text-white shadow-lg shadow-blue-900/20">Conciliar</button>
+          </div>
+        </form>
+
+        <div class="process-step grid min-h-[430px] place-items-center content-center gap-4 text-center" id="loaderStep" hidden>
+          <div class="loader-mark h-16 w-16 rounded-full border-4 border-tanner-royal/20 border-t-tanner-royal" aria-hidden="true"></div>
+          <h3 class="text-2xl font-bold text-tanner-midnight">Conciliando</h3>
+          <p class="text-tanner-gray">Estamos cruzando la solicitud contra movimientos de cartola.</p>
+        </div>
+
+        <div class="result-step grid gap-5" id="resultStep" hidden>
+          <div class="result-banner flex items-center gap-4 rounded-lg border border-green-200 bg-green-50 p-4">
+            <span class="result-icon grid h-10 w-10 shrink-0 place-items-center rounded-full bg-green-600 font-bold text-white">✓</span>
+            <div>
+              <h3 class="text-lg font-bold text-tanner-midnight">Monto correctamente conciliado</h3>
+              <p class="mt-1 text-sm text-tanner-gray">Se encontró una coincidencia consistente entre la solicitud y la cartola bancaria.</p>
+            </div>
+          </div>
+
+          <div class="comparison-grid grid gap-4 lg:grid-cols-2">
+            <section class="comparison-panel rounded-lg border border-slate-200 bg-white p-5">
+              <h4 class="mb-4 font-bold text-tanner-midnight">Datos a conciliar</h4>
+              <dl class="grid gap-3">
+                <div class="flex justify-between gap-4 border-b border-slate-100 pb-3">
+                  <dt class="text-tanner-gray">Monto</dt>
+                  <dd class="font-bold text-[#222222]" id="summaryAmount">$120.000</dd>
+                </div>
+                <div class="flex justify-between gap-4 border-b border-slate-100 pb-3">
+                  <dt class="text-tanner-gray">Mandante</dt>
+                  <dd class="font-bold text-[#222222]" id="summaryMandante">Servipag</dd>
+                </div>
+                <div class="flex justify-between gap-4 border-b border-slate-100 pb-3">
+                  <dt class="text-tanner-gray">Rango de fechas</dt>
+                  <dd class="font-bold text-[#222222]" id="summaryDates">Hoy</dd>
+                </div>
+                <div class="flex justify-between gap-4 border-b border-slate-100 pb-3">
+                  <dt class="text-tanner-gray">Rango horario</dt>
+                  <dd class="font-bold text-[#222222]" id="summaryTime">Rango AM</dd>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <dt class="text-tanner-gray">Referencia</dt>
+                  <dd class="font-bold text-[#222222]">SOL-2026-08421</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section class="comparison-panel cartola-panel rounded-lg border border-slate-200 bg-sky-50 p-5">
+              <h4 class="mb-4 font-bold text-tanner-midnight">Datos desde cartola</h4>
+              <dl class="grid gap-3">
+                <div class="flex justify-between gap-4 border-b border-slate-200 pb-3">
+                  <dt class="text-tanner-gray">Monto cartola</dt>
+                  <dd class="font-bold text-[#222222]" id="cartolaAmount">$120.000</dd>
+                </div>
+                <div class="flex justify-between gap-4 border-b border-slate-200 pb-3">
+                  <dt class="text-tanner-gray">Banco origen</dt>
+                  <dd class="font-bold text-[#222222]">BancoEstado</dd>
+                </div>
+                <div class="flex justify-between gap-4 border-b border-slate-200 pb-3">
+                  <dt class="text-tanner-gray">Fecha abono</dt>
+                  <dd class="font-bold text-[#222222]">05-06-2026</dd>
+                </div>
+                <div class="flex justify-between gap-4 border-b border-slate-200 pb-3">
+                  <dt class="text-tanner-gray">Hora movimiento</dt>
+                  <dd class="font-bold text-[#222222]">10:42</dd>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <dt class="text-tanner-gray">N° operación</dt>
+                  <dd class="font-bold text-[#222222]">BE-88410322</dd>
+                </div>
+              </dl>
+            </section>
+          </div>
+
+          <div class="modal-actions flex flex-wrap justify-end gap-3">
+            <button type="button" class="secondary-btn rounded-lg bg-tanner-midnight/5 px-4 py-3 font-semibold text-tanner-midnight" id="backToRequest">Volver</button>
+            <button type="button" class="primary-btn rounded-lg bg-tanner-royal px-4 py-3 font-semibold text-white shadow-lg shadow-blue-900/20" id="registerConciliation">Registrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay confirm-overlay fixed inset-0 z-[70] hidden items-center justify-center bg-slate-950/60 p-5 backdrop-blur-md" id="confirmationModal" aria-hidden="true">
+      <div class="confirm-card grid w-full max-w-md justify-items-center gap-4 rounded-lg bg-white p-8 text-center shadow-2xl" role="dialog" aria-modal="true" aria-labelledby="confirmationTitle">
+        <div class="confirm-check grid h-14 w-14 place-items-center rounded-full bg-green-600 text-xl font-bold text-white">✓</div>
+        <h2 class="text-2xl font-bold text-tanner-midnight" id="confirmationTitle">Conciliación registrada</h2>
+        <p class="text-tanner-gray">La solicitud fue registrada correctamente y quedó asociada a la cartola simulada.</p>
+        <button type="button" class="primary-btn rounded-lg bg-tanner-royal px-5 py-3 font-semibold text-white shadow-lg shadow-blue-900/20" id="finishConfirmation">Finalizar</button>
+      </div>
+    </div>
+
+    <script>
+      const openBtn = document.getElementById('openConciliationModal');
+      const modal = document.getElementById('conciliationModal');
+      const confirmationModal = document.getElementById('confirmationModal');
+      const closeBtn = document.getElementById('closeConciliationModal');
+      const cancelBtn = document.getElementById('cancelConciliation');
+      const fileInput = document.getElementById('proofImage');
+      const preview = document.getElementById('imagePreview');
+      const modalForm = document.getElementById('requestStep');
+      const loaderStep = document.getElementById('loaderStep');
+      const resultStep = document.getElementById('resultStep');
+      const amountInput = document.getElementById('amount');
+      const dateRange = document.getElementById('dateRange');
+      const singleDateFields = document.getElementById('singleDateFields');
+      const singleDate = document.getElementById('singleDate');
+      const weekDateFields = document.getElementById('weekDateFields');
+      const weekFrom = document.getElementById('weekFrom');
+      const weekTo = document.getElementById('weekTo');
+      const monthFields = document.getElementById('monthFields');
+      const monthPicker = document.getElementById('monthPicker');
+      const customDateFields = document.getElementById('customDateFields');
+      const dateFrom = document.getElementById('dateFrom');
+      const dateTo = document.getElementById('dateTo');
+      const mandante = document.getElementById('mandante');
+      const processImageBtn = document.getElementById('processImageBtn');
+      const resultBlock = document.getElementById('resultBlock');
+      const summaryAmount = document.getElementById('summaryAmount');
+      const summaryMandante = document.getElementById('summaryMandante');
+      const summaryDates = document.getElementById('summaryDates');
+      const summaryTime = document.getElementById('summaryTime');
+      const cartolaAmount = document.getElementById('cartolaAmount');
+      const backToRequest = document.getElementById('backToRequest');
+      const registerBtn = document.getElementById('registerConciliation');
+      const finishConfirmation = document.getElementById('finishConfirmation');
+
+      const openModal = () => {
+        showRequestStep();
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+      };
+
+      const closeModal = () => {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+      };
+
+      const closeConfirmation = () => {
+        confirmationModal.classList.remove('is-open');
+        confirmationModal.setAttribute('aria-hidden', 'true');
+      };
+
+      const showRequestStep = () => {
+        modalForm.hidden = false;
+        loaderStep.hidden = true;
+        resultStep.hidden = true;
+      };
+
+      const showResultStep = () => {
+        loaderStep.hidden = true;
+        resultStep.hidden = false;
+      };
+
+      const formatPeso = (value) => {
+        const digits = value.replace(/\D/g, '');
+        if (!digits) return '';
+        return `$${Number(digits).toLocaleString('es-CL')}`;
+      };
+
+      const formatInputDate = (date) => {
+        return date.toISOString().slice(0, 10);
+      };
+
+      const formatDisplayDate = (value) => {
+        if (!value) return 'sin fecha';
+        const [year, month, day] = value.split('-');
+        return `${day}-${month}-${year}`;
+      };
+
+      const formatDisplayMonth = (value) => {
+        if (!value) return 'sin mes';
+        const [year, month] = value.split('-');
+        return `${month}-${year}`;
+      };
+
+      const addDays = (value, days) => {
+        const date = new Date(`${value}T00:00:00`);
+        date.setDate(date.getDate() + days);
+        return formatInputDate(date);
+      };
+
+      const getSelectedTimeRange = () => {
+        return document.querySelector('input[name="timeRange"]:checked')?.value || 'Rango AM';
+      };
+
+      const getDateSummary = () => {
+        if (dateRange.value === 'Hoy' || dateRange.value === 'Fecha') {
+          return formatDisplayDate(singleDate.value);
+        }
+
+        if (dateRange.value === 'Semana') {
+          return `${formatDisplayDate(weekFrom.value)} a ${formatDisplayDate(weekTo.value)}`;
+        }
+
+        if (dateRange.value === 'Mes') {
+          return formatDisplayMonth(monthPicker.value);
+        }
+
+        return `${formatDisplayDate(dateFrom.value)} a ${formatDisplayDate(dateTo.value)}`;
+      };
+
+      const updateWeekEnd = () => {
+        if (weekFrom.value) weekTo.value = addDays(weekFrom.value, 6);
+      };
+
+      const updateDateControls = () => {
+        const today = formatInputDate(new Date());
+        const selected = dateRange.value;
+
+        singleDateFields.classList.toggle('is-visible', selected === 'Hoy' || selected === 'Fecha');
+        weekDateFields.classList.toggle('is-visible', selected === 'Semana');
+        monthFields.classList.toggle('is-visible', selected === 'Mes');
+        customDateFields.classList.toggle('is-visible', selected === 'Fecha personalizada');
+
+        if (selected === 'Hoy') {
+          singleDate.value = today;
+        }
+
+        if (selected === 'Semana' && !weekFrom.value) {
+          weekFrom.value = today;
+          updateWeekEnd();
+        }
+
+        if (selected === 'Mes' && !monthPicker.value) {
+          monthPicker.value = today.slice(0, 7);
+        }
+      };
+
+      openBtn.addEventListener('click', openModal);
+      closeBtn.addEventListener('click', closeModal);
+      cancelBtn.addEventListener('click', closeModal);
+      backToRequest.addEventListener('click', showRequestStep);
+
+      modal.addEventListener('click', (event) => {
+        if (event.target === modal) closeModal();
+      });
+
+      confirmationModal.addEventListener('click', (event) => {
+        if (event.target === confirmationModal) closeConfirmation();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          closeModal();
+          closeConfirmation();
+        }
+      });
+
+      amountInput.addEventListener('input', (event) => {
+        event.target.value = formatPeso(event.target.value);
+      });
+
+      dateRange.addEventListener('change', updateDateControls);
+      weekFrom.addEventListener('change', updateWeekEnd);
+
+      fileInput.addEventListener('change', (event) => {
+        const file = event.target.files?.[0];
+        if (!file) {
+          preview.innerHTML = '<span>La imagen seleccionada se mostrará aquí</span>';
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          preview.innerHTML = `<img src="${e.target.result}" alt="Vista previa de la evidencia" />`;
+        };
+        reader.readAsDataURL(file);
+      });
+
+      processImageBtn.addEventListener('click', async () => {
+        const file = fileInput.files?.[0];
+        if (!file) {
+          alert('Por favor, selecciona una imagen primero.');
+          return;
+        }
+
+        const formData = new FormData();
+        formData.append('imagen', file);
+
+        resultBlock.textContent = 'Procesando con Gemini...';
+        processImageBtn.disabled = true;
+
+        try {
+          const response = await fetch('http://127.0.0.1:5000/procesar-comprobante', {
+            method: 'POST',
+            body: formData,
+          });
+
+          if (!response.ok) {
+            throw new Error(`${response.status} ${response.statusText}`);
+          }
+
+          const data = await response.json();
+          resultBlock.textContent = JSON.stringify(data, null, 2);
+
+          if (data.monto) {
+            amountInput.value = formatPeso(String(data.monto));
+          }
+          if (data.mandante) {
+            mandante.value = data.mandante;
+          }
+          if (data.fecha) {
+            singleDate.value = data.fecha;
+          }
+        } catch (error) {
+          resultBlock.textContent = 'Error al procesar la imagen: ' + error.message;
+        } finally {
+          processImageBtn.disabled = false;
+        }
+      });
+
+      modalForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const formattedAmount = amountInput.value || '$120.000';
+
+        summaryAmount.textContent = formattedAmount;
+        cartolaAmount.textContent = formattedAmount;
+        summaryMandante.textContent = mandante.value || 'Servipag';
+        summaryDates.textContent = getDateSummary();
+        summaryTime.textContent = getSelectedTimeRange();
+
+        modalForm.hidden = true;
+        resultStep.hidden = true;
+        loaderStep.hidden = false;
+
+        window.setTimeout(showResultStep, 1400);
+      });
+
+      registerBtn.addEventListener('click', () => {
+        confirmationModal.classList.add('is-open');
+        confirmationModal.setAttribute('aria-hidden', 'false');
+      });
+
+      finishConfirmation.addEventListener('click', () => {
+        closeConfirmation();
+        closeModal();
+      });
+
+      updateDateControls();
+    </script>
+  </body>
+</html>
