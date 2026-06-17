@@ -42,18 +42,18 @@
         <!-- <div class="w-fit rounded-full border border-white/15 bg-white/10 px-3 py-2 text-sm text-white/90">Operación financiera</div> -->
         </div>
 
-        <div>
-          <nav class="grid gap-2">
-            <div class="rounded-lg border border-white/15 bg-white/10 px-4 py-3 font-semibold text-white">Dashboard</div>
-            <div class="rounded-lg px-4 py-3 text-white/80">Conciliación</div>
-            <div class="rounded-lg px-4 py-3 text-white/80">Pagos</div>
-            <div class="rounded-lg px-4 py-3 text-white/80">Excepciones</div>
-            <div class="rounded-lg px-4 py-3 text-white/80">Auditoría</div>
-            <div class="rounded-lg px-4 py-3 text-white/80">Reportes</div>
-            <div class="rounded-lg px-4 py-3 text-white/80">Configuración</div>
-          </nav>
-        </div>
-        <div class="text-xs text-white/55">v1.0 Prototipo</div>
+        <nav class="grid gap-2">
+          <div class="rounded-lg border border-white/15 bg-white/10 px-4 py-3 font-semibold text-white">Panel</div>
+          <a href="#detalle-conciliaciones" class="rounded-lg px-4 py-3 text-white/80 transition hover:bg-white/10 hover:text-white">Conciliaciones</a>
+          <div class="rounded-lg px-4 py-3 text-white/80">Pagos</div>
+          <div class="rounded-lg px-4 py-3 text-white/80">Excepciones</div>
+          <div class="rounded-lg px-4 py-3 text-white/80">Auditoría</div>
+          <div class="rounded-lg px-4 py-3 text-white/80">Sincronización</div>
+          <div class="rounded-lg px-4 py-3 text-white/80">Reportes</div>
+          <div class="rounded-lg px-4 py-3 text-white/80">Configuración</div>
+        </nav>
+
+        <div class="mt-auto text-xs text-white/55">v1.0 Prototipo</div>
       </aside>
 
       <main class="overflow-auto p-5 lg:p-8">
@@ -68,40 +68,22 @@
             <button class="rounded-lg bg-tanner-royal px-4 py-3 font-semibold text-white shadow-lg shadow-blue-900/25 transition hover:-translate-y-0.5" id="openConciliationModal">+ Nueva Conciliación</button>
           </div>
         </section>
-
-        <section class="mb-5 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          <div class="rounded-lg border border-slate-200 bg-white/85 p-5 shadow-sm">
-            <span class="block text-sm text-tanner-gray">Procesados hoy</span>
-            <strong class="mt-2 block text-3xl text-tanner-midnight">120</strong>
-          </div>
-          <div class="rounded-lg border border-slate-200 bg-white/85 p-5 shadow-sm">
-            <span class="block text-sm text-tanner-gray">Conciliación total</span>
-            <strong class="mt-2 block text-3xl text-tanner-midnight">85%</strong>
-          </div>
-          <div class="rounded-lg border border-slate-200 bg-white/85 p-5 shadow-sm">
-            <span class="block text-sm text-tanner-gray">Pendientes</span>
-            <strong class="mt-2 block text-3xl text-tanner-midnight">32</strong>
-          </div>
-          <div class="rounded-lg border border-slate-200 bg-white/85 p-5 shadow-sm">
-            <span class="block text-sm text-tanner-gray">Alertas</span>
-            <strong class="mt-2 block text-3xl text-tanner-midnight">8</strong>
-          </div>
-        </section>
-
-        <header class="mb-5 flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
-          <div>
-            <h2 class="text-xl font-bold text-tanner-midnight">Monitoreo operativo</h2>
-            <p class="mt-1 text-sm text-tanner-gray">Visión rápida del estado de conciliación y pendientes críticos.</p>
-          </div>
-          <div class="w-fit rounded-full border border-tanner-midnight/10 bg-tanner-midnight/5 px-4 py-2 text-sm text-tanner-slate">Actualizado hace 2 min</div>
-        </header>
-
-        <section class="mb-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          <article class="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
-            <span class="text-sm text-tanner-gray">Flujo conciliado</span>
-            <strong class="mt-2 block text-3xl text-tanner-midnight">85%</strong>
-            <div class="mt-4 h-2 overflow-hidden rounded-full bg-slate-200">
-              <i class="block h-full rounded-full bg-gradient-to-r from-tanner-aqua to-tanner-mint" style="width: 85%"></i>
+        <section class="mb-6 rounded-lg border border-slate-200 bg-white p-5 shadow-tanner">
+          <div class="mb-5 flex flex-col gap-4">
+            <div class="flex flex-wrap gap-2">
+              <button type="button" data-period="today" class="period-chip rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm font-semibold text-tanner-midnight transition hover:bg-slate-200">Hoy</button>
+              <button type="button" data-period="week" class="period-chip rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm font-semibold text-tanner-midnight transition hover:bg-slate-200">Última semana</button>
+              <button type="button" data-period="month" class="period-chip rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm font-semibold text-tanner-midnight transition hover:bg-slate-200">Último mes</button>
+              <button type="button" data-period="range" class="period-chip rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm font-semibold text-tanner-midnight transition hover:bg-slate-200">Rango de fechas</button>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span
+                id="selectedRangeChip"
+                class="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold shadow-sm"
+                aria-live="polite"
+              >
+                Rango
+              </span>
             </div>
           </article>
           <article class="rounded-lg border border-tanner-midnight bg-gradient-to-br from-tanner-midnight to-tanner-royal p-5 text-white shadow-sm">
@@ -128,17 +110,250 @@
             <button class="rounded-md px-4 py-2 text-sm text-tanner-gray">Historial</button>
           </div>
 
-          <div class="rounded-lg border border-slate-200 bg-white p-5 shadow-tanner">
-            <div class="mb-5 flex flex-col justify-between gap-4 lg:flex-row">
-              <div>
-                <h3 class="text-lg font-bold text-tanner-midnight">Detalle de conciliación</h3>
-                <p class="mt-1 text-sm text-tanner-gray">Transacciones bancarias con estado, monto y acción sugerida.</p>
-              </div>
-              <div class="flex flex-wrap gap-2">
-                <span class="rounded-full border border-tanner-midnight/10 bg-tanner-midnight/5 px-3 py-2 text-sm text-tanner-slate">24 en revisión</span>
-                <span class="rounded-full border border-tanner-midnight/10 bg-tanner-midnight/5 px-3 py-2 text-sm text-tanner-slate">5 automatizadas</span>
+          <div
+            id="dateRangePanel"
+            class="fixed inset-0 z-[60] hidden flex items-center justify-center bg-slate-950/55 p-4 backdrop-blur-sm"
+            role="dialog"
+            aria-modal="true"
+            aria-hidden="true"
+          >
+            <div class="w-full max-w-6xl overflow-hidden rounded-3xl bg-white shadow-2xl ring-1 ring-black/5">
+              <div class="grid lg:grid-cols-[220px_minmax(0,1fr)]">
+                <aside class="border-b border-gray-100 bg-gray-50/80 p-4 lg:border-b-0 lg:border-r">
+                  <p class="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-gray-500">Rangos rápidos</p>
+                  <ul class="flex flex-col text-xs text-gray-700">
+                    <li><button type="button" data-range-preset="last7" class="w-full px-4 py-1.5 text-left leading-5 hover:bg-gray-50 hover:text-blue-600">Últimos 7 días</button></li>
+                    <li><button type="button" data-range-preset="last14" class="w-full px-4 py-1.5 text-left leading-5 hover:bg-gray-50 hover:text-blue-600">Últimos 14 días</button></li>
+                    <li><button type="button" data-range-preset="last30" class="w-full px-4 py-1.5 text-left leading-5 hover:bg-gray-50 hover:text-blue-600">Últimos 30 días</button></li>
+                    <li><button type="button" data-range-preset="last3m" class="w-full px-4 py-1.5 text-left leading-5 hover:bg-gray-50 hover:text-blue-600">Últimos 3 meses</button></li>
+                    <li><button type="button" data-range-preset="last12m" class="w-full px-4 py-1.5 text-left leading-5 hover:bg-gray-50 hover:text-blue-600">Últimos 12 meses</button></li>
+                    <li><button type="button" data-range-preset="mtd" class="w-full px-4 py-1.5 text-left leading-5 hover:bg-gray-50 hover:text-blue-600">Mes hasta hoy</button></li>
+                    <li><button type="button" data-range-preset="qtd" class="w-full px-4 py-1.5 text-left leading-5 hover:bg-gray-50 hover:text-blue-600">Trimestre hasta hoy</button></li>
+                    <li><button type="button" data-range-preset="all" class="w-full px-4 py-1.5 text-left leading-5 hover:bg-gray-50 hover:text-blue-600">Todo el historial</button></li>
+                    <li><button type="button" data-range-preset="custom" class="w-full px-4 py-1.5 text-left leading-5 hover:bg-gray-50 hover:text-blue-600">Personalizado</button></li>
+                  </ul>
+                </aside>
+
+                <div class="flex min-w-0 flex-col">
+                  <div class="grid divide-y divide-gray-100 lg:grid-cols-2 lg:divide-y-0 lg:divide-x">
+                    <div class="flex flex-col border-b border-gray-100 px-6 pb-6 pt-5">
+                      <div class="flex items-center justify-between">
+                        <button type="button" data-calendar-nav="-1" class="flex items-center justify-center rounded-xl p-2 hover:bg-gray-50" aria-label="Mes anterior">
+                          <svg class="h-6 w-6 text-gray-900 stroke-current" fill="none" viewBox="0 0 24 24">
+                            <path d="M13.25 8.75L9.75 12l3.5 3.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <div class="text-sm font-semibold text-gray-900" data-range-calendar-title="left">Febrero</div>
+                        <button type="button" data-calendar-nav="1" class="flex items-center justify-center rounded-xl p-2 hover:bg-gray-50" aria-label="Mes siguiente">
+                          <svg class="h-6 w-6 text-gray-900 stroke-current" fill="none" viewBox="0 0 24 24">
+                            <path d="M10.75 8.75l3.5 3.25-3.5 3.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="grid grid-cols-7 text-center text-xs text-gray-900" data-range-calendar-grid="febrero" data-range-calendar-start="2026-02-01" data-range-calendar-month-index="1">
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg font-semibold">Lu</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg font-semibold">Ma</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg font-semibold">Mi</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg font-semibold">Ju</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg font-semibold">Vi</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg font-semibold">Sá</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg font-semibold">Do</span>
+
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg text-gray-700">1</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg text-gray-700">2</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg text-gray-700">3</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg text-gray-700">4</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg text-gray-700">5</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg text-gray-700">6</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg text-gray-700">7</span>
+
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">8</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-50 font-semibold">9</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">10</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">11</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">12</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">13</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">14</span>
+
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">15</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">16</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">17</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-l-lg bg-blue-600 text-white">18</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-none bg-gray-50 font-semibold text-blue-600">19</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-none bg-gray-50 font-semibold text-blue-600">20</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-none rounded-tr-lg bg-gray-50 font-semibold text-blue-600">21</span>
+
+                        <span class="flex h-10 w-10 items-center justify-center rounded-none rounded-l-lg bg-gray-50 font-semibold text-blue-600">22</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-none bg-gray-50 font-semibold text-blue-600">23</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-none bg-gray-50 font-semibold text-blue-600">24</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-none bg-gray-50 font-semibold text-blue-600">25</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-none bg-gray-50 font-semibold text-blue-600">26</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-none bg-gray-50 font-semibold text-blue-600">27</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-none rounded-br-lg bg-gray-50 font-semibold text-blue-600">28</span>
+
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">1</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">2</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">3</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">4</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">5</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">6</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">7</span>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-col px-6 pb-6 pt-5">
+                      <div class="flex items-center justify-between">
+                        <button type="button" data-calendar-nav="-1" class="flex items-center justify-center rounded-xl p-2 hover:bg-gray-50" aria-label="Mes anterior">
+                          <svg class="h-6 w-6 text-gray-900 stroke-current" fill="none" viewBox="0 0 24 24">
+                            <path d="M13.25 8.75L9.75 12l3.5 3.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <div class="text-sm font-semibold text-gray-900" data-range-calendar-title="right">Marzo</div>
+                        <button type="button" data-calendar-nav="1" class="flex items-center justify-center rounded-xl p-2 hover:bg-gray-50" aria-label="Mes siguiente">
+                          <svg class="h-6 w-6 text-gray-900 stroke-current" fill="none" viewBox="0 0 24 24">
+                            <path d="M10.75 8.75l3.5 3.25-3.5 3.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="grid grid-cols-7 text-center text-xs text-gray-900" data-range-calendar-grid="marzo" data-range-calendar-start="2026-03-01" data-range-calendar-month-index="2">
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg font-semibold">Lu</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg font-semibold">Ma</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg font-semibold">Mi</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg font-semibold">Ju</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg font-semibold">Vi</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg font-semibold">Sá</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg font-semibold">Do</span>
+
+                        <span class="flex h-10 w-10 items-center justify-center rounded-tl-lg bg-gray-50 text-blue-600">1</span>
+                        <span class="flex h-10 w-10 items-center justify-center bg-gray-50 text-blue-600">2</span>
+                        <span class="flex h-10 w-10 items-center justify-center bg-gray-50 text-blue-600">3</span>
+                        <span class="flex h-10 w-10 items-center justify-center bg-gray-50 text-blue-600">4</span>
+                        <span class="flex h-10 w-10 items-center justify-center bg-gray-50 text-blue-600">5</span>
+                        <span class="flex h-10 w-10 items-center justify-center bg-gray-50 text-blue-600">6</span>
+                        <span class="flex h-10 w-10 items-center justify-center bg-gray-50 text-blue-600">7</span>
+
+                        <span class="flex h-10 w-10 items-center justify-center rounded-bl-lg bg-gray-50 text-blue-600">8</span>
+                        <span class="flex h-10 w-10 items-center justify-center bg-gray-50 text-blue-600">9</span>
+                        <span class="flex h-10 w-10 items-center justify-center bg-gray-50 text-blue-600">10</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-r-lg bg-blue-600 text-white">11</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">12</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">13</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">14</span>
+
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">15</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">16</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">17</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">18</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">19</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">20</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">21</span>
+
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">22</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">23</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">24</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">25</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">26</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">27</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">28</span>
+
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">29</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">30</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg">31</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg text-gray-700">1</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg text-gray-700">2</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg text-gray-700">3</span>
+                        <span class="flex h-10 w-10 items-center justify-center rounded-lg text-gray-700">4</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col gap-4 border-t border-gray-100 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
+                    <div class="flex items-center">
+                      <label class="sr-only" for="rangeFrom">Fecha desde</label>
+                      <input
+                        id="rangeFrom"
+                        type="date"
+                        class="flex w-32 items-center rounded-lg bg-gray-50 px-4 py-2 text-sm text-gray-900 focus:bg-white focus:outline-none focus:ring-1 focus:ring-blue-600"
+                      />
+                      <div class="p-1 text-gray-400" aria-hidden="true">
+                        <svg class="h-6 w-6 stroke-current text-gray-900" fill="none" viewBox="0 0 24 24">
+                          <path d="M6.738 12.012h10.5m-4.476 4.25l4.5-4.25-4.5-4.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </div>
+                      <label class="sr-only" for="rangeTo">Fecha hasta</label>
+                      <input
+                        id="rangeTo"
+                        type="date"
+                        class="flex w-32 items-center rounded-lg bg-gray-50 px-4 py-2 text-sm text-gray-900 focus:bg-white focus:outline-none focus:ring-1 focus:ring-blue-600"
+                      />
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <button
+                        type="button"
+                        id="closeRangePicker"
+                        class="rounded-lg bg-gray-50 px-4 py-2 text-sm hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                      >
+                        Cancelar
+                      </button>
+                      <button
+                        type="button"
+                        id="applyRangePicker"
+                        class="rounded-lg bg-blue-600 px-4 py-2 text-sm text-white hover:bg-blue-700 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                      >
+                        Aplicar
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+
+          <div class="mb-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <article class="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-5 shadow-sm">
+              <span class="text-sm text-tanner-gray">Pagos recibidos</span>
+              <strong class="mt-2 block text-3xl text-tanner-midnight" id="metricReceived">--</strong>
+            </article>
+            <article class="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-5 shadow-sm">
+              <span class="text-sm text-tanner-gray">Pagos procesados</span>
+              <strong class="mt-2 block text-3xl text-tanner-midnight" id="metricProcessed">--</strong>
+            </article>
+            <article class="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-5 shadow-sm">
+              <span class="text-sm text-tanner-gray">Conciliados</span>
+              <strong class="mt-2 block text-3xl text-emerald-700" id="metricConciliated">--</strong>
+            </article>
+            <article class="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-5 shadow-sm">
+              <span class="text-sm text-tanner-gray">Pendientes</span>
+              <strong class="mt-2 block text-3xl text-amber-700" id="metricPending">--</strong>
+            </article>
+            <article class="rounded-2xl border border-rose-200 bg-gradient-to-br from-rose-50 to-white p-5 shadow-sm">
+              <span class="text-sm text-rose-700">Rechazados</span>
+              <strong class="mt-2 block text-3xl text-rose-700" id="metricRejected">--</strong>
+            </article>
+            <article class="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-5 shadow-sm">
+              <span class="text-sm text-tanner-gray">Monto conciliado</span>
+              <strong class="mt-2 block text-3xl text-tanner-midnight" id="metricAmount">--</strong>
+            </article>
+          </div>
+
+          <div class="mb-5 flex flex-wrap gap-2" id="statusTabs">
+            <button type="button" data-status-filter="conciliado" class="status-chip rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-100">Conciliados</button>
+            <button type="button" data-status-filter="pendiente" class="status-chip rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-700 transition hover:bg-amber-100">Pendiente</button>
+            <button type="button" data-status-filter="rechazado" class="status-chip rounded-full border border-rose-200 bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700 transition hover:bg-rose-100">Rechazados</button>
+            <button type="button" data-status-filter="all" class="status-chip rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm font-semibold text-tanner-midnight transition hover:bg-slate-200">Historial</button>
+          </div>
+
+          <div class="mb-5 flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3">
+            <span class="text-tanner-royal">⌕</span>
+            <input id="movementSearch" class="w-full border-0 bg-transparent outline-none" type="text" value="" placeholder="Buscar por monto, cliente o referencia..." />
+          </div>
+
+            <div id="detalle-conciliaciones" class="overflow-hidden rounded-2xl border border-slate-200">
+              <div class="flex flex-col gap-4 border-b border-slate-200 bg-slate-50 p-5 lg:flex-row lg:items-start lg:justify-between">
+                <div>
+                  <h3 class="text-lg font-bold text-tanner-midnight">Detalle de Conciliaciones</h3>
+                </div>
+              </div>
 
             <div class="mb-5 flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3">
               <span class="text-tanner-royal">⌕</span>
@@ -148,10 +363,46 @@
             <table class="w-full border-collapse text-left">
               <thead class="text-xs uppercase text-tanner-gray">
                 <tr>
-                  <th class="border-b border-slate-200 px-3 py-3">Fecha</th>
-                  <th class="border-b border-slate-200 px-3 py-3">Monto</th>
-                  <th class="border-b border-slate-200 px-3 py-3">Cliente</th>
-                  <th class="border-b border-slate-200 px-3 py-3">Estado</th>
+                  <th class="border-b border-slate-200 px-3 py-3" data-sort-column="date" data-sort-type="date">
+                    <button type="button" class="flex items-center gap-1 font-semibold text-tanner-gray transition hover:text-tanner-midnight" data-sort-trigger="date" aria-label="Ordenar por fecha">
+                      <span class="flex items-center">
+                        Fecha
+                        <svg class="ms-1 h-4 w-4" data-sort-icon="date" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4" />
+                        </svg>
+                      </span>
+                    </button>
+                  </th>
+                  <th class="border-b border-slate-200 px-3 py-3" data-sort-column="amount" data-sort-type="number">
+                    <button type="button" class="flex items-center gap-1 font-semibold text-tanner-gray transition hover:text-tanner-midnight" data-sort-trigger="amount" aria-label="Ordenar por monto">
+                      <span class="flex items-center">
+                        Monto
+                        <svg class="ms-1 h-4 w-4" data-sort-icon="amount" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4" />
+                        </svg>
+                      </span>
+                    </button>
+                  </th>
+                  <th class="border-b border-slate-200 px-3 py-3" data-sort-column="client" data-sort-type="string">
+                    <button type="button" class="flex items-center gap-1 font-semibold text-tanner-gray transition hover:text-tanner-midnight" data-sort-trigger="client" aria-label="Ordenar por cliente">
+                      <span class="flex items-center">
+                        Cliente
+                        <svg class="ms-1 h-4 w-4" data-sort-icon="client" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4" />
+                        </svg>
+                      </span>
+                    </button>
+                  </th>
+                  <th class="border-b border-slate-200 px-3 py-3" data-sort-column="status" data-sort-type="string">
+                    <button type="button" class="flex items-center gap-1 font-semibold text-tanner-gray transition hover:text-tanner-midnight" data-sort-trigger="status" aria-label="Ordenar por estado">
+                      <span class="flex items-center">
+                        Estado
+                        <svg class="ms-1 h-4 w-4" data-sort-icon="status" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m8 15 4 4 4-4m0-6-4-4-4 4" />
+                        </svg>
+                      </span>
+                    </button>
+                  </th>
                   <th class="border-b border-slate-200 px-3 py-3">Acción</th>
                 </tr>
               </thead>
@@ -172,197 +423,299 @@
                 </tr>
               </tbody>
             </table>
+
+            <div id="tableEmptyState" class="hidden border-t border-slate-200 bg-slate-50 px-4 py-10 text-center text-sm text-tanner-gray">
+              No hay movimientos para el filtro seleccionado.
+            </div>
+
+            <div class="flex flex-col gap-3 border-t border-slate-200 bg-white px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
+              <p id="movementPaginationSummary" class="text-sm text-tanner-gray"></p>
+              <div id="movementPagination" class="flex items-center gap-2"></div>
+            </div>
           </div>
         </section>
       </main>
     </div>
 
-    <div class="modal-overlay fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/60 p-5 backdrop-blur-md" id="conciliationModal" aria-hidden="true">
-      <div class="modal-card max-h-[calc(100vh-40px)] w-full max-w-5xl overflow-auto rounded-lg border border-white/60 bg-white p-6 shadow-2xl" role="dialog" aria-modal="true" aria-labelledby="conciliationModalTitle">
-        <div class="modal-header mb-6 flex items-start justify-between gap-4">
-          <div>
-            <p class="modal-eyebrow mb-2 text-xs uppercase tracking-widest text-tanner-royal">Solicitud</p>
-            <h2 class="text-2xl font-bold text-tanner-midnight" id="conciliationModalTitle">Nueva conciliación</h2>
+    <div class="modal-overlay fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/60 p-3 backdrop-blur-md" id="conciliationModal" aria-hidden="true">
+      <div class="pointer-events-none absolute inset-x-3 top-3 z-[85] flex justify-center sm:top-5">
+        <div class="w-full max-w-2xl">
+          <div class="pointer-events-auto hidden rounded-lg border p-4 shadow-xl" id="identificationAlert" role="alert" aria-live="polite">
+            <div class="flex items-start gap-3">
+              <svg class="mt-0.5 h-5 w-5 shrink-0" id="identificationAlertIcon" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+                <path id="identificationAlertIconPath" fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 10-1.214-.882l-3.236 4.449-1.65-1.65a.75.75 0 00-1.06 1.061l2.273 2.273a.75.75 0 001.137-.089l3.75-5.162z" />
+              </svg>
+              <div class="min-w-0 flex-1">
+                <h3 class="text-sm font-semibold leading-5" id="identificationAlertTitle"></h3>
+                <div class="mt-1 text-sm leading-5" id="identificationAlertDescription"></div>
+              </div>
+              <button type="button" id="dismissIdentificationAlert" class="hidden -m-1.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg p-1.5 transition focus:outline-none focus:ring-4" aria-label="Cerrar alerta">
+                <svg class="h-3.5 w-3.5" aria-hidden="true" fill="none" viewBox="0 0 14 14">
+                  <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                </svg>
+              </button>
+            </div>
           </div>
-          <button class="modal-close grid h-10 w-10 place-items-center rounded-full bg-tanner-midnight/10 text-2xl text-tanner-midnight" id="closeConciliationModal" aria-label="Cerrar modal">×</button>
+          <div class="pointer-events-auto hidden rounded-lg border border-red-200 bg-red-50 p-4 text-red-800 shadow-xl" id="fileAlert" role="alert" aria-live="polite">
+            <div class="flex items-start gap-3">
+              <svg class="mt-0.5 h-5 w-5 shrink-0 text-red-700" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-11.75a.75.75 0 10-1.5 0v4.5a.75.75 0 001.5 0v-4.5zm0 6.75a.75.75 0 10-1.5 0 .75.75 0 001.5 0z" />
+              </svg>
+              <div class="min-w-0 flex-1">
+                <h3 class="text-sm font-semibold leading-5">Debes subir la imagen para pre-procesar</h3>
+                <div class="mt-1 text-sm leading-5">Adjunta un archivo PNG, JPG o PDF para continuar.</div>
+              </div>
+              <button type="button" id="dismissFileAlert" class="-m-1.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg p-1.5 text-red-800 transition hover:bg-red-100 focus:outline-none focus:ring-4 focus:ring-red-300" aria-label="Cerrar alerta">
+                <svg class="h-3.5 w-3.5" aria-hidden="true" fill="none" viewBox="0 0 14 14">
+                  <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-card flex max-h-[calc(100vh-1.5rem)] w-full max-w-3xl flex-col overflow-hidden rounded-lg border border-white/60 bg-white p-3 shadow-2xl sm:p-4" role="dialog" aria-modal="true" aria-labelledby="conciliationModalTitle">
+        <div class="modal-header mb-3 flex items-start justify-between gap-3 sm:mb-4">
+          <div>
+            <p class="modal-eyebrow mb-1 text-[11px] uppercase tracking-[0.24em] text-tanner-royal">Solicitud</p>
+            <h2 class="text-[1.55rem] font-bold leading-tight text-tanner-midnight sm:text-[1.75rem]" id="conciliationModalTitle">Nueva conciliación</h2>
+          </div>
+          <button class="modal-close grid h-9 w-9 place-items-center rounded-full bg-tanner-midnight/10 text-xl text-tanner-midnight" id="closeConciliationModal" aria-label="Cerrar modal">×</button>
         </div>
 
-        <form class="modal-form grid gap-6" id="requestStep">
-          <div class="form-grid grid gap-5 lg:grid-cols-2">
-            <div class="form-field form-field--full grid gap-3 lg:col-span-2">
+        <form class="modal-form flex min-h-0 flex-1 flex-col gap-3 sm:gap-4" id="requestStep">
+          <div class="form-grid grid gap-3 lg:grid-cols-2">
+            <div class="form-field form-field--full grid gap-2 lg:col-span-2">
               <label class="font-semibold text-tanner-midnight" for="proofImage">Adjuntar imagen</label>
-              <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-                <input class="w-full min-w-0 rounded-lg border border-slate-200 bg-white p-3 text-sm file:mr-4 file:rounded-md file:border-0 file:bg-tanner-midnight file:px-4 file:py-2 file:text-white" type="file" id="proofImage" accept="image/*" />
-                <button type="button" id="processImageBtn" class="rounded-lg bg-tanner-royal px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/25 transition hover:-translate-y-0.5">Procesar imagen</button>
+              <div class="flex flex-col gap-2 sm:flex-row sm:items-center">
+                <input class="w-full min-w-0 rounded-lg border border-slate-200 bg-white p-2.5 text-sm file:mr-3 file:rounded-md file:border-0 file:bg-tanner-midnight file:px-4 file:py-2 file:text-white" type="file" id="proofImage" accept="image/*" />
+                <button type="button" id="processImageBtn" class="rounded-lg bg-tanner-royal px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-900/20 transition hover:-translate-y-0.5">Pre-Procesar Imagen</button>
               </div>
-              <div class="image-preview grid min-h-56 place-items-center overflow-hidden rounded-lg border border-slate-200 bg-slate-50" id="imagePreview">
-                <span class="text-sm text-tanner-gray">La imagen seleccionada se mostrará aquí</span>
+              <div class="image-preview relative grid h-[170px] grid-cols-1 gap-2 overflow-hidden rounded-lg border border-slate-200 bg-slate-50 p-2 sm:h-[185px] md:grid-cols-[40%_minmax(0,1fr)] lg:h-[200px]" id="imagePreview">
+                <div class="preview-trigger flex h-full min-h-0 items-center justify-center overflow-hidden rounded-md bg-white">
+                  <img class="preview-image mx-auto block h-auto w-auto max-h-full max-w-full object-contain opacity-90" id="previewImage" alt="Vista previa de la evidencia" hidden />
+                </div>
+                <div class="preview-detail relative hidden h-full min-h-0 overflow-hidden rounded-md border border-slate-200 bg-white md:block" id="previewZoomPane" aria-hidden="true"></div>
+                <div class="absolute inset-2 grid place-items-center gap-1.5 text-center" id="previewPlaceholder">
+                  <span class="text-sm text-tanner-gray">La imagen seleccionada se mostrará aquí</span>
+                  <span class="text-[11px] font-medium uppercase tracking-wide text-tanner-gray/80">Formatos aceptados: PNG, JPG, PDF</span>
+                </div>
+                <div class="absolute inset-0 hidden items-center justify-center bg-slate-950/35 px-3 backdrop-blur-[2px]" id="processingOverlay" aria-hidden="true">
+                  <div class="w-full max-w-xs rounded-2xl border border-white/60 bg-white/95 p-3 shadow-2xl sm:p-4">
+                    <div class="flex items-center gap-3">
+                      <div class="h-10 w-10 shrink-0 animate-spin rounded-full border-4 border-tanner-royal/20 border-t-tanner-royal"></div>
+                      <div class="text-left">
+                        <p class="text-sm font-semibold text-tanner-midnight">Pre-procesando imagen</p>
+                        <p class="text-xs text-tanner-gray">La imagen permanece visible mientras extraemos los datos. Espera que finalice el proceso.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <pre id="resultBlock" class="max-h-52 overflow-auto rounded-lg border border-slate-200 bg-slate-50 p-4 text-sm text-tanner-midnight">El resultado aparecerá aquí...</pre>
+              <div class="image-hover-inspector pointer-events-none fixed left-1/2 top-1/2 z-[65] hidden w-[min(760px,calc(100vw-2rem))] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-lg border border-slate-200 bg-white p-3 shadow-2xl" id="imageHoverInspector" aria-hidden="true">
+                <div class="grid gap-3 md:grid-cols-[minmax(0,45%)_minmax(0,55%)]">
+                  <div class="flex h-[min(52vh,420px)] items-center justify-center overflow-hidden rounded-md bg-slate-50">
+                    <img class="h-full w-full object-contain" id="hoverInspectorImage" alt="Imagen cargada para revisión ampliada" />
+                  </div>
+                  <div class="hover-zoom-pane h-[min(52vh,420px)] overflow-hidden rounded-md border border-slate-200 bg-slate-100" id="hoverZoomPane" aria-hidden="true"></div>
+                </div>
+              </div>
             </div>
 
-            <div class="form-field grid gap-2">
-              <label class="font-semibold text-tanner-midnight" for="amount">Monto</label>
-              <input class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 outline-none focus:border-tanner-royal focus:ring-4 focus:ring-blue-100" type="text" id="amount" inputmode="numeric" placeholder="$0" />
+            <div class="form-field grid gap-1.5">
+              <label class="font-semibold text-tanner-midnight" for="requestName">Nombre</label>
+              <input class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 outline-none transition focus:border-tanner-royal focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-400" type="text" id="requestName" placeholder="Nombre y apellido" disabled />
             </div>
 
-            <div class="form-field grid gap-2">
-              <label class="font-semibold text-tanner-midnight" for="dateRange">Rango de fechas</label>
-              <select class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 outline-none focus:border-tanner-royal focus:ring-4 focus:ring-blue-100" id="dateRange">
-                <option>Hoy</option>
-                <option>Fecha</option>
-                <option>Semana</option>
-                <option>Mes</option>
-                <option>Fecha personalizada</option>
-              </select>
+            <div class="form-field grid gap-1.5">
+              <label class="font-semibold text-tanner-midnight" for="requestRut">RUT</label>
+              <input class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 outline-none transition focus:border-tanner-royal focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-400" type="text" id="requestRut" placeholder="12.345.678-9" disabled />
             </div>
 
-            <div class="form-field form-field--full date-panel grid gap-2 lg:col-span-2" id="singleDateFields">
+            <div class="form-field grid gap-1.5">
               <label class="font-semibold text-tanner-midnight" for="singleDate">Fecha</label>
-              <input class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 outline-none focus:border-tanner-royal focus:ring-4 focus:ring-blue-100" type="date" id="singleDate" />
+              <input class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 outline-none transition focus:border-tanner-royal focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-400" type="date" id="singleDate" disabled />
             </div>
 
-            <div class="form-field form-field--full date-panel grid gap-2 lg:col-span-2" id="weekDateFields">
-              <label class="font-semibold text-tanner-midnight">Semana</label>
-              <div class="date-pair grid gap-3 md:grid-cols-2">
-                <input class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 outline-none focus:border-tanner-royal focus:ring-4 focus:ring-blue-100" type="date" id="weekFrom" aria-label="Inicio de semana" />
-                <input class="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-tanner-gray outline-none" type="date" id="weekTo" aria-label="Fin de semana" readonly />
-              </div>
+            <div class="form-field grid gap-1.5">
+              <label class="font-semibold text-tanner-midnight" for="amount">Monto</label>
+              <input class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 outline-none transition focus:border-tanner-royal focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-400" type="text" id="amount" inputmode="numeric" placeholder="$0" disabled />
             </div>
 
-            <div class="form-field form-field--full date-panel grid gap-2 lg:col-span-2" id="monthFields">
-              <label class="font-semibold text-tanner-midnight" for="monthPicker">Mes</label>
-              <input class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 outline-none focus:border-tanner-royal focus:ring-4 focus:ring-blue-100" type="month" id="monthPicker" />
-            </div>
-
-            <div class="form-field form-field--full date-panel grid gap-2 lg:col-span-2" id="customDateFields">
-              <label class="font-semibold text-tanner-midnight">Fecha personalizada</label>
-              <div class="date-pair grid gap-3 md:grid-cols-2">
-                <input class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 outline-none focus:border-tanner-royal focus:ring-4 focus:ring-blue-100" type="date" id="dateFrom" aria-label="Desde" />
-                <input class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 outline-none focus:border-tanner-royal focus:ring-4 focus:ring-blue-100" type="date" id="dateTo" aria-label="Hasta" />
-              </div>
-            </div>
-
-            <div class="form-field form-field--full grid gap-2 lg:col-span-2">
-              <label class="font-semibold text-tanner-midnight">Rango horario</label>
-              <div class="radio-group grid gap-3 md:grid-cols-3">
-                <label class="radio-option flex min-h-12 cursor-pointer items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 font-semibold text-tanner-midnight">
-                  <input class="accent-tanner-royal" type="radio" name="timeRange" value="Rango AM" checked />
-                  <span>Rango AM</span>
-                </label>
-                <label class="radio-option flex min-h-12 cursor-pointer items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 font-semibold text-tanner-midnight">
-                  <input class="accent-tanner-royal" type="radio" name="timeRange" value="Rango PM" />
-                  <span>Rango PM</span>
-                </label>
-                <label class="radio-option flex min-h-12 cursor-pointer items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 font-semibold text-tanner-midnight">
-                  <input class="accent-tanner-royal" type="radio" name="timeRange" value="Cualquiera" />
-                  <span>Cualquiera</span>
-                </label>
-              </div>
-            </div>
-
-            <div class="form-field form-field--full grid gap-2 lg:col-span-2">
-              <label class="font-semibold text-tanner-midnight" for="mandante">Mandante</label>
-              <select class="w-full rounded-lg border border-slate-200 bg-white px-4 py-3 outline-none focus:border-tanner-royal focus:ring-4 focus:ring-blue-100" id="mandante">
-                <option value="">Seleccione un mandante</option>
-                <optgroup label="[Canales de Pago]">
-                  <option>Servipag</option>
-                  <option>BancoEstado</option>
-                  <option>WebPay</option>
-                </optgroup>
-                <optgroup label="[Automotoras]">
-                  <option>Automotora – BPM</option>
-                  <option>Automotora – Correo</option>
-                </optgroup>
-                <optgroup label="[Clientes]">
-                  <option>Cliente Directo – Transferencia</option>
-                </optgroup>
-                <optgroup label="[Excepciones]">
-                  <option>Pago No Identificado</option>
-                  <option>Otro</option>
-                </optgroup>
-              </select>
+            <div class="form-field form-field--full grid gap-1.5 lg:col-span-2">
+              <label class="font-semibold text-tanner-midnight" for="destinationAccount">Cuenta Destino</label>
+              <input class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 outline-none transition focus:border-tanner-royal focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-400" type="text" id="destinationAccount" placeholder="Cuenta corriente / número de cuenta" disabled />
             </div>
           </div>
 
-          <div class="modal-actions flex flex-wrap justify-end gap-3">
-            <button type="button" class="secondary-btn rounded-lg bg-tanner-midnight/5 px-4 py-3 font-semibold text-tanner-midnight" id="cancelConciliation">Cancelar</button>
-            <button type="submit" class="primary-btn rounded-lg bg-tanner-royal px-4 py-3 font-semibold text-white shadow-lg shadow-blue-900/20">Conciliar</button>
+          <div class="modal-actions flex flex-wrap justify-end gap-2 pt-0.5">
+            <button type="button" class="secondary-btn rounded-lg bg-tanner-midnight/5 px-3.5 py-2.5 font-semibold text-tanner-midnight" id="cancelConciliation">Cancelar</button>
+            <button type="button" class="hidden rounded-lg bg-amber-500 px-3.5 py-2.5 font-semibold text-white shadow-lg shadow-amber-900/15 transition hover:bg-amber-600" id="deferPendingBtn">Dejar pendiente</button>
+            <button type="submit" id="submitConciliationBtn" class="primary-btn rounded-lg bg-tanner-royal px-3.5 py-2.5 font-semibold text-white shadow-lg shadow-blue-900/20 transition disabled:cursor-not-allowed disabled:bg-slate-300 disabled:text-slate-500 disabled:shadow-none">Conciliar</button>
           </div>
         </form>
 
-        <div class="process-step grid min-h-[430px] place-items-center content-center gap-4 text-center" id="loaderStep" hidden>
-          <div class="loader-mark h-16 w-16 rounded-full border-4 border-tanner-royal/20 border-t-tanner-royal" aria-hidden="true"></div>
-          <h3 class="text-2xl font-bold text-tanner-midnight">Conciliando</h3>
-          <p class="text-tanner-gray">Estamos cruzando la solicitud contra movimientos de cartola.</p>
+        <div class="process-step grid min-h-[260px] place-items-center content-center gap-3 text-center" id="loaderStep" hidden>
+          <div class="loader-mark h-14 w-14 rounded-full border-4 border-tanner-royal/20 border-t-tanner-royal" aria-hidden="true"></div>
+          <h3 class="text-xl font-bold text-tanner-midnight">Conciliando</h3>
+          <p class="text-sm text-tanner-gray">Estamos cruzando la solicitud contra movimientos de cartola.</p>
         </div>
 
-        <div class="result-step grid gap-5" id="resultStep" hidden>
-          <div class="result-banner flex items-center gap-4 rounded-lg border border-green-200 bg-green-50 p-4">
-            <span class="result-icon grid h-10 w-10 shrink-0 place-items-center rounded-full bg-green-600 font-bold text-white">✓</span>
-            <div>
-              <h3 class="text-lg font-bold text-tanner-midnight">Monto correctamente conciliado</h3>
-              <p class="mt-1 text-sm text-tanner-gray">Se encontró una coincidencia consistente entre la solicitud y la cartola bancaria.</p>
+        <div class="result-step grid gap-4" id="resultStep" hidden>
+          <div id="resultSuccessView" class="grid gap-4">
+            <div class="result-banner flex items-center gap-3 rounded-lg border border-green-200 bg-green-50 p-3">
+              <span class="result-icon grid h-9 w-9 shrink-0 place-items-center rounded-full bg-green-600 font-bold text-white">✓</span>
+              <div>
+                <h3 class="text-base font-bold text-tanner-midnight">Monto correctamente conciliado</h3>
+                <p class="mt-0.5 text-sm text-tanner-gray">Se encontró una coincidencia consistente entre la solicitud y la cartola bancaria.</p>
+              </div>
+            </div>
+
+            <div class="comparison-grid grid gap-3 lg:grid-cols-2">
+              <section class="comparison-panel rounded-lg border border-slate-200 bg-white p-4">
+                <h4 class="mb-3 font-bold text-tanner-midnight">Datos a conciliar</h4>
+                <dl class="grid gap-2.5">
+                  <div class="flex justify-between gap-3 border-b border-slate-100 pb-2.5">
+                    <dt class="text-tanner-gray">Monto</dt>
+                    <dd class="font-bold text-[#222222]" id="summaryAmount">$120.000</dd>
+                  </div>
+                  <div class="flex justify-between gap-3 border-b border-slate-100 pb-2.5">
+                    <dt class="text-tanner-gray">Nombre</dt>
+                    <dd class="font-bold text-[#222222]" id="summaryName">--</dd>
+                  </div>
+                  <div class="flex justify-between gap-3 border-b border-slate-100 pb-2.5">
+                    <dt class="text-tanner-gray">RUT</dt>
+                    <dd class="font-bold text-[#222222]" id="summaryRut">--</dd>
+                  </div>
+                  <div class="flex justify-between gap-3 border-b border-slate-100 pb-2.5">
+                    <dt class="text-tanner-gray">Fecha</dt>
+                    <dd class="font-bold text-[#222222]" id="summaryDates">Hoy</dd>
+                  </div>
+                  <div class="flex justify-between gap-3 border-b border-slate-100 pb-2.5">
+                    <dt class="text-tanner-gray">Cuenta Destino</dt>
+                    <dd class="font-bold text-[#222222]" id="summaryDestinationAccount">--</dd>
+                  </div>
+                  <div class="flex justify-between gap-3">
+                    <dt class="text-tanner-gray">Referencia</dt>
+                    <dd class="font-bold text-[#222222]">SOL-2026-08421</dd>
+                  </div>
+                </dl>
+              </section>
+
+              <section class="comparison-panel cartola-panel rounded-lg border border-slate-200 bg-sky-50 p-4">
+                <h4 class="mb-3 font-bold text-tanner-midnight">Datos desde cartola</h4>
+                <dl class="grid gap-2.5">
+                  <div class="flex justify-between gap-3 border-b border-slate-200 pb-2.5">
+                    <dt class="text-tanner-gray">Monto cartola</dt>
+                    <dd class="font-bold text-[#222222]" id="cartolaAmount">$120.000</dd>
+                  </div>
+                  <div class="flex justify-between gap-3 border-b border-slate-200 pb-2.5">
+                    <dt class="text-tanner-gray">Banco origen</dt>
+                    <dd class="font-bold text-[#222222]">BancoEstado</dd>
+                  </div>
+                  <div class="flex justify-between gap-3 border-b border-slate-200 pb-2.5">
+                    <dt class="text-tanner-gray">Fecha abono</dt>
+                    <dd class="font-bold text-[#222222]">05-06-2026</dd>
+                  </div>
+                  <div class="flex justify-between gap-3 border-b border-slate-200 pb-2.5">
+                    <dt class="text-tanner-gray">Hora movimiento</dt>
+                    <dd class="font-bold text-[#222222]">10:42</dd>
+                  </div>
+                  <div class="flex justify-between gap-3">
+                    <dt class="text-tanner-gray">N° operación</dt>
+                    <dd class="font-bold text-[#222222]">BE-88410322</dd>
+                  </div>
+                </dl>
+              </section>
             </div>
           </div>
 
-          <div class="comparison-grid grid gap-4 lg:grid-cols-2">
-            <section class="comparison-panel rounded-lg border border-slate-200 bg-white p-5">
-              <h4 class="mb-4 font-bold text-tanner-midnight">Datos a conciliar</h4>
-              <dl class="grid gap-3">
-                <div class="flex justify-between gap-4 border-b border-slate-100 pb-3">
-                  <dt class="text-tanner-gray">Monto</dt>
-                  <dd class="font-bold text-[#222222]" id="summaryAmount">$120.000</dd>
-                </div>
-                <div class="flex justify-between gap-4 border-b border-slate-100 pb-3">
-                  <dt class="text-tanner-gray">Mandante</dt>
-                  <dd class="font-bold text-[#222222]" id="summaryMandante">Servipag</dd>
-                </div>
-                <div class="flex justify-between gap-4 border-b border-slate-100 pb-3">
-                  <dt class="text-tanner-gray">Rango de fechas</dt>
-                  <dd class="font-bold text-[#222222]" id="summaryDates">Hoy</dd>
-                </div>
-                <div class="flex justify-between gap-4 border-b border-slate-100 pb-3">
-                  <dt class="text-tanner-gray">Rango horario</dt>
-                  <dd class="font-bold text-[#222222]" id="summaryTime">Rango AM</dd>
-                </div>
-                <div class="flex justify-between gap-4">
-                  <dt class="text-tanner-gray">Referencia</dt>
-                  <dd class="font-bold text-[#222222]">SOL-2026-08421</dd>
-                </div>
-              </dl>
-            </section>
+          <div id="resultFailureView" class="grid gap-4" hidden>
+            <div class="result-banner flex items-center gap-3 rounded-lg border border-red-200 bg-red-50 p-3">
+              <span class="result-icon grid h-9 w-9 shrink-0 place-items-center rounded-full bg-red-600 font-bold text-white">X</span>
+              <div>
+                <h3 class="text-base font-bold text-tanner-midnight">Monto no encontrado</h3>
+                <p class="mt-0.5 text-sm text-tanner-gray">No se encontraron coincidencias consistentes entre la solicitud y la cartola bancaria.</p>
+              </div>
+            </div>
 
-            <section class="comparison-panel cartola-panel rounded-lg border border-slate-200 bg-sky-50 p-5">
-              <h4 class="mb-4 font-bold text-tanner-midnight">Datos desde cartola</h4>
-              <dl class="grid gap-3">
-                <div class="flex justify-between gap-4 border-b border-slate-200 pb-3">
-                  <dt class="text-tanner-gray">Monto cartola</dt>
-                  <dd class="font-bold text-[#222222]" id="cartolaAmount">$120.000</dd>
-                </div>
-                <div class="flex justify-between gap-4 border-b border-slate-200 pb-3">
-                  <dt class="text-tanner-gray">Banco origen</dt>
-                  <dd class="font-bold text-[#222222]">BancoEstado</dd>
-                </div>
-                <div class="flex justify-between gap-4 border-b border-slate-200 pb-3">
-                  <dt class="text-tanner-gray">Fecha abono</dt>
-                  <dd class="font-bold text-[#222222]">05-06-2026</dd>
-                </div>
-                <div class="flex justify-between gap-4 border-b border-slate-200 pb-3">
-                  <dt class="text-tanner-gray">Hora movimiento</dt>
-                  <dd class="font-bold text-[#222222]">10:42</dd>
-                </div>
-                <div class="flex justify-between gap-4">
-                  <dt class="text-tanner-gray">N° operación</dt>
-                  <dd class="font-bold text-[#222222]">BE-88410322</dd>
-                </div>
-              </dl>
-            </section>
+            <div class="comparison-grid grid gap-3 lg:grid-cols-2">
+              <section class="comparison-panel rounded-lg border border-red-200 bg-white p-4 lg:max-w-xl">
+                <h4 class="mb-3 font-bold text-tanner-midnight">Datos a conciliar</h4>
+                <dl class="grid gap-2.5">
+                  <div class="flex justify-between gap-3 border-b border-slate-100 pb-2.5">
+                    <dt class="text-tanner-gray">Monto</dt>
+                    <dd class="font-bold text-[#222222]" id="failureSummaryAmount">$120.000</dd>
+                  </div>
+                  <div class="flex justify-between gap-3 border-b border-slate-100 pb-2.5">
+                    <dt class="text-tanner-gray">Nombre</dt>
+                    <dd class="font-bold text-[#222222]" id="failureSummaryName">--</dd>
+                  </div>
+                  <div class="flex justify-between gap-3 border-b border-slate-100 pb-2.5">
+                    <dt class="text-tanner-gray">RUT</dt>
+                    <dd class="font-bold text-[#222222]" id="failureSummaryRut">--</dd>
+                  </div>
+                  <div class="flex justify-between gap-3 border-b border-slate-100 pb-2.5">
+                    <dt class="text-tanner-gray">Fecha</dt>
+                    <dd class="font-bold text-[#222222]" id="failureSummaryDates">Hoy</dd>
+                  </div>
+                  <div class="flex justify-between gap-3 border-b border-slate-100 pb-2.5">
+                    <dt class="text-tanner-gray">Cuenta Destino</dt>
+                    <dd class="font-bold text-[#222222]" id="failureSummaryDestinationAccount">--</dd>
+                  </div>
+                  <div class="flex justify-between gap-3">
+                    <dt class="text-tanner-gray">Referencia</dt>
+                    <dd class="font-bold text-[#222222]">SOL-2026-08421</dd>
+                  </div>
+                </dl>
+              </section>
+            </div>
           </div>
 
-          <div class="modal-actions flex flex-wrap justify-end gap-3">
-            <button type="button" class="secondary-btn rounded-lg bg-tanner-midnight/5 px-4 py-3 font-semibold text-tanner-midnight" id="backToRequest">Volver</button>
-            <button type="button" class="primary-btn rounded-lg bg-tanner-royal px-4 py-3 font-semibold text-white shadow-lg shadow-blue-900/20" id="registerConciliation">Registrar</button>
+          <div id="resultPendingView" class="grid gap-4" hidden>
+            <div class="result-banner flex items-center gap-3 rounded-lg border border-amber-200 bg-amber-50 p-3">
+              <span class="result-icon grid h-9 w-9 shrink-0 place-items-center rounded-full bg-amber-100 text-amber-600" aria-hidden="true">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l6.518 11.58A2 2 0 0 1 16.518 17H3.482a2 2 0 0 1-1.743-2.321L8.257 3.1ZM10 7a.75.75 0 0 0-.75.75v3.5a.75.75 0 0 0 1.5 0v-3.5A.75.75 0 0 0 10 7Zm0 7.25a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" clip-rule="evenodd" />
+                </svg>
+              </span>
+              <div>
+                <h3 class="text-base font-bold text-tanner-midnight">Conciliación pendiente de revisión</h3>
+                <p class="mt-0.5 text-sm text-tanner-gray">La evidencia quedó marcada para revisión manual.</p>
+              </div>
+            </div>
+
+            <div class="comparison-grid grid gap-3 lg:grid-cols-2">
+              <section class="comparison-panel rounded-lg border border-slate-200 bg-white p-4">
+                <h4 class="mb-3 font-bold text-tanner-midnight">Evidencia</h4>
+                <div class="flex h-[260px] items-center justify-center overflow-hidden rounded-md border border-slate-200 bg-slate-50 p-2">
+                  <img class="max-h-full max-w-full object-contain" id="pendingEvidenceImage" alt="Imagen enviada para revisión" />
+                </div>
+              </section>
+
+              <section class="comparison-panel rounded-lg border border-slate-200 bg-sky-50 p-4">
+                <h4 class="mb-3 font-bold text-tanner-midnight">Estado</h4>
+                <dl class="grid gap-2.5">
+                  <div class="flex justify-between gap-3 border-b border-slate-200 pb-2.5">
+                    <dt class="text-tanner-gray">Resultado</dt>
+                    <dd class="font-bold text-[#222222]">Pendiente de revisión</dd>
+                  </div>
+                  <div class="flex justify-between gap-3 border-b border-slate-200 pb-2.5">
+                    <dt class="text-tanner-gray">Acción</dt>
+                    <dd class="font-bold text-[#222222]">Revisión manual</dd>
+                  </div>
+                  <div class="flex justify-between gap-3">
+                    <dt class="text-tanner-gray">Referencia</dt>
+                    <dd class="font-bold text-[#222222]">SOL-2026-08421</dd>
+                  </div>
+                </dl>
+              </section>
+            </div>
+          </div>
+
+          <div class="modal-actions flex flex-wrap justify-end gap-2">
+            <button type="button" class="secondary-btn rounded-lg bg-tanner-midnight/5 px-3.5 py-2.5 font-semibold text-tanner-midnight" id="backToRequest">Volver</button>
+            <button type="button" class="primary-btn rounded-lg bg-tanner-royal px-3.5 py-2.5 font-semibold text-white shadow-lg shadow-blue-900/20" id="registerConciliation">Registrar</button>
           </div>
         </div>
       </div>
@@ -370,10 +723,40 @@
 
     <div class="modal-overlay confirm-overlay fixed inset-0 z-[70] hidden items-center justify-center bg-slate-950/60 p-5 backdrop-blur-md" id="confirmationModal" aria-hidden="true">
       <div class="confirm-card grid w-full max-w-md justify-items-center gap-4 rounded-lg bg-white p-8 text-center shadow-2xl" role="dialog" aria-modal="true" aria-labelledby="confirmationTitle">
-        <div class="confirm-check grid h-14 w-14 place-items-center rounded-full bg-green-600 text-xl font-bold text-white">✓</div>
+        <div class="confirm-check grid h-14 w-14 place-items-center rounded-full bg-green-600 text-xl font-bold text-white" id="confirmationIcon">✓</div>
         <h2 class="text-2xl font-bold text-tanner-midnight" id="confirmationTitle">Conciliación registrada</h2>
-        <p class="text-tanner-gray">La solicitud fue registrada correctamente y quedó asociada a la cartola simulada.</p>
+        <p class="text-tanner-gray" id="confirmationMessage">La solicitud fue registrada correctamente y quedó asociada a la cartola simulada.</p>
         <button type="button" class="primary-btn rounded-lg bg-tanner-royal px-5 py-3 font-semibold text-white shadow-lg shadow-blue-900/20" id="finishConfirmation">Finalizar</button>
+      </div>
+    </div>
+
+    <div class="modal-overlay fixed inset-0 z-[75] hidden items-center justify-center bg-slate-950/60 p-5 backdrop-blur-md" id="warningModal" aria-hidden="true">
+      <div class="relative w-full max-w-sm overflow-hidden rounded-lg border border-red-200 bg-white shadow-2xl" role="dialog" aria-modal="true" aria-labelledby="warningModalTitle">
+        <div class="flex justify-end p-2">
+          <button type="button" class="rounded-lg p-1.5 text-gray-400 transition hover:bg-gray-100 hover:text-gray-900" id="closeWarningModal" aria-label="Cerrar alerta">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" />
+            </svg>
+          </button>
+        </div>
+        <div class="px-6 pb-6 pt-0 text-center">
+          <svg class="mx-auto h-20 w-20 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <h3 class="mt-5 mb-3 text-xl font-semibold text-gray-700" id="warningModalTitle">Atencion</h3>
+          <p class="mb-6 text-sm text-gray-600">Vas a buscar datos que pueden ser incorrectos en las cartolas</p>
+          <div class="flex flex-wrap justify-center gap-2">
+            <button type="button" class="rounded-lg bg-red-600 px-4 py-2.5 text-base font-semibold text-white shadow-lg shadow-red-900/20 transition hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300" id="confirmWarningConciliation">Si, estoy seguro</button>
+            <button type="button" class="rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-base font-semibold text-gray-900 transition hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-cyan-200" id="cancelWarningConciliation">No, cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay fixed inset-0 z-[80] hidden items-center justify-center bg-slate-950/80 p-4 backdrop-blur-md" id="imageLightbox" aria-hidden="true">
+      <div class="relative flex max-h-[calc(100vh-2rem)] w-full max-w-5xl items-center justify-center rounded-lg bg-white p-3 shadow-2xl" role="dialog" aria-modal="true" aria-label="Imagen completa">
+        <button type="button" class="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full bg-slate-900/85 text-2xl leading-none text-white shadow-lg transition hover:bg-slate-900" id="closeImageLightbox" aria-label="Cerrar imagen">×</button>
+        <img class="max-h-[calc(100vh-5rem)] max-w-full object-contain" id="lightboxImage" alt="Imagen completa de la evidencia" />
       </div>
     </div>
 
@@ -381,39 +764,269 @@
       const openBtn = document.getElementById('openConciliationModal');
       const modal = document.getElementById('conciliationModal');
       const confirmationModal = document.getElementById('confirmationModal');
+      const warningModal = document.getElementById('warningModal');
+      const imageLightbox = document.getElementById('imageLightbox');
+      const lightboxImage = document.getElementById('lightboxImage');
+      const closeImageLightboxBtn = document.getElementById('closeImageLightbox');
+      const confirmationIcon = document.getElementById('confirmationIcon');
+      const confirmationTitle = document.getElementById('confirmationTitle');
+      const confirmationMessage = document.getElementById('confirmationMessage');
       const closeBtn = document.getElementById('closeConciliationModal');
       const cancelBtn = document.getElementById('cancelConciliation');
       const fileInput = document.getElementById('proofImage');
-      const preview = document.getElementById('imagePreview');
+      const imagePreview = document.getElementById('imagePreview');
+      const previewImage = document.getElementById('previewImage');
+      const previewZoomPane = document.getElementById('previewZoomPane');
+      const imageHoverInspector = document.getElementById('imageHoverInspector');
+      const hoverInspectorImage = document.getElementById('hoverInspectorImage');
+      const hoverZoomPane = document.getElementById('hoverZoomPane');
+      const previewPlaceholder = document.getElementById('previewPlaceholder');
+      const identificationAlert = document.getElementById('identificationAlert');
+      const identificationAlertTitle = document.getElementById('identificationAlertTitle');
+      const identificationAlertDescription = document.getElementById('identificationAlertDescription');
+      const identificationAlertIcon = document.getElementById('identificationAlertIcon');
+      const identificationAlertIconPath = document.getElementById('identificationAlertIconPath');
+      const dismissIdentificationAlert = document.getElementById('dismissIdentificationAlert');
+      const deferPendingBtn = document.getElementById('deferPendingBtn');
+      const fileAlert = document.getElementById('fileAlert');
+      const dismissFileAlert = document.getElementById('dismissFileAlert');
+      const processingOverlay = document.getElementById('processingOverlay');
       const modalForm = document.getElementById('requestStep');
       const loaderStep = document.getElementById('loaderStep');
       const resultStep = document.getElementById('resultStep');
+      const resultSuccessView = document.getElementById('resultSuccessView');
+      const resultFailureView = document.getElementById('resultFailureView');
+      const resultPendingView = document.getElementById('resultPendingView');
+      const pendingEvidenceImage = document.getElementById('pendingEvidenceImage');
+      const closeWarningModalBtn = document.getElementById('closeWarningModal');
+      const confirmWarningConciliation = document.getElementById('confirmWarningConciliation');
+      const cancelWarningConciliation = document.getElementById('cancelWarningConciliation');
       const amountInput = document.getElementById('amount');
-      const dateRange = document.getElementById('dateRange');
-      const singleDateFields = document.getElementById('singleDateFields');
       const singleDate = document.getElementById('singleDate');
-      const weekDateFields = document.getElementById('weekDateFields');
-      const weekFrom = document.getElementById('weekFrom');
-      const weekTo = document.getElementById('weekTo');
-      const monthFields = document.getElementById('monthFields');
-      const monthPicker = document.getElementById('monthPicker');
-      const customDateFields = document.getElementById('customDateFields');
-      const dateFrom = document.getElementById('dateFrom');
-      const dateTo = document.getElementById('dateTo');
-      const mandante = document.getElementById('mandante');
+      const requestName = document.getElementById('requestName');
+      const requestRut = document.getElementById('requestRut');
+      const destinationAccount = document.getElementById('destinationAccount');
+      const bankSelect = document.getElementById('bankSelect');
+      const cartolaUpdatedAt = document.getElementById('cartolaUpdatedAt');
+      const downloadStatement = document.getElementById('downloadStatement');
+      const syncBankBtn = document.getElementById('syncBankBtn');
       const processImageBtn = document.getElementById('processImageBtn');
-      const resultBlock = document.getElementById('resultBlock');
+      const submitConciliationBtn = document.getElementById('submitConciliationBtn');
       const summaryAmount = document.getElementById('summaryAmount');
-      const summaryMandante = document.getElementById('summaryMandante');
+      const summaryName = document.getElementById('summaryName');
+      const summaryRut = document.getElementById('summaryRut');
       const summaryDates = document.getElementById('summaryDates');
-      const summaryTime = document.getElementById('summaryTime');
+      const summaryDestinationAccount = document.getElementById('summaryDestinationAccount');
+      const failureSummaryAmount = document.getElementById('failureSummaryAmount');
+      const failureSummaryName = document.getElementById('failureSummaryName');
+      const failureSummaryRut = document.getElementById('failureSummaryRut');
+      const failureSummaryDates = document.getElementById('failureSummaryDates');
+      const failureSummaryDestinationAccount = document.getElementById('failureSummaryDestinationAccount');
       const cartolaAmount = document.getElementById('cartolaAmount');
+      const mainUpdatedChip = document.getElementById('mainUpdatedChip');
+      const modalSubmitBtn = submitConciliationBtn;
+      const dateRangePanel = document.getElementById('dateRangePanel');
+      const rangeFrom = document.getElementById('rangeFrom');
+      const rangeTo = document.getElementById('rangeTo');
+      const movementSearch = document.getElementById('movementSearch');
+      const movementsTableBody = document.getElementById('movementsTableBody');
+      const tableEmptyState = document.getElementById('tableEmptyState');
+      const movementPagination = document.getElementById('movementPagination');
+      const movementPaginationSummary = document.getElementById('movementPaginationSummary');
+      const metricReceived = document.getElementById('metricReceived');
+      const metricProcessed = document.getElementById('metricProcessed');
+      const metricConciliated = document.getElementById('metricConciliated');
+      const metricPending = document.getElementById('metricPending');
+      const metricRejected = document.getElementById('metricRejected');
+      const metricAmount = document.getElementById('metricAmount');
+      const selectedRangeChip = document.getElementById('selectedRangeChip');
+      const periodButtons = Array.from(document.querySelectorAll('[data-period]'));
+      const statusButtons = Array.from(document.querySelectorAll('[data-status-filter]'));
+      const sortButtons = Array.from(document.querySelectorAll('[data-sort-trigger]'));
+      const sortHeaders = Array.from(document.querySelectorAll('[data-sort-column]'));
+      const calendarTitleLeft = document.querySelector('[data-range-calendar-title="left"]');
+      const calendarTitleRight = document.querySelector('[data-range-calendar-title="right"]');
+      const calendarGrids = Array.from(document.querySelectorAll('[data-range-calendar-grid]'));
       const backToRequest = document.getElementById('backToRequest');
       const registerBtn = document.getElementById('registerConciliation');
       const finishConfirmation = document.getElementById('finishConfirmation');
+      const requestFields = [requestName, requestRut, singleDate, amountInput, destinationAccount];
+      const identificationAlertToneClasses = ['border-green-200', 'bg-green-50', 'text-green-800', 'border-amber-200', 'bg-amber-50', 'text-amber-800', 'border-red-200', 'bg-red-50', 'text-red-800'];
+      const identificationAlertIconToneClasses = ['text-green-700', 'text-amber-700', 'text-red-700'];
+      const identificationAlertDismissToneClasses = ['text-green-800', 'hover:bg-green-100', 'focus:ring-green-300', 'text-amber-800', 'hover:bg-amber-100', 'focus:ring-amber-300', 'text-red-800', 'hover:bg-red-100', 'focus:ring-red-300'];
+      const identificationAlertIconPaths = {
+        green: 'M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 10-1.214-.882l-3.236 4.449-1.65-1.65a.75.75 0 00-1.06 1.061l2.273 2.273a.75.75 0 001.137-.089l3.75-5.162z',
+        amber: 'M8.257 3.099c.765-1.36 2.72-1.36 3.486 0l6.518 11.59c.75 1.334-.214 2.986-1.742 2.986H3.48c-1.528 0-2.492-1.652-1.742-2.986l6.518-11.59zM11 14a1 1 0 10-2 0 1 1 0 002 0zm-.25-6.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z',
+        red: 'M10 18a8 8 0 100-16 8 8 0 000 16zM7.22 7.22a.75.75 0 011.06 0L10 8.94l1.72-1.72a.75.75 0 111.06 1.06L11.06 10l1.72 1.72a.75.75 0 11-1.06 1.06L10 11.06l-1.72 1.72a.75.75 0 11-1.06-1.06L8.94 10 7.22 8.28a.75.75 0 010-1.06z',
+      };
+      const identificationAlertCopy = {
+        green: {
+          title: 'Datos identificados',
+          description: 'Los campos fueron completados automáticamente.',
+        },
+        amber: {
+          title: 'Posibles datos identificados',
+          description: 'Valida que son correctos, ingresa los datos manualmente o déjalo pendiente.',
+        },
+        red: {
+          title: 'Datos no identificados',
+          description: 'Ingresa los datos manualmente o déjalo pendiente.',
+        },
+      };
+      const identificationStates = {
+        'tx1.jpg': {
+          tone: 'green',
+          message: 'Datos identificados',
+          fill: {
+            nombre: 'Cesar Augusto',
+            rut: '26.654.992-0',
+            fecha: '2025-02-28',
+            monto: '$100.000',
+            cuentaDestino: 'Banco de Chile',
+          },
+          disabled: false,
+        },
+        'tx1.jpeg': {
+          tone: 'green',
+          message: 'Datos identificados',
+          fill: {
+            nombre: 'Cesar Augusto',
+            rut: '26.654.992-0',
+            fecha: '2025-02-28',
+            monto: '$100.000',
+            cuentaDestino: 'Banco de Chile',
+          },
+          disabled: false,
+        },
+        'tx1.png': {
+          tone: 'green',
+          message: 'Datos identificados',
+          fill: {
+            nombre: 'Cesar Augusto',
+            rut: '26.654.992-0',
+            fecha: '2025-02-28',
+            monto: '$100.000',
+            cuentaDestino: 'Banco de Chile',
+          },
+          disabled: false,
+        },
+        'tx2.jpg': {
+          tone: 'amber',
+          message: 'Posibles datos identificados. Valida que son correctos, ingresa los datos manualmente o déjalo pendiente',
+          fill: {
+            nombre: 'Ana Isabel Andrade',
+            rut: '14.131.034-4',
+            fecha: '2025-09-16',
+            monto: '$99.000',
+            cuentaDestino: 'Coopeuch',
+          },
+          disabled: false,
+        },
+        'valevista.jpg': {
+          tone: 'red',
+          message: 'Datos no identificados. Ingresa los datos manualmente o déjalo pendiente',
+          fill: null,
+          disabled: false,
+        },
+        'valevista.png': {
+          tone: 'red',
+          message: 'Datos no identificados. Ingresa los datos manualmente o déjalo pendiente',
+          fill: null,
+          disabled: false,
+        },
+      };
+      let currentIdentificationState = null;
+      let currentResultMode = 'success';
+      let currentFileName = '';
+      let imageReviewEnabled = false;
+      let imageReviewReady = false;
+      let identificationAlertBlocksReview = false;
+      let warningModalProceed = null;
+      let processingTimer = null;
+
+      const movementData = [
+        { date: '2026-06-16', amount: 1200000, client: 'Automotora XYZ', status: 'conciliado', reference: 'SOL-884103' },
+        { date: '2026-06-15', amount: 4500000, client: 'Importadora Sur', status: 'conciliado', reference: 'SOL-771204' },
+        { date: '2026-06-14', amount: 670000, client: 'Cliente Directo', status: 'conciliado', reference: 'SOL-330118' },
+        { date: '2026-06-12', amount: 3200000, client: 'Mall Central', status: 'conciliado', reference: 'SOL-663200' },
+        { date: '2026-06-10', amount: 1250000, client: 'Ferretería San José', status: 'conciliado', reference: 'SOL-552099' },
+        { date: '2026-06-09', amount: 760000, client: 'Logística Andina', status: 'conciliado', reference: 'SOL-441122' },
+        { date: '2026-06-07', amount: 980000, client: 'Café Central', status: 'conciliado', reference: 'SOL-554433' },
+        { date: '2026-06-05', amount: 1450000, client: 'Inversiones del Pacífico', status: 'conciliado', reference: 'SOL-998800' },
+        { date: '2026-06-03', amount: 830000, client: 'Constructora Sur', status: 'conciliado', reference: 'SOL-112233' },
+        { date: '2026-05-30', amount: 1890000, client: 'Retail Express', status: 'conciliado', reference: 'SOL-665544' },
+        { date: '2026-05-28', amount: 1800000, client: 'Servicios Globales', status: 'conciliado', reference: 'SOL-110045' },
+        { date: '2026-05-26', amount: 1580000, client: 'Agroindustrias del Maule', status: 'conciliado', reference: 'SOL-771899' },
+        { date: '2026-05-24', amount: 940000, client: 'Clínica Oriente', status: 'conciliado', reference: 'SOL-223344' },
+        { date: '2026-05-22', amount: 670000, client: 'Transporte Norte', status: 'conciliado', reference: 'SOL-778899' },
+        { date: '2026-05-19', amount: 2140000, client: 'Farmacias del Sur', status: 'conciliado', reference: 'SOL-556677' },
+        { date: '2026-05-28', amount: 1800000, client: 'Servicios Globales', status: 'conciliado', reference: 'SOL-110045' },
+        { date: '2026-05-26', amount: 1580000, client: 'Agroindustrias del Maule', status: 'conciliado', reference: 'SOL-771899' },
+        { date: '2026-06-16', amount: 850000, client: 'Cliente ABC', status: 'pendiente', reference: 'PND-552104' },
+        { date: '2026-06-13', amount: 1580000, client: 'Inmobiliaria Pacífico', status: 'pendiente', reference: 'PND-884771' },
+        { date: '2026-06-07', amount: 780000, client: 'Cliente Retail', status: 'pendiente', reference: 'PND-220877' },
+        { date: '2026-05-30', amount: 930000, client: 'Distribuidora Austral', status: 'pendiente', reference: 'PND-441009' },
+        { date: '2026-05-24', amount: 610000, client: 'Servicios Andinos', status: 'pendiente', reference: 'PND-119233' },
+        { date: '2026-05-20', amount: 540000, client: 'Panadería Los Robles', status: 'pendiente', reference: 'PND-339911' },
+        { date: '2026-05-18', amount: 720000, client: 'Maderas del Sur', status: 'pendiente', reference: 'PND-554466' },
+        { date: '2026-05-16', amount: 890000, client: 'Electrohogar', status: 'pendiente', reference: 'PND-225588' },
+        { date: '2026-06-14', amount: 210000, client: 'Proveedor Norte', status: 'excepcion', reference: 'EXC-118900' },
+        { date: '2026-06-08', amount: 520000, client: 'Automotora Delta', status: 'excepcion', reference: 'EXC-440912' },
+        { date: '2026-05-17', amount: 960000, client: 'Clientes Norte', status: 'excepcion', reference: 'EXC-661003' },
+        { date: '2026-05-15', amount: 310000, client: 'Distribuidora Cordillera', status: 'excepcion', reference: 'EXC-773355' },
+        { date: '2026-05-13', amount: 480000, client: 'Servicios Bahía', status: 'excepcion', reference: 'EXC-998877' },
+        { date: '2026-06-15', amount: 990000, client: 'Pago incorrecto', status: 'rechazado', reference: 'REJ-220194' },
+        { date: '2026-06-11', amount: 450000, client: 'Transportes del Sur', status: 'rechazado', reference: 'REJ-771004' },
+        { date: '2026-05-21', amount: 390000, client: 'Consultora Kappa', status: 'rechazado', reference: 'REJ-990021' },
+        { date: '2026-05-12', amount: 250000, client: 'Centro Médico Norte', status: 'rechazado', reference: 'REJ-331199' },
+        { date: '2026-05-10', amount: 610000, client: 'Agrícola del Valle', status: 'rechazado', reference: 'REJ-445566' },
+      ];
+
+      const movementSortState = {
+        column: 'date',
+        direction: 'desc',
+      };
+
+      const statusMeta = {
+        conciliado: {
+          label: 'Conciliado',
+          badge: 'border-emerald-200 bg-emerald-50 text-emerald-700',
+          action: 'Ver',
+          actionClass: 'bg-emerald-50 text-emerald-700 hover:bg-emerald-100',
+        },
+        pendiente: {
+          label: 'Pendiente',
+          badge: 'border-amber-200 bg-amber-50 text-amber-700',
+          action: 'Conciliar',
+          actionClass: 'bg-amber-50 text-amber-700 hover:bg-amber-100',
+        },
+        excepcion: {
+          label: 'Excepción',
+          badge: 'border-orange-200 bg-orange-50 text-orange-700',
+          action: 'Revisar',
+          actionClass: 'bg-orange-50 text-orange-700 hover:bg-orange-100',
+        },
+        rechazado: {
+          label: 'Rechazado',
+          badge: 'border-rose-200 bg-rose-50 text-rose-700',
+          action: 'Revisar',
+          actionClass: 'bg-rose-50 text-rose-700 hover:bg-rose-100',
+        },
+      };
+
+      let currentPeriod = 'month';
+      let currentStatus = 'all';
+      let rangePickerOpen = false;
+      let selectedRange = { from: '', to: '' };
+      let draftRange = { from: '', to: '' };
+      let calendarStartMonth = new Date();
+      let rangeOriginPeriod = 'month';
+      let movementCurrentPage = 1;
+      const movementPageSize = 6;
 
       const openModal = () => {
         showRequestStep();
+        resetRequestForm();
         modal.classList.add('is-open');
         modal.setAttribute('aria-hidden', 'false');
       };
@@ -421,6 +1034,10 @@
       const closeModal = () => {
         modal.classList.remove('is-open');
         modal.setAttribute('aria-hidden', 'true');
+        warningModalProceed = null;
+        resetPreviewHover();
+        closeImageLightbox();
+        closeWarningModal();
       };
 
       const closeConfirmation = () => {
@@ -428,25 +1045,310 @@
         confirmationModal.setAttribute('aria-hidden', 'true');
       };
 
+      const openWarningModal = (onConfirm) => {
+        warningModalProceed = onConfirm;
+        warningModal.classList.add('is-open');
+        warningModal.setAttribute('aria-hidden', 'false');
+      };
+
+      const closeWarningModal = () => {
+        warningModal.classList.remove('is-open');
+        warningModal.setAttribute('aria-hidden', 'true');
+      };
+
+      const openImageLightbox = () => {
+        if (!imageReviewEnabled || !previewImage?.src || previewImage.hidden || !imageLightbox || !lightboxImage) return;
+        lightboxImage.src = previewImage.src;
+        imageLightbox.classList.add('is-open');
+        imageLightbox.setAttribute('aria-hidden', 'false');
+        resetPreviewHover();
+      };
+
+      const closeImageLightbox = () => {
+        if (!imageLightbox || !lightboxImage) return;
+        imageLightbox.classList.remove('is-open');
+        imageLightbox.setAttribute('aria-hidden', 'true');
+        lightboxImage.removeAttribute('src');
+      };
+
+      const setImageReviewEnabled = (enabled) => {
+        imageReviewEnabled = enabled;
+        imagePreview?.classList.toggle('is-review-enabled', enabled);
+        if (!enabled) {
+          resetPreviewHover();
+          closeImageLightbox();
+        }
+      };
+
+      const setImageReviewReady = (ready) => {
+        imageReviewReady = ready;
+        setImageReviewEnabled(ready && !identificationAlertBlocksReview);
+      };
+
+      const setRiskyActions = (enabled) => {
+        deferPendingBtn?.classList.toggle('hidden', !enabled);
+        if (!submitConciliationBtn) return;
+
+        submitConciliationBtn.className = 'primary-btn rounded-lg bg-tanner-royal px-3.5 py-2.5 font-semibold text-white shadow-lg shadow-blue-900/20 transition disabled:cursor-not-allowed disabled:bg-slate-300 disabled:text-slate-500 disabled:shadow-none';
+      };
+
+      const setRequestFieldsDisabled = (disabled) => {
+        requestFields.forEach((field) => {
+          if (!field) return;
+          field.disabled = disabled;
+        });
+        if (modalSubmitBtn) {
+          modalSubmitBtn.disabled = disabled;
+        }
+      };
+
+      const showFileAlert = () => {
+        if (!fileAlert) return;
+        fileAlert.classList.remove('hidden');
+      };
+
+      const hideFileAlert = () => {
+        if (!fileAlert) return;
+        fileAlert.classList.add('hidden');
+      };
+
+      const hideIdentificationAlert = () => {
+        if (!identificationAlert) return;
+        identificationAlert.classList.add('hidden');
+        identificationAlert.classList.remove(...identificationAlertToneClasses);
+        identificationAlertIcon?.classList.remove(...identificationAlertIconToneClasses);
+        dismissIdentificationAlert?.classList.remove(...identificationAlertDismissToneClasses);
+        dismissIdentificationAlert?.classList.add('hidden');
+        identificationAlertBlocksReview = false;
+        if (identificationAlertTitle) {
+          identificationAlertTitle.textContent = '';
+        }
+        if (identificationAlertDescription) {
+          identificationAlertDescription.textContent = '';
+        }
+      };
+
+      const showIdentificationAlert = (tone, message) => {
+        if (!identificationAlert || !identificationAlertTitle || !identificationAlertDescription || !identificationAlertIcon) return;
+        const alertCopy = identificationAlertCopy[tone] || {
+          title: message || 'Resultado del pre-procesado',
+          description: '',
+        };
+        hideIdentificationAlert();
+        identificationAlert.classList.remove('hidden');
+        identificationAlertTitle.textContent = alertCopy.title;
+        identificationAlertDescription.textContent = alertCopy.description;
+        identificationAlertIconPath?.setAttribute('d', identificationAlertIconPaths[tone] || identificationAlertIconPaths.red);
+        dismissIdentificationAlert?.classList.remove('hidden');
+
+        if (tone === 'green') {
+          identificationAlert.classList.add('border-green-200', 'bg-green-50', 'text-green-800');
+          identificationAlertIcon.classList.add('text-green-700');
+          dismissIdentificationAlert?.classList.add('text-green-800', 'hover:bg-green-100', 'focus:ring-green-300');
+          identificationAlertBlocksReview = false;
+        } else if (tone === 'amber') {
+          identificationAlert.classList.add('border-amber-200', 'bg-amber-50', 'text-amber-800');
+          identificationAlertIcon.classList.add('text-amber-700');
+          dismissIdentificationAlert?.classList.add('text-amber-800', 'hover:bg-amber-100', 'focus:ring-amber-300');
+          identificationAlertBlocksReview = true;
+          setImageReviewEnabled(false);
+        } else {
+          identificationAlert.classList.add('border-red-200', 'bg-red-50', 'text-red-800');
+          identificationAlertIcon.classList.add('text-red-700');
+          dismissIdentificationAlert?.classList.add('text-red-800', 'hover:bg-red-100', 'focus:ring-red-300');
+          identificationAlertBlocksReview = true;
+          setImageReviewEnabled(false);
+        }
+      };
+
+      const dismissIdentificationAlertMessage = () => {
+        hideIdentificationAlert();
+        setImageReviewEnabled(imageReviewReady);
+      };
+
+      const resetPreviewZoomPane = () => {
+        if (!previewZoomPane) return;
+        previewZoomPane.style.opacity = '0';
+        previewZoomPane.style.backgroundImage = 'none';
+        previewZoomPane.style.backgroundSize = 'auto';
+        previewZoomPane.style.backgroundPosition = 'center center';
+      };
+
+      const resetImageHoverInspector = () => {
+        if (!imageHoverInspector || !hoverZoomPane) return;
+        imageHoverInspector.classList.add('hidden');
+        imageHoverInspector.setAttribute('aria-hidden', 'true');
+        hoverZoomPane.style.backgroundImage = 'none';
+        hoverZoomPane.style.backgroundSize = 'auto';
+        hoverZoomPane.style.backgroundPosition = 'center center';
+      };
+
+      const applyImageHoverInspector = (event) => {
+        if (!imageReviewEnabled || !previewImage || !imageHoverInspector || !hoverInspectorImage || !hoverZoomPane || previewImage.hidden || !previewImage.src) return;
+
+        const imageRect = previewImage.getBoundingClientRect();
+        if (!imageRect.width || !imageRect.height) return;
+
+        const x = event.clientX;
+        const y = event.clientY;
+        if (x < imageRect.left || x > imageRect.right || y < imageRect.top || y > imageRect.bottom) {
+          resetImageHoverInspector();
+          return;
+        }
+
+        if (hoverInspectorImage.src !== previewImage.src) {
+          hoverInspectorImage.src = previewImage.src;
+        }
+
+        imageHoverInspector.classList.remove('hidden');
+        imageHoverInspector.setAttribute('aria-hidden', 'false');
+
+        const paneRect = hoverZoomPane.getBoundingClientRect();
+        const relativeX = (x - imageRect.left) / imageRect.width;
+        const relativeY = (y - imageRect.top) / imageRect.height;
+        const naturalWidth = previewImage.naturalWidth || imageRect.width;
+        const naturalHeight = previewImage.naturalHeight || imageRect.height;
+        const zoom = 2.8;
+        const baseScale = Math.max(paneRect.width / naturalWidth, paneRect.height / naturalHeight);
+        const bgWidth = naturalWidth * baseScale * zoom;
+        const bgHeight = naturalHeight * baseScale * zoom;
+        const focusX = relativeX * bgWidth;
+        const focusY = relativeY * bgHeight;
+
+        hoverZoomPane.style.backgroundImage = `url("${previewImage.src}")`;
+        hoverZoomPane.style.backgroundSize = `${bgWidth}px ${bgHeight}px`;
+        hoverZoomPane.style.backgroundPosition = `${paneRect.width / 2 - focusX}px ${paneRect.height / 2 - focusY}px`;
+      };
+
+      const applyPreviewZoomPane = (event) => {
+        if (!imageReviewEnabled || !imagePreview || !previewImage || !previewZoomPane || previewImage.hidden || !previewImage.src) return;
+
+        const imageRect = previewImage.getBoundingClientRect();
+        const paneRect = previewZoomPane.getBoundingClientRect();
+        if (!imageRect.width || !imageRect.height || !paneRect.width || !paneRect.height) return;
+
+        const x = event.clientX;
+        const y = event.clientY;
+        if (x < imageRect.left || x > imageRect.right || y < imageRect.top || y > imageRect.bottom) {
+          previewZoomPane.style.opacity = '0';
+          return;
+        }
+
+        const zoom = 5;
+        const relativeX = x - imageRect.left;
+        const relativeY = y - imageRect.top;
+        const bgWidth = imageRect.width * zoom;
+        const bgHeight = imageRect.height * zoom;
+        const focusX = (relativeX / imageRect.width) * bgWidth;
+        const focusY = (relativeY / imageRect.height) * bgHeight;
+
+        previewZoomPane.style.opacity = '1';
+        previewZoomPane.style.backgroundImage = `url("${previewImage.src}")`;
+        previewZoomPane.style.backgroundSize = `${bgWidth}px ${bgHeight}px`;
+        previewZoomPane.style.backgroundPosition = `${paneRect.width / 2 - focusX}px ${paneRect.height / 2 - focusY}px`;
+      };
+
+      const handlePreviewImageHover = (event) => {
+        applyPreviewZoomPane(event);
+        applyImageHoverInspector(event);
+      };
+
+      const resetPreviewHover = () => {
+        resetPreviewZoomPane();
+        resetImageHoverInspector();
+      };
+
+      const resetRequestForm = () => {
+        if (processingTimer) {
+          window.clearTimeout(processingTimer);
+          processingTimer = null;
+        }
+
+        currentIdentificationState = null;
+        currentResultMode = 'success';
+        currentFileName = '';
+        imageReviewReady = false;
+        identificationAlertBlocksReview = false;
+        setImageReviewEnabled(false);
+        setRiskyActions(false);
+
+        fileInput.value = '';
+        previewImage.removeAttribute('src');
+        previewImage.hidden = true;
+        previewZoomPane.hidden = true;
+        previewPlaceholder.hidden = false;
+        pendingEvidenceImage?.removeAttribute('src');
+        resetPreviewHover();
+        hideFileAlert();
+        hideIdentificationAlert();
+        warningModalProceed = null;
+        closeWarningModal();
+        closeImageLightbox();
+        processingOverlay.classList.add('hidden');
+        processingOverlay.classList.remove('flex');
+
+        amountInput.value = '';
+        singleDate.value = '';
+        requestName.value = '';
+        requestRut.value = '';
+        destinationAccount.value = '';
+        setRequestFieldsDisabled(true);
+        processImageBtn.disabled = false;
+      };
+
       const showRequestStep = () => {
         modalForm.hidden = false;
         loaderStep.hidden = true;
         resultStep.hidden = true;
+        resultSuccessView.hidden = true;
+        resultFailureView.hidden = true;
+        resultPendingView.hidden = true;
       };
 
-      const showResultStep = () => {
+      const showResultStep = (mode = 'success') => {
+        currentResultMode = mode;
+        modalForm.hidden = true;
         loaderStep.hidden = true;
         resultStep.hidden = false;
+        resultSuccessView.hidden = mode !== 'success';
+        resultFailureView.hidden = mode !== 'failure';
+        resultPendingView.hidden = mode !== 'pending';
+
+        if (mode === 'pending' && pendingEvidenceImage) {
+          pendingEvidenceImage.src = previewImage?.src || '';
+        }
+      };
+
+      const showPendingReviewStep = () => {
+        showResultStep('pending');
+      };
+
+      const proceedWithConciliation = (resultMode = 'success') => {
+        const formattedAmount = amountInput.value || '$120.000';
+
+        summaryAmount.textContent = formattedAmount;
+        cartolaAmount.textContent = formattedAmount;
+        summaryName.textContent = requestName.value || '--';
+        summaryRut.textContent = requestRut.value || '--';
+        summaryDates.textContent = getDateSummary();
+        summaryDestinationAccount.textContent = destinationAccount.value || '--';
+        failureSummaryAmount.textContent = formattedAmount;
+        failureSummaryName.textContent = requestName.value || '--';
+        failureSummaryRut.textContent = requestRut.value || '--';
+        failureSummaryDates.textContent = getDateSummary();
+        failureSummaryDestinationAccount.textContent = destinationAccount.value || '--';
+
+        modalForm.hidden = true;
+        resultStep.hidden = true;
+        loaderStep.hidden = false;
+
+        window.setTimeout(() => showResultStep(resultMode), 1400);
       };
 
       const formatPeso = (value) => {
         const digits = value.replace(/\D/g, '');
         if (!digits) return '';
         return `$${Number(digits).toLocaleString('es-CL')}`;
-      };
-
-      const formatInputDate = (date) => {
-        return date.toISOString().slice(0, 10);
       };
 
       const formatDisplayDate = (value) => {
@@ -461,62 +1363,775 @@
         return `${month}-${year}`;
       };
 
+      const formatSyncDateTime = (value) => {
+        return new Intl.DateTimeFormat('es-CL', {
+          dateStyle: 'long',
+          timeStyle: 'short',
+        }).format(value);
+      };
+
+      const formatUpdatedChip = (value) => {
+        const dateText = new Intl.DateTimeFormat('es-CL', {
+          dateStyle: 'long',
+        }).format(value);
+        const timeText = new Intl.DateTimeFormat('es-CL', {
+          hour: '2-digit',
+          minute: '2-digit',
+        }).format(value);
+
+        return `Actualizado el ${dateText} a las ${timeText}`;
+      };
+
+      const formatMoney = (value) => {
+        return `$${Number(value).toLocaleString('es-CL')}`;
+      };
+
+      const parseDate = (value) => {
+        return new Date(`${value}T00:00:00`);
+      };
+
+      const formatInputDate = (date) => {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+      };
+
+      const formatCalendarLabel = (value) => {
+        return new Intl.DateTimeFormat('es-CL', {
+          dateStyle: 'full',
+        }).format(parseDate(value));
+      };
+
+      const formatLongDate = (value) => {
+        return new Intl.DateTimeFormat('es-CL', {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric',
+        }).format(parseDate(value));
+      };
+
+      const formatCalendarMonthTitle = (date) => {
+        const label = new Intl.DateTimeFormat('es-CL', {
+          month: 'long',
+          year: 'numeric',
+        }).format(date);
+        return label.charAt(0).toUpperCase() + label.slice(1);
+      };
+
+      const cloneDate = (date) => {
+        return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+      };
+
+      const startOfMonth = (date) => {
+        return new Date(date.getFullYear(), date.getMonth(), 1);
+      };
+
+      const startOfQuarter = (date) => {
+        const quarterStartMonth = Math.floor(date.getMonth() / 3) * 3;
+        return new Date(date.getFullYear(), quarterStartMonth, 1);
+      };
+
+      const subtractDays = (date, days) => {
+        const nextDate = cloneDate(date);
+        nextDate.setDate(nextDate.getDate() - days);
+        return nextDate;
+      };
+
+      const subtractMonths = (date, months) => {
+        const nextDate = cloneDate(date);
+        nextDate.setMonth(nextDate.getMonth() - months);
+        return nextDate;
+      };
+
+      const addMonths = (date, months) => {
+        const nextDate = cloneDate(date);
+        nextDate.setMonth(nextDate.getMonth() + months);
+        return nextDate;
+      };
+
+      const startOfWeek = (date) => {
+        const weekStart = cloneDate(date);
+        const offset = (weekStart.getDay() + 6) % 7;
+        weekStart.setDate(weekStart.getDate() - offset);
+        return weekStart;
+      };
+
+      const getPeriodRange = (period) => {
+        const today = new Date();
+        const todayValue = formatInputDate(today);
+
+        if (period === 'today') {
+          return { from: todayValue, to: todayValue };
+        }
+
+        if (period === 'week') {
+          return {
+            from: formatInputDate(subtractDays(today, 6)),
+            to: todayValue,
+          };
+        }
+
+        if (period === 'month') {
+          return {
+            from: formatInputDate(subtractDays(today, 29)),
+            to: todayValue,
+          };
+        }
+
+        return normalizeRange(draftRange.from || selectedRange.from, draftRange.to || selectedRange.to);
+      };
+
+      const getCalendarDateButtonClasses = ({ isActiveMonth, isSelected, isRangeEdge, isRangeMiddle }) => {
+        const base = 'flex h-10 w-10 cursor-pointer select-none items-center justify-center rounded-lg text-xs font-medium transition focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2';
+
+        if (isRangeEdge) {
+          return `${base} bg-blue-600 text-white shadow-sm`;
+        }
+
+        if (isRangeMiddle) {
+          return `${base} bg-blue-50 font-semibold text-blue-700`;
+        }
+
+        if (isSelected) {
+          return `${base} bg-blue-100 font-semibold text-blue-800`;
+        }
+
+        return `${base} ${isActiveMonth ? 'text-gray-900 hover:bg-blue-50 hover:text-blue-700' : 'text-gray-400 hover:bg-blue-50 hover:text-blue-700'}`;
+      };
+
+      const normalizeRange = (fromValue, toValue) => {
+        if (!fromValue && !toValue) {
+          const bounds = getRangeBounds();
+          return { from: bounds.from, to: bounds.to };
+        }
+
+        if (fromValue && !toValue) {
+          return { from: fromValue, to: fromValue };
+        }
+
+        if (!fromValue && toValue) {
+          return { from: toValue, to: toValue };
+        }
+
+        if (fromValue && toValue && parseDate(fromValue).getTime() > parseDate(toValue).getTime()) {
+          return { from: toValue, to: fromValue };
+        }
+
+        return { from: fromValue, to: toValue };
+      };
+
+      const isWithinDays = (rowDate, days) => {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const diff = today.getTime() - parseDate(rowDate).getTime();
+        return diff >= 0 && diff <= days * 86400000;
+      };
+
+      const isWithinRange = (rowDate, fromValue, toValue) => {
+        const rowTime = parseDate(rowDate).getTime();
+        if (!fromValue && !toValue) return true;
+        if (!fromValue) return rowTime <= parseDate(toValue).getTime();
+        if (!toValue) return rowTime >= parseDate(fromValue).getTime();
+        const fromTime = parseDate(fromValue).getTime();
+        const toTime = parseDate(toValue).getTime();
+        return rowTime >= fromTime && rowTime <= toTime;
+      };
+
+      const getFilteredMovements = () => {
+        const query = movementSearch?.value.trim().toLowerCase() ?? '';
+        return getPeriodMovements().filter((row) => {
+
+          const matchesStatus =
+            currentStatus === 'all'
+              ? true
+              : currentStatus === 'pendiente'
+                ? row.status === 'pendiente' || row.status === 'excepcion'
+                : row.status === currentStatus;
+
+          const matchesSearch =
+            !query ||
+            row.client.toLowerCase().includes(query) ||
+            row.reference.toLowerCase().includes(query) ||
+            formatMoney(row.amount).toLowerCase().includes(query) ||
+            statusMeta[row.status].label.toLowerCase().includes(query);
+
+          return matchesStatus && matchesSearch;
+        });
+      };
+
+      const getPeriodMovements = () => {
+        return movementData.filter((row) => isWithinRange(row.date, selectedRange.from, selectedRange.to));
+      };
+
+      const getMovementSortValue = (row, column) => {
+        switch (column) {
+          case 'date':
+            return parseDate(row.date).getTime();
+          case 'amount':
+            return row.amount;
+          case 'client':
+            return row.client.toLowerCase();
+          case 'status':
+            return statusMeta[row.status]?.label.toLowerCase() ?? row.status.toLowerCase();
+          default:
+            return '';
+        }
+      };
+
+      const sortMovements = (rows) => {
+        const factor = movementSortState.direction === 'asc' ? 1 : -1;
+        return [...rows].sort((a, b) => {
+          const aValue = getMovementSortValue(a, movementSortState.column);
+          const bValue = getMovementSortValue(b, movementSortState.column);
+
+          if (aValue < bValue) return -1 * factor;
+          if (aValue > bValue) return 1 * factor;
+
+          return parseDate(b.date).getTime() - parseDate(a.date).getTime();
+        });
+      };
+
+      const updateSortHeaders = () => {
+        sortHeaders.forEach((header) => {
+          const column = header.dataset.sortColumn;
+          const isActive = column === movementSortState.column;
+          const icon = header.querySelector('[data-sort-icon]');
+
+          header.setAttribute('aria-sort', isActive ? (movementSortState.direction === 'asc' ? 'ascending' : 'descending') : 'none');
+
+          if (icon) {
+            icon.className = `ms-1 h-4 w-4 transition ${isActive ? 'text-tanner-midnight' : 'text-slate-300'}`;
+          }
+        });
+      };
+
+      const renderMovementsTable = () => {
+        if (!movementsTableBody || !tableEmptyState) return;
+
+        const rows = sortMovements(getFilteredMovements());
+        const totalPages = Math.max(1, Math.ceil(rows.length / movementPageSize));
+        if (movementCurrentPage > totalPages) movementCurrentPage = totalPages;
+        if (movementCurrentPage < 1) movementCurrentPage = 1;
+
+        const startIndex = (movementCurrentPage - 1) * movementPageSize;
+        const visibleRows = rows.slice(startIndex, startIndex + movementPageSize);
+
+        movementsTableBody.innerHTML = visibleRows
+          .map((row) => {
+            const meta = statusMeta[row.status];
+            return `
+              <tr class="odd:bg-white even:bg-slate-50/60">
+                <td class="border-b border-slate-200 px-3 py-4">${formatDisplayDate(row.date)}</td>
+                <td class="border-b border-slate-200 px-3 py-4 font-semibold text-tanner-midnight">${formatMoney(row.amount)}</td>
+                <td class="border-b border-slate-200 px-3 py-4">${row.client}</td>
+                <td class="border-b border-slate-200 px-3 py-4">
+                  <span class="inline-flex items-center rounded-full border px-3 py-1 text-sm font-semibold ${meta.badge}">
+                    ${meta.label}
+                  </span>
+                </td>
+                <td class="border-b border-slate-200 px-3 py-4">
+                  <button class="rounded-lg px-3 py-2 text-sm font-semibold transition ${meta.actionClass}">
+                    ${meta.action}
+                  </button>
+                </td>
+              </tr>
+            `;
+          })
+          .join('');
+
+        tableEmptyState.hidden = rows.length > 0;
+
+        if (movementPaginationSummary) {
+          if (rows.length === 0) {
+            movementPaginationSummary.textContent = '0 movimientos';
+          } else {
+            const startItem = startIndex + 1;
+            const endItem = startIndex + visibleRows.length;
+            movementPaginationSummary.textContent = `Mostrando ${startItem}-${endItem} de ${rows.length} movimientos`;
+          }
+        }
+
+        if (movementPagination) {
+          if (rows.length <= movementPageSize) {
+            movementPagination.innerHTML = '';
+          } else {
+            const createPageButton = (label, page, disabled = false, active = false) => {
+              const buttonClasses = active
+                ? 'rounded-lg bg-tanner-midnight px-3 py-2 text-sm font-semibold text-white shadow-sm'
+                : 'rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-tanner-midnight transition hover:bg-slate-50';
+              return `<button type="button" data-page="${page}" ${disabled ? 'disabled' : ''} class="${buttonClasses} ${disabled ? 'cursor-not-allowed opacity-50 hover:bg-white' : ''}">${label}</button>`;
+            };
+
+            const pageButtons = [];
+            pageButtons.push(createPageButton('Anterior', Math.max(1, movementCurrentPage - 1), movementCurrentPage === 1));
+
+            for (let page = 1; page <= totalPages; page += 1) {
+              pageButtons.push(createPageButton(String(page), page, false, page === movementCurrentPage));
+            }
+
+            pageButtons.push(createPageButton('Siguiente', Math.min(totalPages, movementCurrentPage + 1), movementCurrentPage === totalPages));
+            movementPagination.innerHTML = pageButtons.join('');
+
+            movementPagination.querySelectorAll('[data-page]').forEach((button) => {
+              button.addEventListener('click', () => {
+                const nextPage = Number(button.dataset.page || '1');
+                if (Number.isNaN(nextPage)) return;
+                movementCurrentPage = Math.min(Math.max(1, nextPage), totalPages);
+                renderMovementsTable();
+              });
+            });
+          }
+        }
+      };
+
+      const updateMetrics = () => {
+        const periodRows = getPeriodMovements();
+        const conciliados = periodRows.filter((row) => row.status === 'conciliado');
+        const pendientes = periodRows.filter((row) => row.status === 'pendiente' || row.status === 'excepcion');
+        const rechazados = periodRows.filter((row) => row.status === 'rechazado');
+        const received = periodRows.length;
+        const processed = conciliados.length + rechazados.length;
+        const amount = conciliados.reduce((sum, row) => sum + row.amount, 0);
+
+        if (metricReceived) metricReceived.textContent = String(received);
+        if (metricProcessed) metricProcessed.textContent = String(processed);
+        if (metricConciliated) metricConciliated.textContent = String(conciliados.length);
+        if (metricPending) metricPending.textContent = String(pendientes.length);
+        if (metricRejected) metricRejected.textContent = String(rechazados.length);
+        if (metricAmount) metricAmount.textContent = formatMoney(amount);
+      };
+
+      const updatePeriodButtons = () => {
+        periodButtons.forEach((button) => {
+          const period = button.dataset.period;
+          const isActive = period === currentPeriod;
+          button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+          button.className =
+            `period-chip rounded-full border px-4 py-2 text-sm font-semibold transition ` +
+            (isActive
+              ? 'border-tanner-midnight bg-tanner-midnight text-white shadow-md shadow-slate-300/60'
+              : 'border-slate-200 bg-slate-100 text-tanner-midnight hover:bg-slate-200');
+        });
+      };
+
+      const updateStatusButtons = () => {
+        statusButtons.forEach((button) => {
+          const status = button.dataset.statusFilter;
+          const isActive = status === currentStatus;
+          button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+
+          const styles = {
+            conciliado: isActive
+              ? 'border-emerald-600 bg-emerald-600 text-white shadow-md shadow-emerald-200'
+              : 'border-emerald-200 bg-emerald-50 text-emerald-700 hover:bg-emerald-100',
+            pendiente: isActive
+              ? 'border-amber-600 bg-amber-600 text-white shadow-md shadow-amber-200'
+              : 'border-amber-200 bg-amber-50 text-amber-700 hover:bg-amber-100',
+            rechazado: isActive
+              ? 'border-rose-600 bg-rose-600 text-white shadow-md shadow-rose-200'
+              : 'border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-100',
+            all: isActive
+              ? 'border-tanner-midnight bg-tanner-midnight text-white shadow-md shadow-slate-300'
+              : 'border-slate-200 bg-slate-100 text-tanner-midnight hover:bg-slate-200',
+          };
+
+          button.className =
+            `status-chip rounded-full border px-4 py-2 text-sm font-semibold transition ` + styles[status];
+        });
+      };
+
+      const updateDateRangePanel = () => {
+        if (!dateRangePanel) return;
+        dateRangePanel.classList.toggle('hidden', !rangePickerOpen);
+        dateRangePanel.setAttribute('aria-hidden', rangePickerOpen ? 'false' : 'true');
+      };
+
+      const getRangeBounds = () => {
+        const dates = movementData.map((row) => row.date).sort();
+        return {
+          from: dates[0],
+          to: dates[dates.length - 1],
+        };
+      };
+
+      const getPresetFromRange = (range) => {
+        if (!range.from && !range.to) {
+          return 'range';
+        }
+
+        const today = new Date();
+        const todayValue = formatInputDate(today);
+        const weekRange = {
+          from: formatInputDate(subtractDays(today, 6)),
+          to: todayValue,
+        };
+        const monthRange = {
+          from: formatInputDate(subtractDays(today, 29)),
+          to: todayValue,
+        };
+
+        if (range.from === todayValue && range.to === todayValue) {
+          return 'today';
+        }
+
+        if (range.from === weekRange.from && range.to === weekRange.to) {
+          return 'week';
+        }
+
+        if (range.from === monthRange.from && range.to === monthRange.to) {
+          return 'month';
+        }
+
+        return 'range';
+      };
+
+      const setCalendarViewForRange = (range) => {
+        const referenceDate = range.from ? parseDate(range.from) : new Date();
+        calendarStartMonth = startOfMonth(referenceDate);
+      };
+
+      const shiftCalendarView = (months) => {
+        calendarStartMonth = addMonths(calendarStartMonth, months);
+        renderRangeCalendars();
+      };
+
+      const updateSelectedRangeChip = () => {
+        if (!selectedRangeChip) return;
+
+        const displayedRange =
+          rangePickerOpen && draftRange.from && draftRange.to ? normalizeRange(draftRange.from, draftRange.to) : selectedRange;
+        const preset = getPresetFromRange(displayedRange);
+        const chipStyles = {
+          today: 'border-sky-200 bg-sky-50 text-sky-800',
+          week: 'border-blue-200 bg-blue-50 text-blue-800',
+          month: 'border-indigo-200 bg-indigo-50 text-indigo-800',
+          range: 'border-emerald-200 bg-emerald-50 text-emerald-800',
+        };
+
+        let label = 'Rango';
+        if (preset === 'today') {
+          label = `Hoy · ${formatLongDate(displayedRange.from || formatInputDate(new Date()))}`;
+        } else if (preset === 'week') {
+          label = `Última semana · desde ${formatLongDate(displayedRange.from)} a hoy`;
+        } else if (preset === 'month') {
+          label = `Último mes · desde ${formatLongDate(displayedRange.from)} a hoy`;
+        } else if (displayedRange.from && displayedRange.to) {
+          label = `Rango de fechas · ${formatLongDate(displayedRange.from)} al ${formatLongDate(displayedRange.to)}`;
+        } else {
+          label = 'Rango de fechas';
+        }
+
+        selectedRangeChip.textContent = label;
+        selectedRangeChip.className =
+          `inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold shadow-sm ` +
+          (chipStyles[preset] || chipStyles.range);
+      };
+
+      const renderRangeCalendars = () => {
+        if (!dateRangePanel || calendarGrids.length === 0) return;
+
+        const monthNames = ['Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá', 'Do'];
+        const fromTime = draftRange.from ? parseDate(draftRange.from).getTime() : null;
+        const toTime = draftRange.to ? parseDate(draftRange.to).getTime() : null;
+
+        calendarGrids.forEach((grid, index) => {
+          const monthDate = addMonths(calendarStartMonth, index);
+          const monthStart = startOfMonth(monthDate);
+          const firstVisibleDate = startOfWeek(monthStart);
+
+          const weekdayMarkup = monthNames
+            .map((label) => `<span class="flex h-10 w-10 items-center justify-center rounded-lg font-semibold">${label}</span>`)
+            .join('');
+
+          const dayMarkup = Array.from({ length: 42 }, (_, cellIndex) => {
+            const date = cloneDate(firstVisibleDate);
+            date.setDate(date.getDate() + cellIndex);
+            const dateValue = formatInputDate(date);
+            const dateTime = date.getTime();
+            const isActiveMonth = date.getFullYear() === monthStart.getFullYear() && date.getMonth() === monthStart.getMonth();
+            const isStart = fromTime !== null && dateTime === fromTime;
+            const isEnd = toTime !== null && dateTime === toTime;
+            const isMiddle = fromTime !== null && toTime !== null && dateTime > fromTime && dateTime < toTime;
+            const isSelected = isStart || isEnd || isMiddle;
+            const label = formatCalendarLabel(dateValue);
+
+            return `
+              <button
+                type="button"
+                class="${getCalendarDateButtonClasses({
+                  isActiveMonth,
+                  isSelected,
+                  isRangeEdge: isStart || isEnd,
+                  isRangeMiddle: isMiddle,
+                })}"
+                data-calendar-date="${dateValue}"
+                data-calendar-month="${monthStart.getMonth()}"
+                aria-label="${label}"
+                aria-pressed="${isSelected ? 'true' : 'false'}"
+                title="${label}"
+              >
+                ${date.getDate()}
+              </button>
+            `;
+          }).join('');
+
+          grid.innerHTML = `${weekdayMarkup}${dayMarkup}`;
+          grid.dataset.renderedMonth = formatInputDate(monthStart);
+
+          if (index === 0 && calendarTitleLeft) {
+            calendarTitleLeft.textContent = formatCalendarMonthTitle(monthStart);
+          }
+          if (index === 1 && calendarTitleRight) {
+            calendarTitleRight.textContent = formatCalendarMonthTitle(monthDate);
+          }
+        });
+
+        updateSelectedRangeChip();
+      };
+
+      const updateCalendarSelection = () => {
+        renderRangeCalendars();
+      };
+
+      const syncRangeInputs = () => {
+        if (rangeFrom) rangeFrom.value = draftRange.from;
+        if (rangeTo) rangeTo.value = draftRange.to;
+      };
+
+      const syncDraftRangeFromInputs = () => {
+        draftRange = normalizeRange(rangeFrom?.value ?? '', rangeTo?.value ?? '');
+        setCalendarViewForRange(draftRange);
+        renderRangeCalendars();
+      };
+
+      const setDraftRangeFromCalendar = (dateValue) => {
+        if (!draftRange.from || draftRange.to) {
+          draftRange = { from: dateValue, to: '' };
+        } else {
+          draftRange = normalizeRange(draftRange.from, dateValue);
+        }
+
+        syncRangeInputs();
+        updateCalendarSelection();
+      };
+
+      const openRangePicker = () => {
+        rangeOriginPeriod = currentPeriod;
+        currentPeriod = 'range';
+        draftRange = { ...selectedRange };
+        syncRangeInputs();
+        setCalendarViewForRange(selectedRange);
+        renderRangeCalendars();
+        rangePickerOpen = true;
+        updatePeriodButtons();
+        updateSelectedRangeChip();
+        updateDateRangePanel();
+      };
+
+      const closeRangePicker = (restoreInputs = true) => {
+        if (restoreInputs) {
+          if (rangeOriginPeriod !== 'range') {
+            currentPeriod = rangeOriginPeriod;
+            selectedRange = getPeriodRange(rangeOriginPeriod);
+          }
+          draftRange = { ...selectedRange };
+          setCalendarViewForRange(selectedRange);
+          syncRangeInputs();
+          renderRangeCalendars();
+          updatePeriodButtons();
+          updateSelectedRangeChip();
+          updateMetrics();
+          renderMovementsTable();
+        }
+        rangePickerOpen = false;
+        updateDateRangePanel();
+      };
+
+      const applyRangePicker = () => {
+        draftRange = normalizeRange(rangeFrom?.value ?? '', rangeTo?.value ?? '');
+        selectedRange = { ...draftRange };
+        rangeOriginPeriod = 'range';
+        setCalendarViewForRange(selectedRange);
+        renderRangeCalendars();
+        rangePickerOpen = false;
+        updateDateRangePanel();
+        movementCurrentPage = 1;
+        updateMetrics();
+        renderMovementsTable();
+        updateSelectedRangeChip();
+      };
+
+      const setRangePreset = (preset) => {
+        const today = new Date();
+        const bounds = getRangeBounds();
+        const rangePresets = {
+          last7: {
+            from: formatInputDate(subtractDays(today, 6)),
+            to: formatInputDate(today),
+          },
+          last14: {
+            from: formatInputDate(subtractDays(today, 13)),
+            to: formatInputDate(today),
+          },
+          last30: {
+            from: formatInputDate(subtractDays(today, 29)),
+            to: formatInputDate(today),
+          },
+          last3m: {
+            from: formatInputDate(subtractMonths(today, 3)),
+            to: formatInputDate(today),
+          },
+          last12m: {
+            from: formatInputDate(subtractMonths(today, 12)),
+            to: formatInputDate(today),
+          },
+          mtd: {
+            from: formatInputDate(startOfMonth(today)),
+            to: formatInputDate(today),
+          },
+          qtd: {
+            from: formatInputDate(startOfQuarter(today)),
+            to: formatInputDate(today),
+          },
+          all: {
+            from: bounds.from,
+            to: bounds.to,
+          },
+          custom: draftRange,
+        };
+
+        draftRange = normalizeRange(rangePresets[preset]?.from ?? bounds.from, rangePresets[preset]?.to ?? bounds.to);
+        syncRangeInputs();
+        setCalendarViewForRange(draftRange);
+        renderRangeCalendars();
+      };
+
+      const setPeriod = (period) => {
+        if (period === 'range') {
+          openRangePicker();
+        } else {
+          currentPeriod = period;
+          selectedRange = getPeriodRange(period);
+          draftRange = { ...selectedRange };
+          setCalendarViewForRange(selectedRange);
+          rangePickerOpen = false;
+          updateDateRangePanel();
+          renderRangeCalendars();
+        }
+        movementCurrentPage = 1;
+        updatePeriodButtons();
+        updateSelectedRangeChip();
+        updateMetrics();
+        renderMovementsTable();
+      };
+
+      const setStatusFilter = (status) => {
+        currentStatus = status;
+        movementCurrentPage = 1;
+        updateStatusButtons();
+        renderMovementsTable();
+      };
+
+      const bindMovementFilters = () => {
+        if (movementSearch) {
+          movementSearch.addEventListener('input', () => {
+            movementCurrentPage = 1;
+            renderMovementsTable();
+          });
+        }
+      };
+
+      const normalizeFileName = (value) => {
+        return value
+          .toLowerCase()
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '')
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/^-+|-+$/g, '');
+      };
+
+      const buildStatementDownload = (bankName) => {
+        const today = new Date();
+        const rows = [
+          ['Fecha', 'Banco', 'Tipo', 'Descripción', 'Monto', 'Referencia'],
+          [formatSyncDateTime(today), bankName, 'Abono', 'Transferencia cliente corporativo', '$120.000', 'CC-884103'],
+          [formatSyncDateTime(new Date(today.getTime() - 86400000)), bankName, 'Cargo', 'Pago proveedor operativo', '$45.500', 'CC-771204'],
+          [formatSyncDateTime(new Date(today.getTime() - 172800000)), bankName, 'Abono', 'Depósito automático recaudación', '$210.000', 'CC-660118'],
+        ];
+
+        const tableHtml = `
+          <!doctype html>
+          <html>
+            <head>
+              <meta charset="utf-8" />
+              <style>
+                body { font-family: Arial, sans-serif; }
+                table { border-collapse: collapse; width: 100%; }
+                th, td { border: 1px solid #d1d5db; padding: 8px 10px; text-align: left; }
+                th { background: #001E3D; color: #fff; }
+              </style>
+            </head>
+            <body>
+              <h1>Movimientos de cuenta corriente</h1>
+              <p>Banco: ${bankName}</p>
+              <table>
+                <tbody>
+                  ${rows
+                    .map(
+                      (row, rowIndex) =>
+                        `<tr>${row
+                          .map((cell) => (rowIndex === 0 ? `<th>${cell}</th>` : `<td>${cell}</td>`))
+                          .join('')}</tr>`,
+                    )
+                    .join('')}
+                </tbody>
+              </table>
+            </body>
+          </html>
+        `;
+
+        const encoded = encodeURIComponent(tableHtml);
+        return {
+          href: `data:application/vnd.ms-excel;charset=utf-8,${encoded}`,
+          fileName: `cartola_movimientos_${normalizeFileName(bankName)}.xls`,
+        };
+      };
+
+      const refreshStatementDownload = () => {
+        if (!bankSelect || !downloadStatement) return;
+        const bankName = bankSelect.value;
+        const statement = buildStatementDownload(bankName);
+        downloadStatement.href = statement.href;
+        downloadStatement.download = statement.fileName;
+      };
+
       const addDays = (value, days) => {
-        const date = new Date(`${value}T00:00:00`);
+        const date = parseDate(value);
         date.setDate(date.getDate() + days);
         return formatInputDate(date);
       };
 
-      const getSelectedTimeRange = () => {
-        return document.querySelector('input[name="timeRange"]:checked')?.value || 'Rango AM';
-      };
-
       const getDateSummary = () => {
-        if (dateRange.value === 'Hoy' || dateRange.value === 'Fecha') {
-          return formatDisplayDate(singleDate.value);
-        }
-
-        if (dateRange.value === 'Semana') {
-          return `${formatDisplayDate(weekFrom.value)} a ${formatDisplayDate(weekTo.value)}`;
-        }
-
-        if (dateRange.value === 'Mes') {
-          return formatDisplayMonth(monthPicker.value);
-        }
-
-        return `${formatDisplayDate(dateFrom.value)} a ${formatDisplayDate(dateTo.value)}`;
-      };
-
-      const updateWeekEnd = () => {
-        if (weekFrom.value) weekTo.value = addDays(weekFrom.value, 6);
+        return formatDisplayDate(singleDate?.value || formatInputDate(new Date()));
       };
 
       const updateDateControls = () => {
         const today = formatInputDate(new Date());
-        const selected = dateRange.value;
-
-        singleDateFields.classList.toggle('is-visible', selected === 'Hoy' || selected === 'Fecha');
-        weekDateFields.classList.toggle('is-visible', selected === 'Semana');
-        monthFields.classList.toggle('is-visible', selected === 'Mes');
-        customDateFields.classList.toggle('is-visible', selected === 'Fecha personalizada');
-
-        if (selected === 'Hoy') {
+        if (singleDate && !singleDate.value) {
           singleDate.value = today;
-        }
-
-        if (selected === 'Semana' && !weekFrom.value) {
-          weekFrom.value = today;
-          updateWeekEnd();
-        }
-
-        if (selected === 'Mes' && !monthPicker.value) {
-          monthPicker.value = today.slice(0, 7);
         }
       };
 
       openBtn.addEventListener('click', openModal);
       closeBtn.addEventListener('click', closeModal);
       cancelBtn.addEventListener('click', closeModal);
+      dismissFileAlert?.addEventListener('click', hideFileAlert);
+      dismissIdentificationAlert?.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        dismissIdentificationAlertMessage();
+      });
       backToRequest.addEventListener('click', showRequestStep);
 
       modal.addEventListener('click', (event) => {
@@ -527,8 +2142,21 @@
         if (event.target === confirmationModal) closeConfirmation();
       });
 
+      imageLightbox?.addEventListener('click', (event) => {
+        if (event.target === imageLightbox) closeImageLightbox();
+      });
+      closeImageLightboxBtn?.addEventListener('click', closeImageLightbox);
+
       document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
+          if (imageLightbox?.classList.contains('is-open')) {
+            closeImageLightbox();
+            return;
+          }
+          if (rangePickerOpen) {
+            closeRangePicker();
+            return;
+          }
           closeModal();
           closeConfirmation();
         }
@@ -538,85 +2166,250 @@
         event.target.value = formatPeso(event.target.value);
       });
 
-      dateRange.addEventListener('change', updateDateControls);
-      weekFrom.addEventListener('change', updateWeekEnd);
+      singleDate?.addEventListener('change', updateDateControls);
+      periodButtons.forEach((button) => {
+        button.addEventListener('click', () => setPeriod(button.dataset.period));
+      });
+      statusButtons.forEach((button) => {
+        button.addEventListener('click', () => setStatusFilter(button.dataset.statusFilter));
+      });
+      sortButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const column = button.dataset.sortTrigger;
+          if (!column) return;
 
-      fileInput.addEventListener('change', (event) => {
-        const file = event.target.files?.[0];
-        if (!file) {
-          preview.innerHTML = '<span>La imagen seleccionada se mostrará aquí</span>';
+          if (movementSortState.column === column) {
+            movementSortState.direction = movementSortState.direction === 'asc' ? 'desc' : 'asc';
+          } else {
+            movementSortState.column = column;
+            movementSortState.direction = column === 'date' ? 'desc' : 'asc';
+          }
+
+          movementCurrentPage = 1;
+          updateSortHeaders();
+          renderMovementsTable();
+        });
+      });
+      dateRangePanel?.addEventListener('click', (event) => {
+        const calendarButton = event.target.closest?.('[data-calendar-date]');
+        if (calendarButton) {
+          event.preventDefault();
+          setDraftRangeFromCalendar(calendarButton.dataset.calendarDate);
           return;
         }
 
+        if (event.target === dateRangePanel) {
+          closeRangePicker();
+        }
+      });
+      dateRangePanel?.querySelectorAll('[data-range-preset]').forEach((button) => {
+        button.addEventListener('click', () => setRangePreset(button.dataset.rangePreset));
+      });
+      rangeFrom?.addEventListener('input', syncDraftRangeFromInputs);
+      rangeFrom?.addEventListener('change', syncDraftRangeFromInputs);
+      rangeTo?.addEventListener('input', syncDraftRangeFromInputs);
+      rangeTo?.addEventListener('change', syncDraftRangeFromInputs);
+      dateRangePanel?.querySelectorAll('[data-calendar-nav]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const months = Number(button.dataset.calendarNav || '0');
+          if (!Number.isNaN(months) && months !== 0) {
+            shiftCalendarView(months);
+          }
+        });
+      });
+      document.getElementById('closeRangePicker')?.addEventListener('click', () => closeRangePicker());
+      document.getElementById('applyRangePicker')?.addEventListener('click', applyRangePicker);
+      bindMovementFilters();
+      if (bankSelect) bankSelect.addEventListener('change', refreshStatementDownload);
+
+      fileInput.addEventListener('change', (event) => {
+        const file = event.target.files?.[0];
+        if (processingTimer) {
+          window.clearTimeout(processingTimer);
+          processingTimer = null;
+        }
+
+        processingOverlay.classList.add('hidden');
+        processingOverlay.classList.remove('flex');
+        processImageBtn.disabled = false;
+        hideFileAlert();
+        hideIdentificationAlert();
+        imageReviewReady = false;
+        identificationAlertBlocksReview = false;
+        setImageReviewEnabled(false);
+        setRiskyActions(false);
+
+        if (!file) {
+          previewImage.removeAttribute('src');
+          previewImage.hidden = true;
+          previewZoomPane.hidden = true;
+          previewPlaceholder.hidden = false;
+          resetPreviewHover();
+          amountInput.value = '';
+          singleDate.value = '';
+          requestName.value = '';
+          requestRut.value = '';
+          destinationAccount.value = '';
+          setRequestFieldsDisabled(true);
+          return;
+        }
+
+        amountInput.value = '';
+        singleDate.value = '';
+        requestName.value = '';
+        requestRut.value = '';
+        destinationAccount.value = '';
+        setRequestFieldsDisabled(true);
+        resetPreviewHover();
         const reader = new FileReader();
         reader.onload = (e) => {
-          preview.innerHTML = `<img src="${e.target.result}" alt="Vista previa de la evidencia" />`;
+          previewImage.src = e.target.result;
+          previewImage.hidden = false;
+          previewZoomPane.hidden = false;
+          previewPlaceholder.hidden = true;
+          resetPreviewHover();
         };
         reader.readAsDataURL(file);
       });
 
-      processImageBtn.addEventListener('click', async () => {
+      imagePreview?.addEventListener('mousemove', handlePreviewImageHover);
+      imagePreview?.addEventListener('mouseenter', handlePreviewImageHover);
+      imagePreview?.addEventListener('mouseleave', resetPreviewHover);
+      previewImage?.addEventListener('click', openImageLightbox);
+
+      processImageBtn.addEventListener('click', () => {
         const file = fileInput.files?.[0];
         if (!file) {
-          alert('Por favor, selecciona una imagen primero.');
+          showFileAlert();
           return;
         }
 
-        const formData = new FormData();
-        formData.append('imagen', file);
+        const fileName = file.name.toLowerCase();
+        const identificationState =
+          identificationStates[fileName] ||
+          (fileName.startsWith('tx1.') ? identificationStates['tx1.jpg'] : null);
+        currentFileName = fileName;
 
-        resultBlock.textContent = 'Procesando con Gemini...';
+        setRequestFieldsDisabled(true);
+        processingOverlay.classList.remove('hidden');
+        processingOverlay.classList.add('flex');
         processImageBtn.disabled = true;
-
-        try {
-          const response = await fetch('http://127.0.0.1:8000/procesar-comprobante', {
-            method: 'POST',
-            body: formData,
-          });
-
-          if (!response.ok) {
-            throw new Error(`${response.status} ${response.statusText}`);
-          }
-
-          const data = await response.json();
-          resultBlock.textContent = JSON.stringify(data, null, 2);
-
-          if (data.monto) {
-            amountInput.value = formatPeso(String(data.monto));
-          }
-          if (data.mandante) {
-            mandante.value = data.mandante;
-          }
-          if (data.fecha) {
-            singleDate.value = data.fecha;
-          }
-        } catch (error) {
-          resultBlock.textContent = 'Error al procesar la imagen: ' + error.message;
-        } finally {
-          processImageBtn.disabled = false;
+        if (processingTimer) {
+          window.clearTimeout(processingTimer);
         }
+
+        processingTimer = window.setTimeout(() => {
+          currentIdentificationState = identificationState;
+          if (identificationState?.fill) {
+            requestName.value = identificationState.fill.nombre;
+            requestRut.value = identificationState.fill.rut;
+            singleDate.value = identificationState.fill.fecha;
+            amountInput.value = identificationState.fill.monto;
+            destinationAccount.value = identificationState.fill.cuentaDestino;
+          } else {
+            amountInput.value = '';
+            singleDate.value = '';
+            requestName.value = '';
+            requestRut.value = '';
+            destinationAccount.value = '';
+          }
+
+          if (identificationState) {
+            showIdentificationAlert(identificationState.tone, identificationState.message);
+            setRequestFieldsDisabled(Boolean(identificationState.disabled));
+            setRiskyActions(identificationState.tone === 'amber' || identificationState.tone === 'red');
+          } else {
+            hideIdentificationAlert();
+            setRequestFieldsDisabled(true);
+            setRiskyActions(false);
+          }
+          processingOverlay.classList.add('hidden');
+          processingOverlay.classList.remove('flex');
+          processImageBtn.disabled = false;
+          setImageReviewReady(true);
+          processingTimer = null;
+        }, 10000);
+      });
+
+      deferPendingBtn?.addEventListener('click', () => {
+        showPendingReviewStep();
       });
 
       modalForm.addEventListener('submit', (event) => {
         event.preventDefault();
-        const formattedAmount = amountInput.value || '$120.000';
+        setImageReviewReady(false);
 
-        summaryAmount.textContent = formattedAmount;
-        cartolaAmount.textContent = formattedAmount;
-        summaryMandante.textContent = mandante.value || 'Servipag';
-        summaryDates.textContent = getDateSummary();
-        summaryTime.textContent = getSelectedTimeRange();
+        const isRiskyIdentification = currentIdentificationState?.tone === 'amber' || currentIdentificationState?.tone === 'red';
+        if (isRiskyIdentification) {
+          openWarningModal(() => {
+            closeWarningModal();
+            const shouldFail = currentFileName === 'tx2.jpg' || currentFileName === 'valevista.jpg' || currentFileName === 'valevista.png';
+            proceedWithConciliation(shouldFail ? 'failure' : 'success');
+          });
+          return;
+        }
 
-        modalForm.hidden = true;
-        resultStep.hidden = true;
-        loaderStep.hidden = false;
-
-        window.setTimeout(showResultStep, 1400);
+        proceedWithConciliation();
       });
 
       registerBtn.addEventListener('click', () => {
+        const isPendingResult = currentResultMode === 'pending';
+        const isRejectedResult = currentResultMode === 'failure';
+        if (confirmationIcon) {
+          confirmationIcon.classList.remove('bg-green-600', 'bg-red-600', 'bg-amber-500', 'text-white');
+          if (isRejectedResult) {
+            confirmationIcon.textContent = '!';
+            confirmationIcon.classList.add('bg-red-600', 'text-white');
+          } else if (isPendingResult) {
+            confirmationIcon.textContent = '!';
+            confirmationIcon.classList.add('bg-amber-500', 'text-white');
+          } else {
+            confirmationIcon.textContent = '✓';
+            confirmationIcon.classList.add('bg-green-600', 'text-white');
+          }
+        }
+        if (confirmationTitle) {
+          if (isRejectedResult) {
+            confirmationTitle.textContent = 'Conciliacion Rechazada';
+          } else if (isPendingResult) {
+            confirmationTitle.textContent = 'Conciliación registrada como Pendiente';
+          } else {
+            confirmationTitle.textContent = 'Conciliación registrada';
+          }
+        }
+        if (confirmationMessage) {
+          if (isRejectedResult) {
+            confirmationMessage.textContent = 'La solicitud fue registrada como Rechazada';
+          } else if (isPendingResult) {
+            confirmationMessage.textContent = 'La solicitud fue registrada como pendiente';
+          } else {
+            confirmationMessage.textContent = 'La solicitud fue registrada correctamente y quedó asociada a la cartola simulada.';
+          }
+        }
         confirmationModal.classList.add('is-open');
         confirmationModal.setAttribute('aria-hidden', 'false');
+      });
+
+      closeWarningModalBtn?.addEventListener('click', () => {
+        warningModalProceed = null;
+        closeWarningModal();
+      });
+      cancelWarningConciliation?.addEventListener('click', () => {
+        warningModalProceed = null;
+        closeWarningModal();
+      });
+      confirmWarningConciliation?.addEventListener('click', () => {
+        const proceed = warningModalProceed;
+        warningModalProceed = null;
+        closeWarningModal();
+        proceed?.();
+      });
+
+      warningModal?.addEventListener('click', (event) => {
+        if (event.target === warningModal) {
+          warningModalProceed = null;
+          closeWarningModal();
+        }
       });
 
       finishConfirmation.addEventListener('click', () => {
@@ -624,6 +2417,10 @@
         closeModal();
       });
 
+      updateMetrics();
+      updateStatusButtons();
+      updateSortHeaders();
+      setPeriod('month');
       updateDateControls();
     </script>
   </body>

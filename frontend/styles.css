@@ -35,11 +35,37 @@ body {
 }
 
 .image-preview img {
-  width: 100%;
-  height: 100%;
-  min-height: 14rem;
-  object-fit: cover;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
   display: block;
+  transition: opacity 180ms ease;
+}
+
+.preview-trigger {
+  min-height: 0;
+}
+
+.image-preview.is-review-enabled:hover .preview-image {
+  cursor: zoom-in;
+}
+
+.preview-detail {
+  background-color: rgba(248, 250, 252, 0.96);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+  z-index: 20;
+  min-height: 0;
+}
+
+.hover-zoom-pane {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
 }
 
 .loader-mark {
