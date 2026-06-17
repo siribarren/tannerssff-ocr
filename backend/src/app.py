@@ -9,7 +9,7 @@ load_dotenv(env_file)
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from src.backend.web_route import router
+from src.backend.routes.web_route import router
 from src.config.log_config import configurar_log
 
 configurar_log()
