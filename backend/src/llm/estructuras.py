@@ -8,7 +8,7 @@ class TokenInfo(BaseModel):
     total_tokens: int
 
 class ConciliacionResponse(BaseModel):
-    fecha: date | None = Field(default=None, description="Fecha de la transferencia en formato YYYY-MM-DD")
+    fecha: date | None = Field(default=None, description="Fecha de la transferencia en formato YYYY-MM-DD.")
+    nombre: str | None = Field(default=None, description="Nombre de la persona que hace la transferencia.")
+    rut: str | None = Field(default=None, description="SOLO el RUT de la persona o entidad que envía. NO incluir banco, número de cuenta ni otros datos.")
     monto: int | None = Field(default=None, description="Monto de la transferencia, solo el número entero sin símbolos ni separadores")
-    emisor: str | None = Field(default=None, description="SOLO el nombre de la persona o entidad que envía. NO incluir banco, número de cuenta ni otros datos.")
-    receptor: str | None = Field(default=None, description="SOLO el nombre de la persona o entidad que recibe. NO incluir banco, número de cuenta ni otros datos.")
