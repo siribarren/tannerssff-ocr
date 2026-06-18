@@ -58,7 +58,7 @@ class OpenAiConciliacionService:
         Por favor, organiza esta información en una estructura con las siguientes columnas:
             - Fecha: Fecha en que se realizo la transferencia en formato: YYYY-MM-DD.
             - Nombre: Nombre de la persona o entidad que envia la transferecia.
-            - Rut: Rol Único Tributario de la persona o entidad que envia la transferencia. En caso que el Nro. Cuenta sea equivalente al RUT utilizar este valor y calcular digito verificador en base del Modulo 11
+            - Rut: Rol Único Tributario de la persona o entidad que envia la transferencia. Si el Nro de cuenta parece el RUT pero le falta el digito verificador, calcularlo utilizando el Modulo 11.
             - Monto: Monto por el cual se realiza la transferencia.
 
         La información se presenta a continuación:
