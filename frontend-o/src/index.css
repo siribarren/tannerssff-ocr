@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tanner-midnight: #001E3D;
+  --color-tanner-navy: #002080;
+  --color-tanner-royal: #005CB9;
+  --color-tanner-medium: #023AE0;
+  --color-tanner-slate: #024993;
+  --color-tanner-aqua: #4DD2FF;
+  --color-tanner-mint: #4DFFF0;
+  --color-tanner-gray: #6B7280;
+  --color-tanner-line: #E5E7EB;
+  --color-tanner-snow: #FAFAFA;
+  --shadow-tanner: 0 24px 60px rgba(0, 30, 61, 0.12);
+}
+
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #222222;
+  background: #f8fbff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(77, 210, 255, 0.15), transparent 28%),
+    radial-gradient(circle at top right, rgba(2, 58, 224, 0.12), transparent 24%),
+    linear-gradient(180deg, #f8fbff 0%, #eef3f9 100%);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.modal-overlay.is-open {
+  display: flex;
+}
+
+.image-preview img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  transition: opacity 180ms ease;
+}
+
+.image-preview.is-review-enabled:hover .preview-image {
+  cursor: zoom-in;
+}
+
+.preview-detail,
+.hover-zoom-pane {
+  background-color: rgba(248, 250, 252, 0.96);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;
+}
+
+.loader-mark {
+  animation: spin 900ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

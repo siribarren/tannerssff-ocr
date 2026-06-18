@@ -2,6 +2,7 @@ import logging
 
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
 
+from src.llm.estructuras import ConciliacionResponse
 from src.backend.web_service import (
     ArchivoVacioError,
     MimeNoSoportadoError,
@@ -11,14 +12,14 @@ from src.backend.web_service import (
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter()
+router = APIRouter(tags=["sistema"])
 
 
-@router.post("/procesar-comprobante")
+@router.post("/procesar-comprobante", operation_id="procesarComprobante", response_model=ConciliacionResponse)
 async def procesar_comprobante(
     imagen: UploadFile = File(...),
     service: WebService = Depends(get_web_service),
-):
+) -> ConciliacionResponse:
     content = await imagen.read()
     try:
         return service.procesar_comprobante(content, imagen.content_type)
