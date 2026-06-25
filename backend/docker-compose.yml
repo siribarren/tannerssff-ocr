@@ -1,0 +1,17 @@
+name: tannerssff
+
+volumes:
+  pgdata:
+
+services:
+  postgres:
+    image: postgres:17
+    container_name: postgres
+    environment:
+      POSTGRES_USER: tannerssff
+      POSTGRES_PASSWORD: SCq2ftgt4t7W
+      POSTGRES_DB: tannerssff
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
